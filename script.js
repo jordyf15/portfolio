@@ -39,6 +39,11 @@ function seedProjects(){
         'https://github.com/jordyf15/todo-list',
         './images/todo-list.jpeg'
     );
+    addProject('Weather-App',
+        'https://jordyf15.github.io/weather-app/',
+        'https://github.com/jordyf15/weather-app',
+        './images/weather-app.jpeg'
+    )
     addProject('Odin Library',
         'https://jordyf15.github.io/odin-library/', 
         'https://github.com/jordyf15/odin-library', 
