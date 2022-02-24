@@ -19,6 +19,10 @@ function addProject(name, live, code, image){
 }
 
 function seedProjects(){
+    addProject('CV-Creator',
+    'https://jordyf15.github.io/cv-application/',
+    'https://github.com/jordyf15/cv-application',
+    './images/cv-application.jpeg');
     addProject('Restopedia', 
         'https://Restopedia.jordyf15.repl.co', 
         'https://github.com/jordyf15/Dicoding-Expert-FrontEnd-Web-Development-FinalProject', 
