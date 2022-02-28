@@ -19,6 +19,10 @@ function addProject(name, live, code, image){
 }
 
 function seedProjects(){
+    addProject('Digi-Memory',
+    'https://jordyf15.github.io/digi-memory/',
+    'https://github.com/jordyf15/digi-memory',
+    './images/digi-memory.jpeg');
     addProject('CV-Creator',
     'https://jordyf15.github.io/cv-application/',
     'https://github.com/jordyf15/cv-application',
