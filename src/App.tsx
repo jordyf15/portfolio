@@ -15,7 +15,11 @@ function App() {
   return (
     <ThemeProvider theme={appTheme}>
       <BrowserRouter>
-        <Stack direction="column">
+        <Stack
+          direction="column"
+          minHeight="100vh"
+          justifyContent="space-between"
+        >
           <Header />
           <Routes>
             <Route path="/projects" element={<ProjectPage />} />
