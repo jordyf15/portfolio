@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createTheme, Stack, ThemeProvider } from "@mui/material";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import HomePage from "./pages/home-page";
+import ProjectPage from "./pages/projects-page";
+
+const appTheme = createTheme({
+  typography: {
+    fontFamily: `"Roboto", sans-serif`,
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={appTheme}>
+      <BrowserRouter>
+        <Stack direction="column">
+          <Header />
+          <Routes>
+            <Route path="/projects" element={<ProjectPage />} />
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+          <Footer />
+        </Stack>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
