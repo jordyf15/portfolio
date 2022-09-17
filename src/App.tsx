@@ -9,6 +9,15 @@ const appTheme = createTheme({
   typography: {
     fontFamily: `"Roboto", sans-serif`,
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 700,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
 });
 
 function App() {
