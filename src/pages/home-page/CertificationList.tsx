@@ -1,5 +1,14 @@
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
-import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  IconButton,
+  IconButtonProps,
+  Stack,
+  SxProps,
+  Theme,
+  Typography,
+} from "@mui/material";
 import { useState } from "react";
 import Certification from "../../models/Certification";
 import CertificationItem from "./CertificationItem";
@@ -68,36 +77,16 @@ const CertificationList = ({
         }}
         justifyContent="space-between"
       >
-        <IconButton
-          sx={{
-            p: 0,
-          }}
-          onClick={previousCertificate}
-        >
-          <KeyboardArrowLeft
-            sx={{
-              fontSize: {
-                xs: "40px",
-                sm: "60px",
-              },
-              color: "#F78166",
-            }}
-          />
-        </IconButton>
+        <CustomIconBtn onClick={previousCertificate}>
+          <KeyboardArrowLeft sx={iconSx} />
+        </CustomIconBtn>
         <CertificationItem
           key={certificationList[currentCertificateIndex].id}
           certification={certificationList[currentCertificateIndex]}
         />
-        <IconButton
-          sx={{
-            p: 0,
-          }}
-          onClick={nextCertificate}
-        >
-          <KeyboardArrowRight
-            sx={{ fontSize: { xs: "40px", sm: "60px" }, color: "#F78166" }}
-          />
-        </IconButton>
+        <CustomIconBtn onClick={nextCertificate}>
+          <KeyboardArrowRight sx={iconSx} />
+        </CustomIconBtn>
       </Stack>
       <Stack direction="row" justifyContent="center" mt="40px">
         {Array.from(
@@ -144,6 +133,24 @@ const CertificationList = ({
         })}
       </Stack>
     </Box>
+  );
+};
+
+const iconSx: SxProps<Theme> = {
+  fontSize: { xs: "40px", sm: "60px" },
+  color: "#F78166",
+};
+
+const CustomIconBtn = (props: IconButtonProps) => {
+  return (
+    <IconButton
+      sx={{
+        p: 0,
+      }}
+      onClick={props.onClick}
+    >
+      {props.children}
+    </IconButton>
   );
 };
 

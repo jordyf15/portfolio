@@ -22,17 +22,7 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
       }}
     >
       <Stack direction="column" width="70px" alignItems="center">
-        <Box
-          bgcolor="#D8DEE4"
-          width="4px"
-          mt="5px"
-          sx={{
-            height: {
-              xs: "25px",
-              sm: "30px",
-            },
-          }}
-        />
+        <Pipe />
         <Stack
           bgcolor="#EAEEF2"
           borderRadius="50%"
@@ -52,17 +42,7 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
         >
           <HistoryIcon category={history.category} />
         </Stack>
-        <Box
-          bgcolor="#D8DEE4"
-          width="4px"
-          mb="5px"
-          sx={{
-            height: {
-              xs: "25px",
-              sm: "30px",
-            },
-          }}
-        />
+        <Pipe />
       </Stack>
       <Stack direction="column" justifyContent="center">
         <Typography
@@ -101,6 +81,22 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
         </Typography>
       </Stack>
     </Stack>
+  );
+};
+
+const Pipe = () => {
+  return (
+    <Box
+      bgcolor="#D8DEE4"
+      width="4px"
+      mt="5px"
+      sx={{
+        height: {
+          xs: "25px",
+          sm: "30px",
+        },
+      }}
+    />
   );
 };
 

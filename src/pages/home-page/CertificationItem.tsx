@@ -32,7 +32,8 @@ const CertificationItem = ({ certification }: CertificationItemProp) => {
           },
         }}
       >
-        {showImageViewer && (
+        {/* TODO Image Viewer */}
+        {/* {showImageViewer && (
           <Box
             onClick={closeImageViewer}
             bgcolor="rgba(0, 0, 0, 0.6)"
@@ -44,7 +45,7 @@ const CertificationItem = ({ certification }: CertificationItemProp) => {
           >
             <Box component="img" width="100%" src={certification.imageUrl} />
           </Box>
-        )}
+        )} */}
         <Stack
           sx={{
             minWidth: {
