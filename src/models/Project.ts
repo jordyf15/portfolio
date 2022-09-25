@@ -1,10 +1,9 @@
 type Type = "Front-end" | "Back-end" | "Android" | "Other" | "Full Stack";
 
-type Language = "Kotlin" | "Javascript" | "Ruby" | "Go";
+type Language = "Kotlin" | "Javascript" | "Ruby" | "Go" | "Typescript";
 
 type Technology =
   | "React"
-  | "Typescript"
   | "MongoDB"
   | "Redux"
   | "Express"

@@ -41,12 +41,12 @@ import weatherAppImg from "../assets/projects/weather-app.jpeg";
 import wikipediaViewerImg from "../assets/projects/wikipedia-viewer.jpeg";
 import Project from "../models/Project";
 
-export const Projects: Array<Project> = [
+export const projects: Array<Project> = [
   {
     id: "project-44",
     title: "Github Users",
     description:
-      "Github Users is an android application where users can view informations about users in Github.",
+      "Github Users is an android application where users can view informations about users in Github. This project was made for the Dicoding's Fundamental Android Development Course.",
     type: "Android",
     language: "Kotlin",
     technologies: [],
@@ -59,7 +59,7 @@ export const Projects: Array<Project> = [
     id: "project-43",
     title: "Restopedia",
     description:
-      "Restopedia is a Progressive web apps that allows the user to view information about certain restaurants such as their location, menus, reviews and ratings and also favorite them.",
+      "Restopedia is a Progressive web apps that allows the user to view information about certain restaurants such as their location, menus, reviews and ratings and also favorite them. This project was made for the Dicoding's Expert Front-end Development Course.",
     type: "Front-end",
     language: "Javascript",
     technologies: [],
@@ -72,7 +72,7 @@ export const Projects: Array<Project> = [
     id: "project-42",
     title: "CV Creator",
     description:
-      "A CV Creator web application where users can create their own CV and download it.",
+      "A CV Creator web application where users can create their own CV and download it. This project was made for the Odin Project's Full Stack Javascript path.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["React"],
@@ -83,7 +83,8 @@ export const Projects: Array<Project> = [
   {
     id: "project-41",
     title: "Digi Memory",
-    description: "A digimon themed memory card game built with React.",
+    description:
+      "A digimon themed memory card game built with React. This project was made for the Odin Project's Full Stack Javascript path.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["React"],
@@ -95,7 +96,7 @@ export const Projects: Array<Project> = [
     id: "project-40",
     title: "Wiki Viewer",
     description:
-      "A wikipedia viewer which allow users to search for related wikipedia entries based on the word they type in the search bar and also get a random wikipedia entry if the users want it.",
+      "A wikipedia viewer which allow users to search for related wikipedia entries based on the word they type in the search bar and also get a random wikipedia entry if the users want it. This project was made for the FreeCodeCamp's Take Home Project.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["React"],
@@ -107,7 +108,7 @@ export const Projects: Array<Project> = [
     id: "project-39",
     title: "Difooding",
     description:
-      "A web application where users can search for all kinds of food recipes by name or through filter which are divided by 3 types: categories, area, and ingridients.",
+      "A web application where users can search for all kinds of food recipes by name or through filter which are divided by 3 types: categories, area, and ingridients. This project was made for the Dicoding's Fundamental Front-end Web Development Course.",
     type: "Front-end",
     language: "Javascript",
     technologies: [],
@@ -120,7 +121,7 @@ export const Projects: Array<Project> = [
     id: "project-38",
     title: "Todo List",
     description:
-      "A web based todo list application where users can organize their todos.",
+      "A web based todo list application where users can organize their todos. This project was made for the Odin Project's Full Stack Javascript path.",
     type: "Front-end",
     language: "Javascript",
     technologies: [],
@@ -132,7 +133,7 @@ export const Projects: Array<Project> = [
     id: "project-37",
     title: "Weather App",
     description:
-      "A web based weather application where users can view the weather information of the location they searched for.",
+      "A web based weather application where users can view the weather information of the location they searched for. This project was made for the Odin Project's Full Stack Javascript path.",
     type: "Front-end",
     language: "Javascript",
     technologies: [],
@@ -144,7 +145,7 @@ export const Projects: Array<Project> = [
     id: "project-36",
     title: "Odin Library",
     description:
-      "A web based library application where users can save their books information such as author, title, pages, and the read status.",
+      "A web based library application where users can save their books information such as author, title, pages, and the read status. This project was made for the Odin Project's Full Stack Javascript path.",
     type: "Front-end",
     language: "Javascript",
     technologies: [],
@@ -156,7 +157,7 @@ export const Projects: Array<Project> = [
     id: "project-35",
     title: "Tic Tac Toe",
     description:
-      "A web based Tic Tac Toe game where users can choose to play against an AI or another User.",
+      "A web based Tic Tac Toe game where users can choose to play against an AI or another User. This project was made for the Odin Project's Full Stack Javascript path.",
     type: "Front-end",
     language: "Javascript",
     technologies: [],
@@ -167,7 +168,8 @@ export const Projects: Array<Project> = [
   {
     id: "project-34",
     title: "Restaurant Page",
-    description: "A restaurant webpage build with only DOM manipulation",
+    description:
+      "A restaurant webpage build with only DOM manipulation. This project was made for the Odin Project's Full Stack Javascript path.",
     type: "Front-end",
     language: "Javascript",
     technologies: [],
@@ -179,7 +181,7 @@ export const Projects: Array<Project> = [
     id: "project-33",
     title: "CLI Chess",
     description:
-      "A command line chess game where users can play against a player or an AI. The user can also save and load their game.",
+      "A command line chess game where users can play against a player or an AI. The user can also save and load their game. This project was made for the Odin project's Full Stack Ruby On Rails path.",
     type: "Other",
     language: "Ruby",
     technologies: [],
@@ -191,7 +193,7 @@ export const Projects: Array<Project> = [
     id: "project-32",
     title: "CLI Tic Tac Toe",
     description:
-      "A command line Tic Tac Toe game where 2 players can play against each other.",
+      "A command line Tic Tac Toe game where 2 players can play against each other. This project was made for the Odin project's Full Stack Ruby On Rails path.",
     type: "Other",
     language: "Ruby",
     technologies: [],
@@ -202,7 +204,8 @@ export const Projects: Array<Project> = [
   {
     id: "project-31",
     title: "CLI Hangman",
-    description: "A command line hangman game with a save and load feature,",
+    description:
+      "A command line hangman game with a save and load feature. This project was made for the Odin project's Full Stack Ruby On Rails path.",
     type: "Other",
     language: "Ruby",
     technologies: [],
@@ -214,7 +217,7 @@ export const Projects: Array<Project> = [
     id: "project-30",
     title: "CLI Mastermind",
     description:
-      "A command line mastermind game where the user can play against a computer either as a secret code maker or a secret code breaker.",
+      "A command line mastermind game where the user can play against a computer either as a secret code maker or a secret code breaker. This project was made for the Odin project's Full Stack Ruby On Rails path.",
     type: "Other",
     language: "Ruby",
     technologies: [],
@@ -225,7 +228,8 @@ export const Projects: Array<Project> = [
   {
     id: "project-29",
     title: "Calculator",
-    description: "A simple web based calculator",
+    description:
+      "A simple web based calculator. This project was made for the Odin Project's Foundation path.",
     type: "Front-end",
     language: "Javascript",
     technologies: [],
@@ -237,7 +241,7 @@ export const Projects: Array<Project> = [
     id: "project-28",
     title: "Etch a Sketch",
     description:
-      "A web based application of something between a sketchpad and an Etch-A-Sketch.",
+      "A web based application of something between a sketchpad and an Etch-A-Sketch. This project was made for the Odin Project's Foundation path.",
     type: "Front-end",
     language: "Javascript",
     technologies: [],
@@ -249,7 +253,7 @@ export const Projects: Array<Project> = [
     id: "project-27",
     title: "Rock Paper Scissors",
     description:
-      "A web based rock-paper-scissors game where the user will play against a computer until one wins 5 rounds.",
+      "A web based rock-paper-scissors game where the user will play against a computer until one wins 5 rounds. This project was made for the Odin Project's Foundation path.",
     type: "Front-end",
     language: "Javascript",
     technologies: [],
@@ -261,7 +265,7 @@ export const Projects: Array<Project> = [
     id: "project-26",
     title: "Simon Game",
     description:
-      "A web based simon game where users can play a simon game for 20 rounds with strict or non-strict mode.",
+      "A web based simon game where users can play a simon game for 20 rounds with strict or non-strict mode. This project was made for the FreeCodeCamp's Take Home Project.",
     type: "Front-end",
     language: "Javascript",
     technologies: [],
@@ -273,7 +277,7 @@ export const Projects: Array<Project> = [
     id: "project-25",
     title: "Pinterest Clone",
     description:
-      "A pinterest clone where users can login with their github account and then can view, link and delete the images they link to in the pinterest clone.",
+      "A pinterest clone where users can login with their github account and then can view, link and delete the images they link to in the pinterest clone. This project was made for the FreeCodeCamp's Take Home Project.",
     type: "Full Stack",
     language: "Javascript",
     technologies: ["React", "MongoDB", "Express"],
@@ -285,7 +289,7 @@ export const Projects: Array<Project> = [
     id: "project-24",
     title: "Recipe Box",
     description:
-      "A web based recipe box where users can create, edit, delete, and keep recipes that have names, ingridients, and directions.",
+      "A web based recipe box where users can create, edit, delete, and keep recipes that have names, ingridients, and directions. This project was made for the FreeCodeCamp's Take Home Project.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["React"],
@@ -297,7 +301,7 @@ export const Projects: Array<Project> = [
     id: "project-23",
     title: "Forum Homepage",
     description:
-      "FreeCodeCamp Forum HomePage where users can see the most recent posts in FreeCodeCamp forum including it's details.",
+      "FreeCodeCamp Forum HomePage where users can see the most recent posts in FreeCodeCamp forum including it's details. This project was made for the FreeCodeCamp's Take Home Project.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["React"],
@@ -309,7 +313,7 @@ export const Projects: Array<Project> = [
     id: "project-22",
     title: "Image Searcher",
     description:
-      "A web based Image Search Abstraction Layer that allows user to search for images related to the query and also see recent searches.",
+      "A web based Image Search Abstraction Layer that allows user to search for images related to the query and also see recent searches. This project was made for the FreeCodeCamp's Take Home Project.",
     type: "Full Stack",
     language: "Javascript",
     technologies: ["React", "MongoDB", "Express"],
@@ -321,7 +325,7 @@ export const Projects: Array<Project> = [
     id: "project-21",
     title: "Twitch Json Api",
     description:
-      "A web based application that display information whether a list of channels IN Twitch.tv are currently streaming or not.",
+      "A web based application that display information whether a list of channels IN Twitch.tv are currently streaming or not. This project was made for the FreeCodeCamp's Take Home Project.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["React"],
@@ -333,20 +337,19 @@ export const Projects: Array<Project> = [
     id: "project-20",
     title: "Local Weather",
     description:
-      "A web based local weather application that displays the weather based on the user's current location.",
+      "A web based local weather application that displays the weather based on the user's current location. This project was made for the FreeCodeCamp's Take Home Project.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["React"],
     demoUrl: "https://codepen.io/jordyf15/full/MWjJoxX",
-    repoUrl:
-      "https://github.com/jordyf15/FreeCodeCamp-Local-Weather/blob/master/package.json",
+    repoUrl: "https://github.com/jordyf15/FreeCodeCamp-Local-Weather",
     imageUrl: localWeatherImg,
   },
   {
     id: "project-19",
     title: "Drum Machine",
     description:
-      "A web based drum machine application where users can play a drum.",
+      "A web based drum machine application where users can play a drum. This project was made for the FreeCodeCamp's Frontend Library Curriculum.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["React"],
@@ -357,7 +360,8 @@ export const Projects: Array<Project> = [
   {
     id: "project-18",
     title: "Connecting Four",
-    description: "A command line connecting four game built with TTD.",
+    description:
+      "A command line connecting four game built with TTD. This project was made for the Odin project's Full Stack Ruby On Rails path.",
     type: "Other",
     language: "Ruby",
     technologies: [],
@@ -369,7 +373,7 @@ export const Projects: Array<Project> = [
     id: "project-17",
     title: "Open Music API",
     description:
-      "An API where users can perform a CRUD operation of songs and playlists.",
+      "An API where users can perform a CRUD operation of songs and playlists. This project was made for the Dicoding's Fundamental BackEnd Development Project.",
     type: "Back-end",
     language: "Javascript",
     technologies: ["Postgres", "Redis", "Hapi"],
@@ -381,7 +385,8 @@ export const Projects: Array<Project> = [
   {
     id: "project-16",
     title: "Bookshelf API",
-    description: "An API where users can perform a CRUD operation of books.",
+    description:
+      "An API where users can perform a CRUD operation of books. This project was made for the Dicoding's Beginner BackEnd Development Course.",
     type: "Back-end",
     language: "Javascript",
     technologies: ["Hapi"],
@@ -393,7 +398,8 @@ export const Projects: Array<Project> = [
   {
     id: "project-15",
     title: "Garuda Game Forum API",
-    description: "An API with ",
+    description:
+      "An API which have the basic features of a forum web application and was implemented using clean architecture and 100% test coverage. This project was made for the Dicoding's Expert Backend Development Course.",
     type: "Back-end",
     language: "Javascript",
     technologies: ["Hapi", "Postgres"],
@@ -405,7 +411,7 @@ export const Projects: Array<Project> = [
     id: "project-14",
     title: "File Metadata Microservice",
     description:
-      "A File Metadata Microservice where users can upload a file and receive it's meta data such as file name and size.",
+      "A File Metadata Microservice where users can upload a file and receive it's meta data such as file name and size. This project was made for the FreeCodeCamp's API and Microservice Curriculum.",
     type: "Back-end",
     language: "Javascript",
     technologies: ["Express"],
@@ -418,7 +424,7 @@ export const Projects: Array<Project> = [
     id: "project-13",
     title: "Exercise Tracker Microservice",
     description:
-      "A Exercise Tracker Microservice where users can add and get exercises for a user.",
+      "A Exercise Tracker Microservice where users can add and get exercises for a user. This project was made for the FreeCodeCamp's API and Microservice Curriculum.",
     type: "Back-end",
     language: "Javascript",
     technologies: ["Express", "MongoDB"],
@@ -430,7 +436,8 @@ export const Projects: Array<Project> = [
   {
     id: "project-12",
     title: "URL Shortener Microservice",
-    description: "A URL Shortener Microservice where users can shorten a url.",
+    description:
+      "A URL Shortener Microservice where users can shorten a url. This project was made for the FreeCodeCamp's API and Microservice Curriculum.",
     type: "Back-end",
     language: "Javascript",
     technologies: ["Express", "MongoDB"],
@@ -443,7 +450,7 @@ export const Projects: Array<Project> = [
     id: "project-11",
     title: "Request Header Parser Microservice",
     description:
-      "A microservice that allows the user to get their IP Address, Preferred Languages, and System Information of their current device.",
+      "A microservice that allows the user to get their IP Address, Preferred Languages, and System Information of their current device. This project was made for the FreeCodeCamp's API and Microservice Curriculum.",
     type: "Back-end",
     language: "Javascript",
     technologies: ["Express"],
@@ -456,7 +463,7 @@ export const Projects: Array<Project> = [
     id: "project-10",
     title: "Timestamp Microservice",
     description:
-      "A microservice that will return a unix and utc timestamp of the inputted time to the user.",
+      "A microservice that will return a unix and utc timestamp of the inputted time to the user. This project was made for the FreeCodeCamp's API and Microservice Curriculum.",
     type: "Back-end",
     language: "Javascript",
     technologies: ["Express"],
@@ -467,7 +474,8 @@ export const Projects: Array<Project> = [
   {
     id: "project-9",
     title: "Pomodoro Clock",
-    description: "A web based pomodoro clock application.",
+    description:
+      "A web based pomodoro clock application. This project was made for the FreeCodeCamp's Frontent Library Curriculum.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["React"],
@@ -478,7 +486,8 @@ export const Projects: Array<Project> = [
   {
     id: "project-8",
     title: "React Calculator",
-    description: "A web based calculator application.",
+    description:
+      "A web based calculator application. This project was made for the FreeCodeCamp's Frontent Library Curriculum.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["React"],
@@ -490,7 +499,7 @@ export const Projects: Array<Project> = [
     id: "project-7",
     title: "Markdown Previewer",
     description:
-      "A web based markdown previewer where the user can immediately see the preview of the markdown that they wrote.",
+      "A web based markdown previewer where the user can immediately see the preview of the markdown that they wrote. This project was made for the FreeCodeCamp's Frontent Library Curriculum.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["React"],
@@ -502,7 +511,7 @@ export const Projects: Array<Project> = [
     id: "project-6",
     title: "Random Quote Machine",
     description:
-      "A web based Random Quote Machine that displays new and random quote everytime the user clicks on the 'New Quote' button and also allows the user to share it on Twitter and Tumblr.",
+      "A web based Random Quote Machine that displays new and random quote everytime the user clicks on the 'New Quote' button and also allows the user to share it on Twitter and Tumblr. This project was made for the FreeCodeCamp's Frontent Library Curriculum.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["React"],
@@ -514,7 +523,7 @@ export const Projects: Array<Project> = [
     id: "project-5",
     title: "US GDP's Bar Chart",
     description:
-      "A data visualization of The United States's GDP in the form of a Bar Chart.",
+      "A data visualization of The United States's GDP in the form of a Bar Chart. This project was made for the Freecodecamp's Data Visualization Curriculum.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["D3js"],
@@ -527,7 +536,7 @@ export const Projects: Array<Project> = [
     id: "project-4",
     title: "Professional Bicycle Racing Doping Cases's Scatter Plot",
     description:
-      "A data visualization of The Professional Bicycle Racing Doping Cases in the form of a Scatter Plot",
+      "A data visualization of The Professional Bicycle Racing Doping Cases in the form of a Scatter Plot. This project was made for the Freecodecamp's Data Visualization Curriculum.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["D3js"],
@@ -540,7 +549,7 @@ export const Projects: Array<Project> = [
     id: "project-3",
     title: "Monthly Global Land-Surface Temperature's Heat Map",
     description:
-      "A data visualization of The Monthly Global Land-Surface Temperature in the form of a Heat Map.",
+      "A data visualization of The Monthly Global Land-Surface Temperature in the form of a Heat Map. This project was made for the Freecodecamp's Data Visualization Curriculum.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["D3js"],
@@ -553,7 +562,7 @@ export const Projects: Array<Project> = [
     id: "project-2",
     title: "US Educational Attainment's Choropleth Map",
     description:
-      "A data visualization of The United States Educational Attainment in the form of a Choropleth Map",
+      "A data visualization of The United States Educational Attainment in the form of a Choropleth Map. This project was made for the Freecodecamp's Data Visualization Curriculum.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["D3js"],
@@ -566,7 +575,7 @@ export const Projects: Array<Project> = [
     id: "project-1",
     title: "Video Game Sale's Tree Map",
     description:
-      "A data visualization of The Video Game Sale in the form of a Tree Map.",
+      "A data visualization of The Video Game Sale in the form of a Tree Map. This project was made for the Freecodecamp's Data Visualization Curriculum.",
     type: "Front-end",
     language: "Javascript",
     technologies: ["D3js"],
