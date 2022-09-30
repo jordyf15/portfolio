@@ -4,6 +4,7 @@ import {
   InputLabel,
   MenuItem,
   Select,
+  SelectChangeEvent,
   Stack,
   styled,
   SxProps,
@@ -11,7 +12,7 @@ import {
   Theme,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import { ChangeEvent, ReactNode, useState } from "react";
 import { projects as projectDatas } from "../../datas/ProjectData";
 import ProjectList from "./ProjectList";
 
@@ -33,6 +34,79 @@ const FilterSelect = styled(Select)(() => ({
 
 const ProjectPage = () => {
   const [currentProjectList, setCurrentProjectList] = useState(projectDatas);
+  const [currentNameFilter, setCurrentNameFilter] = useState("");
+  const [currentTypeFilter, setCurrentTypeFilter] = useState("All");
+  const [currentLanguageFilter, setCurrentLanguageFilter] = useState("All");
+
+  const onFilterName = ({
+    target,
+  }: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setCurrentNameFilter(target.value);
+    const filteredByType =
+      currentTypeFilter === "All"
+        ? projectDatas
+        : projectDatas.filter((project) => project.type === currentTypeFilter);
+
+    const filteredByLanguage =
+      currentLanguageFilter === "All"
+        ? filteredByType
+        : filteredByType.filter(
+            (project) => project.language === currentLanguageFilter
+          );
+
+    const filteredByName = filteredByLanguage.filter((project) =>
+      project.title.toLowerCase().includes(target.value.toLowerCase())
+    );
+
+    setCurrentProjectList(filteredByName);
+  };
+
+  const onFilterType = (
+    { target }: SelectChangeEvent<unknown>,
+    _: ReactNode
+  ) => {
+    setCurrentTypeFilter(target.value as string);
+    const filteredByLanguage =
+      currentLanguageFilter === "All"
+        ? projectDatas
+        : projectDatas.filter(
+            (project) => project.language === currentLanguageFilter
+          );
+
+    const filteredByName = filteredByLanguage.filter((project) =>
+      project.title.toLowerCase().includes(currentNameFilter.toLowerCase())
+    );
+
+    const filteredByType =
+      target.value === "All"
+        ? filteredByName
+        : filteredByName.filter((project) => project.type === target.value);
+
+    setCurrentProjectList(filteredByType);
+  };
+
+  const onFilterLanguage = (
+    { target }: SelectChangeEvent<unknown>,
+    _: ReactNode
+  ) => {
+    setCurrentLanguageFilter(target.value as string);
+    const filteredByType =
+      currentTypeFilter === "All"
+        ? projectDatas
+        : projectDatas.filter((project) => project.type === currentTypeFilter);
+
+    const filteredByName = filteredByType.filter((project) =>
+      project.title.toLowerCase().includes(currentNameFilter.toLowerCase())
+    );
+
+    const filteredByLanguage =
+      target.value === "All"
+        ? filteredByName
+        : filteredByName.filter((project) => project.language === target.value);
+
+    setCurrentProjectList(filteredByLanguage);
+  };
+
   return (
     <Stack flex={1} py="35px" alignItems="center">
       <Typography
@@ -98,6 +172,7 @@ const ProjectPage = () => {
               sm: "40px",
             },
           }}
+          onChange={onFilterName}
         />
         <Stack
           direction="row"
@@ -119,11 +194,13 @@ const ProjectPage = () => {
             ]}
             filterType="Type"
             sx={{ minWidth: "85px", mr: { xs: "5px", sm: "8px" } }}
+            onFilter={onFilterType}
           />
           <ProjectFilterSelect
             options={["All", "Kotlin", "Javascript", "Ruby", "Go"]}
             filterType="Language"
             sx={{ minWidth: "125px" }}
+            onFilter={onFilterLanguage}
           />
           <Box flex={1} />
         </Stack>
@@ -137,12 +214,14 @@ interface ProjectFilterSelectProps {
   options: Array<string>;
   filterType: "Type" | "Language";
   sx?: SxProps<Theme>;
+  onFilter: (event: SelectChangeEvent<unknown>, child: ReactNode) => void;
 }
 
 const ProjectFilterSelect = ({
   options,
   filterType,
   sx,
+  onFilter,
 }: ProjectFilterSelectProps) => {
   return (
     <FormControl
@@ -165,6 +244,7 @@ const ProjectFilterSelect = ({
           fontWeight: "bold",
           fontFamily: `"Roboto", sans-serif`,
         }}
+        onChange={onFilter}
       >
         {options.map((option) => (
           <MenuItem
@@ -176,7 +256,6 @@ const ProjectFilterSelect = ({
           </MenuItem>
         ))}
       </FilterSelect>
-      <Stack></Stack>
     </FormControl>
   );
 };
