@@ -1,7 +1,9 @@
+import apiImg from "../assets/projects/apiImg.jpg";
 import cliChessImg from "../assets/projects/cli-chess.jpeg";
 import cliHangmanImg from "../assets/projects/cli-hangman.jpeg";
 import cliMasterMindImg from "../assets/projects/cli-mastermind.jpeg";
 import cliTicTacToeImg from "../assets/projects/cli-tic-tac-toe.jpeg";
+import connectingFourImg from "../assets/projects/connecting-four.jpg";
 import cvApplicationImg from "../assets/projects/cv-application.jpeg";
 import difoodingImg from "../assets/projects/difooding.jpeg";
 import digiMemoryImg from "../assets/projects/digi-memory.jpeg";
@@ -10,7 +12,8 @@ import etchASketchImg from "../assets/projects/etch-a-sketch.jpeg";
 import exerciseTrackerMicroserviceImg from "../assets/projects/exercise-tracker-microservice.jpeg";
 import fileMetadataMicroserviceImg from "../assets/projects/file-metadata-microservice.jpeg";
 import forumHomepageImg from "../assets/projects/forum-homepage.jpeg";
-import githubUsersImg from "../assets/projects/github-users.png";
+import githubUsersImg from "../assets/projects/github-users.jpg";
+import hololiveInfoAppImg from "../assets/projects/hololive-infoapp.jpg";
 import imageSearcherImg from "../assets/projects/image-searcher.jpeg";
 import javascriptCalculatorImg from "../assets/projects/javascript-calculator.jpeg";
 import localWeatherImg from "../assets/projects/local-weather.jpeg";
@@ -32,7 +35,6 @@ import ticTacToeImg from "../assets/projects/tic-tac-toe.jpeg";
 import timestampMicroservice from "../assets/projects/timestamp-microservice.jpeg";
 import todoListImg from "../assets/projects/todo-list.jpeg";
 import twitchJsonApiImg from "../assets/projects/twitch-json-api.jpeg";
-import unavailableImg from "../assets/projects/unavailable.jpg";
 import urlShortenerMicroserviceImg from "../assets/projects/url-shortener-microservice.jpeg";
 import usEducationalAttainmentChoroplethMapImg from "../assets/projects/us-educational-attainment-choropleth-map.jpeg";
 import usGdpImg from "../assets/projects/us-gdp.jpeg";
@@ -43,7 +45,7 @@ import Project from "../models/Project";
 
 export const projects: Array<Project> = [
   {
-    id: "project-44",
+    id: "project-45",
     title: "Github Users",
     description:
       "Github Users is an android application where users can view informations about users in Github. This project was made for the Dicoding's Fundamental Android Development Course.",
@@ -56,7 +58,7 @@ export const projects: Array<Project> = [
     imageUrl: githubUsersImg,
   },
   {
-    id: "project-43",
+    id: "project-44",
     title: "Restopedia",
     description:
       "Restopedia is a Progressive web apps that allows the user to view information about certain restaurants such as their location, menus, reviews and ratings and also favorite them. This project was made for the Dicoding's Expert Front-end Development Course.",
@@ -69,7 +71,7 @@ export const projects: Array<Project> = [
     imageUrl: restopediaImg,
   },
   {
-    id: "project-42",
+    id: "project-43",
     title: "CV Creator",
     description:
       "A CV Creator web application where users can create their own CV and download it. This project was made for the Odin Project's Full Stack Javascript path.",
@@ -81,7 +83,7 @@ export const projects: Array<Project> = [
     imageUrl: cvApplicationImg,
   },
   {
-    id: "project-41",
+    id: "project-42",
     title: "Digi Memory",
     description:
       "A digimon themed memory card game built with React. This project was made for the Odin Project's Full Stack Javascript path.",
@@ -93,7 +95,7 @@ export const projects: Array<Project> = [
     imageUrl: digiMemoryImg,
   },
   {
-    id: "project-40",
+    id: "project-41",
     title: "Wiki Viewer",
     description:
       "A wikipedia viewer which allow users to search for related wikipedia entries based on the word they type in the search bar and also get a random wikipedia entry if the users want it. This project was made for the FreeCodeCamp's Take Home Project.",
@@ -105,7 +107,7 @@ export const projects: Array<Project> = [
     imageUrl: wikipediaViewerImg,
   },
   {
-    id: "project-39",
+    id: "project-40",
     title: "Difooding",
     description:
       "A web application where users can search for all kinds of food recipes by name or through filter which are divided by 3 types: categories, area, and ingridients. This project was made for the Dicoding's Fundamental Front-end Web Development Course.",
@@ -118,7 +120,7 @@ export const projects: Array<Project> = [
     imageUrl: difoodingImg,
   },
   {
-    id: "project-38",
+    id: "project-39",
     title: "Todo List",
     description:
       "A web based todo list application where users can organize their todos. This project was made for the Odin Project's Full Stack Javascript path.",
@@ -130,7 +132,7 @@ export const projects: Array<Project> = [
     imageUrl: todoListImg,
   },
   {
-    id: "project-37",
+    id: "project-38",
     title: "Weather App",
     description:
       "A web based weather application where users can view the weather information of the location they searched for. This project was made for the Odin Project's Full Stack Javascript path.",
@@ -142,7 +144,7 @@ export const projects: Array<Project> = [
     imageUrl: weatherAppImg,
   },
   {
-    id: "project-36",
+    id: "project-37",
     title: "Odin Library",
     description:
       "A web based library application where users can save their books information such as author, title, pages, and the read status. This project was made for the Odin Project's Full Stack Javascript path.",
@@ -154,7 +156,7 @@ export const projects: Array<Project> = [
     imageUrl: odinLibraryImg,
   },
   {
-    id: "project-35",
+    id: "project-36",
     title: "Tic Tac Toe",
     description:
       "A web based Tic Tac Toe game where users can choose to play against an AI or another User. This project was made for the Odin Project's Full Stack Javascript path.",
@@ -166,7 +168,7 @@ export const projects: Array<Project> = [
     imageUrl: ticTacToeImg,
   },
   {
-    id: "project-34",
+    id: "project-35",
     title: "Restaurant Page",
     description:
       "A restaurant webpage build with only DOM manipulation. This project was made for the Odin Project's Full Stack Javascript path.",
@@ -178,7 +180,7 @@ export const projects: Array<Project> = [
     imageUrl: restaurantPageImg,
   },
   {
-    id: "project-33",
+    id: "project-34",
     title: "CLI Chess",
     description:
       "A command line chess game where users can play against a player or an AI. The user can also save and load their game. This project was made for the Odin project's Full Stack Ruby On Rails path.",
@@ -190,7 +192,7 @@ export const projects: Array<Project> = [
     imageUrl: cliChessImg,
   },
   {
-    id: "project-32",
+    id: "project-33",
     title: "CLI Tic Tac Toe",
     description:
       "A command line Tic Tac Toe game where 2 players can play against each other. This project was made for the Odin project's Full Stack Ruby On Rails path.",
@@ -202,7 +204,7 @@ export const projects: Array<Project> = [
     imageUrl: cliTicTacToeImg,
   },
   {
-    id: "project-31",
+    id: "project-32",
     title: "CLI Hangman",
     description:
       "A command line hangman game with a save and load feature. This project was made for the Odin project's Full Stack Ruby On Rails path.",
@@ -214,7 +216,7 @@ export const projects: Array<Project> = [
     imageUrl: cliHangmanImg,
   },
   {
-    id: "project-30",
+    id: "project-31",
     title: "CLI Mastermind",
     description:
       "A command line mastermind game where the user can play against a computer either as a secret code maker or a secret code breaker. This project was made for the Odin project's Full Stack Ruby On Rails path.",
@@ -226,7 +228,7 @@ export const projects: Array<Project> = [
     imageUrl: cliMasterMindImg,
   },
   {
-    id: "project-29",
+    id: "project-30",
     title: "Calculator",
     description:
       "A simple web based calculator. This project was made for the Odin Project's Foundation path.",
@@ -238,7 +240,7 @@ export const projects: Array<Project> = [
     imageUrl: javascriptCalculatorImg,
   },
   {
-    id: "project-28",
+    id: "project-29",
     title: "Etch a Sketch",
     description:
       "A web based application of something between a sketchpad and an Etch-A-Sketch. This project was made for the Odin Project's Foundation path.",
@@ -250,7 +252,7 @@ export const projects: Array<Project> = [
     imageUrl: etchASketchImg,
   },
   {
-    id: "project-27",
+    id: "project-28",
     title: "Rock Paper Scissors",
     description:
       "A web based rock-paper-scissors game where the user will play against a computer until one wins 5 rounds. This project was made for the Odin Project's Foundation path.",
@@ -260,6 +262,19 @@ export const projects: Array<Project> = [
     demoUrl: "https://jordyf15.github.io/rock-paper-scissors/",
     repoUrl: "https://github.com/jordyf15/rock-paper-scissors",
     imageUrl: rockPaperScissorsImg,
+  },
+  {
+    id: "project-27",
+    title: "Hololive InfoApp",
+    description:
+      "An android application where users can view information about 15 Vtubers from Hololive. This project was made for the Dicoding's Beginner Android Development Course.",
+    type: "Android",
+    language: "Kotlin",
+    technologies: [],
+    demoUrl: "",
+    repoUrl:
+      "https://github.com/jordyf15/Hololive-InfoApp_Dicoding-Beginner-Android-Development-Final-Project",
+    imageUrl: hololiveInfoAppImg,
   },
   {
     id: "project-26",
@@ -367,7 +382,7 @@ export const projects: Array<Project> = [
     technologies: [],
     demoUrl: "",
     repoUrl: "https://github.com/jordyf15/connecting-four",
-    imageUrl: unavailableImg,
+    imageUrl: connectingFourImg,
   },
   {
     id: "project-17",
@@ -380,7 +395,7 @@ export const projects: Array<Project> = [
     demoUrl: "https://jordy-open-music-api.herokuapp.com/",
     repoUrl:
       "https://github.com/jordyf15/Open-Music-API_Dicoding-Fundamental-BackEnd-Development-Project",
-    imageUrl: unavailableImg,
+    imageUrl: apiImg,
   },
   {
     id: "project-16",
@@ -393,7 +408,7 @@ export const projects: Array<Project> = [
     demoUrl: "https://jordy-bookshelf-api.herokuapp.com/",
     repoUrl:
       "https://github.com/jordyf15/BookShelf-API-Dicoding-Beginner-BackEnd-Development-Project",
-    imageUrl: unavailableImg,
+    imageUrl: apiImg,
   },
   {
     id: "project-15",
@@ -405,7 +420,7 @@ export const projects: Array<Project> = [
     technologies: ["Hapi", "Postgres"],
     demoUrl: "https://jordy-forum-api.herokuapp.com/",
     repoUrl: "https://github.com/jordyf15/garuda-game-forum-api",
-    imageUrl: unavailableImg,
+    imageUrl: apiImg,
   },
   {
     id: "project-14",
