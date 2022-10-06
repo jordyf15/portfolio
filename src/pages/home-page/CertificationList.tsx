@@ -51,7 +51,7 @@ const CertificationList = ({
     >
       <Typography
         component="h2"
-        color="#F78166"
+        color="primary.main"
         textAlign="center"
         fontWeight="bold"
         sx={{
@@ -114,8 +114,8 @@ const CertificationList = ({
               sx={{
                 color:
                   currentCertificateIndex + 1 === numbering
-                    ? "#F78166"
-                    : "#7B7B7B",
+                    ? "primary.main"
+                    : "minorText",
                 minWidth: "unset",
                 py: 0,
                 px: "5px",
@@ -138,7 +138,7 @@ const CertificationList = ({
 
 const iconSx: SxProps<Theme> = {
   fontSize: { xs: "40px", sm: "60px" },
-  color: "#F78166",
+  color: "primary.main",
 };
 
 const CustomIconBtn = (props: IconButtonProps) => {

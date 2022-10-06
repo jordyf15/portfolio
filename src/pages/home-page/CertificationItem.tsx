@@ -88,7 +88,7 @@ const CertificationItem = ({ certification }: CertificationItemProp) => {
           }}
         >
           <Typography
-            color="#F78166"
+            color="primary.main"
             component="h3"
             fontWeight="bold"
             lineHeight="unset"
@@ -115,6 +115,7 @@ const CertificationItem = ({ certification }: CertificationItemProp) => {
                 sm: "16px",
               },
             }}
+            color="secondary.main"
           >
             {certification.description}
           </Typography>

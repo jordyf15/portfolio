@@ -16,6 +16,7 @@ const ProjectLanguage = ({ language }: ProjectLanguageProps) => {
             md: "15px",
           },
         }}
+        color="secondary.main"
       >
         Language:{" "}
       </Typography>
@@ -32,6 +33,7 @@ const ProjectLanguage = ({ language }: ProjectLanguageProps) => {
               md: "15px",
             },
           }}
+          color="secondary.main"
         >
           {language}
         </Typography>

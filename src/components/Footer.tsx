@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 const Footer = () => {
   return (
     <Typography
-      color="#7B7B7B"
+      color="minorText"
       fontSize="14px"
       textAlign="center"
       mb="15px"

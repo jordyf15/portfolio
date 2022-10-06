@@ -12,8 +12,8 @@ interface ProfileLinksProp {
 const ProfileLinks = ({ Icon, text, url }: ProfileLinksProp) => {
   return (
     <Link
-      bgcolor="#F78166"
-      color="white"
+      bgcolor="primary.main"
+      color="onPrimary"
       target="_blank"
       rel="noreferrer"
       href={url}
@@ -22,7 +22,6 @@ const ProfileLinks = ({ Icon, text, url }: ProfileLinksProp) => {
       flexDirection="row"
       alignItems="center"
       fontFamily={`"Roboto", sans-serif`}
-      // fontSize="14px"
       p="5px"
       pr="8px"
       mx="12px"

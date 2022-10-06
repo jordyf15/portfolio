@@ -21,7 +21,7 @@ const HistoryList = ({ historyList, historyTitle }: HistoryListProp) => {
     >
       <Typography
         component="h2"
-        color="#F78166"
+        color="primary.main"
         textAlign="center"
         fontWeight="bold"
         sx={{

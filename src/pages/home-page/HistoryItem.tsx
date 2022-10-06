@@ -1,5 +1,5 @@
 import { Groups, School, Work } from "@mui/icons-material";
-import { Box, Stack, SxProps, Typography } from "@mui/material";
+import { Box, BoxProps, Stack, SxProps, Typography } from "@mui/material";
 import { Theme } from "@mui/system";
 import History from "../../models/History";
 
@@ -11,7 +11,6 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
   return (
     <Stack
       direction="row"
-      border="3px solid #D0D7DE"
       width="85%"
       mt="20px"
       sx={{
@@ -19,12 +18,15 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
           xs: "25px",
           sm: "15px",
         },
+        borderWidth: "3px",
+        borderStyle: "solid",
+        borderColor: "border",
       }}
     >
       <Stack direction="column" width="70px" alignItems="center">
-        <Pipe />
+        <Pipe sx={{ mt: "5px" }} />
         <Stack
-          bgcolor="#EAEEF2"
+          bgcolor="historyBackground"
           borderRadius="50%"
           my="5px"
           justifyContent="center"
@@ -42,7 +44,7 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
         >
           <HistoryIcon category={history.category} />
         </Stack>
-        <Pipe />
+        <Pipe sx={{ mb: "5px" }} />
       </Stack>
       <Stack direction="column" justifyContent="center">
         <Typography
@@ -53,7 +55,7 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
             },
           }}
           fontWeight="bold"
-          color="#F78166"
+          color="primary.main"
         >
           {history.institution}
         </Typography>
@@ -65,6 +67,7 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
             },
           }}
           fontWeight="bold"
+          color="secondary.main"
         >
           {history.role}
         </Typography>
@@ -75,7 +78,7 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
               sm: "16px",
             },
           }}
-          color="#7B7B7B"
+          color="minorText"
         >
           {history.date}
         </Typography>
@@ -84,17 +87,17 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
   );
 };
 
-const Pipe = () => {
+const Pipe = (props: BoxProps) => {
   return (
     <Box
-      bgcolor="#D8DEE4"
+      bgcolor="historyPillar"
       width="4px"
-      mt="5px"
       sx={{
         height: {
           xs: "25px",
           sm: "30px",
         },
+        ...props.sx,
       }}
     />
   );
@@ -106,7 +109,7 @@ interface HistoryIconProp {
 
 const HistoryIcon = ({ category }: HistoryIconProp) => {
   const iconSx: SxProps<Theme> = {
-    color: "#57606A",
+    color: "historyIcon",
     fontSize: {
       xs: "24px",
       sm: "30px",

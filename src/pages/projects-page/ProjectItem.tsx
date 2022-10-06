@@ -12,7 +12,6 @@ interface ProjectItemProps {
 const ProjectItem = ({ project }: ProjectItemProps) => {
   return (
     <Stack
-      border="2px solid #D0D7DE"
       width="85%"
       borderRadius="12px"
       mt="40px"
@@ -35,6 +34,9 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
           md: "25px",
           lg: "35px",
         },
+        borderStyle: "solid",
+        borderWidth: "2px",
+        borderColor: "border",
       }}
     >
       <Box
@@ -67,7 +69,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
       />
       <Stack width="80%">
         <Typography
-          color="#F78166"
+          color="primary.main"
           fontWeight="bold"
           sx={{
             textAlign: {
@@ -96,6 +98,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
               md: "14px",
             },
           }}
+          color="secondary.main"
         >
           {project.description}
         </Typography>

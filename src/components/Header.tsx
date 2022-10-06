@@ -2,6 +2,7 @@ import {
   BackupTable,
   DarkMode,
   Home,
+  LightMode,
   Settings,
   Translate,
 } from "@mui/icons-material";
@@ -15,15 +16,17 @@ import {
 } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { toggleTheme } from "../features/theme";
+import { useAppDispatch, useAppSelector } from "../hook";
 
 const Header = () => {
   const location = useLocation();
 
   return (
     <Stack
-      bgcolor="#252733"
+      bgcolor="headerBackground"
       direction="row"
-      color="#C9D1D9"
+      color="onHeader"
       alignItems="center"
       px="10px"
       justifyContent="space-between"
@@ -36,7 +39,7 @@ const Header = () => {
           display="flex"
           flexDirection="row"
           alignItems="center"
-          color="#C9D1D9"
+          color="onHeader"
           px="5px"
           py="15px"
           position="relative"
@@ -47,7 +50,7 @@ const Header = () => {
           <Home
             sx={{
               mr: "5px",
-              color: "#8B949E",
+              color: "headerIcon",
             }}
           />
           Home
@@ -57,7 +60,7 @@ const Header = () => {
             bottom={0}
             left={0}
             width="100%"
-            bgcolor="#F78166"
+            bgcolor="primary.main"
             sx={{
               visibility: location.pathname === "/" ? "show" : "hidden",
             }}
@@ -69,7 +72,7 @@ const Header = () => {
           alignItems="center"
           component={Link}
           to="/projects"
-          color="#C9D1D9"
+          color="onHeader"
           px="5px"
           py="15px"
           sx={{
@@ -81,7 +84,7 @@ const Header = () => {
           <BackupTable
             sx={{
               mr: "5px",
-              color: "#8B949E",
+              color: "headerIcon",
             }}
           />
           Projects
@@ -91,7 +94,7 @@ const Header = () => {
             bottom={0}
             left={0}
             width="100%"
-            bgcolor="#F78166"
+            bgcolor="primary.main"
             sx={{
               visibility: location.pathname === "/projects" ? "show" : "hidden",
             }}
@@ -108,6 +111,9 @@ const SettingMenu = () => {
   const [showSettingModal, setShowSettingModal] = useState(false);
   const settingButtonRef = useRef<HTMLButtonElement>(null);
   const settingModalRef = useRef<HTMLDivElement>(null);
+
+  const theme = useAppSelector((state) => state.theme);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     document.addEventListener("click", hideSettingModal, true);
@@ -130,20 +136,24 @@ const SettingMenu = () => {
     }
   };
 
+  const onToggleTheme = () => {
+    dispatch(toggleTheme({}));
+  };
+
   useEffect(() => {}, []);
   return isMobile ? (
     <Box component="div" position="relative">
       <IconButton
         aria-label="open setting modal"
         sx={{
-          color: "#C9D1D9",
+          color: "onHeader",
         }}
         onClick={toggleShowSettingModal}
         ref={settingButtonRef}
       >
         <Settings
           sx={{
-            color: "#8B949E",
+            color: "headerIcon",
           }}
         />
       </IconButton>
@@ -153,7 +163,7 @@ const SettingMenu = () => {
           bottom="-75px"
           right={0}
           zIndex={5}
-          bgcolor="white"
+          bgcolor={theme === "Dark" ? "headerBackground" : "background.default"}
           width="175px"
           borderRadius="5px"
           boxShadow="0 4px 12px 2px rgba(0,0,0,0.25)"
@@ -161,12 +171,11 @@ const SettingMenu = () => {
         >
           <Button
             sx={{
-              // bgcolor: "red",
               width: "100%",
               justifyContent: "flex-start",
               alignItems: "center",
               fontWeight: "bold",
-              color: "black",
+              color: "secondary.main",
               pl: "15px",
               textTransform: "none",
             }}
@@ -177,29 +186,34 @@ const SettingMenu = () => {
           </Button>
           <Button
             sx={{
-              // bgcolor: "orange",
               width: "100%",
               justifyContent: "flex-start",
               alignItems: "center",
               fontWeight: "bold",
-              color: "black",
+              color: "secondary.main",
               pl: "15px",
               textTransform: "none",
             }}
             variant="text"
-            startIcon={<DarkMode />}
+            onClick={onToggleTheme}
+            startIcon={theme === "Dark" ? <LightMode /> : <DarkMode />}
           >
-            Dark Mode
+            {theme === "Dark" ? "Light Mode" : "Dark Mode"}
           </Button>
           <Box
             height={0}
             width={0}
             borderLeft="7px solid transparent"
             borderRight="7px solid transparent"
-            borderBottom="7px solid white"
             position="absolute"
             top="-7px"
             right="13px"
+            sx={{
+              borderBottomWidth: "7px",
+              borderBottomStyle: "solid",
+              borderBottomColor:
+                theme === "Dark" ? "headerBackground" : "background.default",
+            }}
           />
         </Stack>
       ) : null}
@@ -209,15 +223,19 @@ const SettingMenu = () => {
       <Button
         variant="text"
         sx={{
-          color: "#C9D1D9",
+          color: "onHeader",
           textTransform: "none",
         }}
-        startIcon={<Translate sx={{ color: "#8B949E" }} />}
+        startIcon={<Translate sx={{ color: "headerIcon" }} />}
       >
         Japanese
       </Button>
-      <IconButton>
-        <DarkMode sx={{ color: "#8B949E" }} />
+      <IconButton onClick={onToggleTheme}>
+        {theme === "Dark" ? (
+          <LightMode sx={{ color: "headerIcon" }} />
+        ) : (
+          <DarkMode sx={{ color: "headerIcon" }} />
+        )}
       </IconButton>
     </Box>
   );

@@ -6,7 +6,6 @@ import {
   Select,
   SelectChangeEvent,
   Stack,
-  styled,
   SxProps,
   TextField,
   Theme,
@@ -15,22 +14,6 @@ import {
 import { ChangeEvent, ReactNode, useState } from "react";
 import { projects as projectDatas } from "../../datas/ProjectData";
 import ProjectList from "./ProjectList";
-
-const SearchBox = styled(TextField)(() => ({
-  "& fieldset": {
-    borderRadius: "12px",
-    borderColor: "#D0D7DE",
-  },
-}));
-
-const FilterSelect = styled(Select)(() => ({
-  "& svg": {
-    color: "#24292F",
-  },
-  "& fieldset": {
-    borderColor: "#D0D7DE",
-  },
-}));
 
 const ProjectPage = () => {
   const [currentProjectList, setCurrentProjectList] = useState(projectDatas);
@@ -111,7 +94,7 @@ const ProjectPage = () => {
     <Stack flex={1} py="35px" alignItems="center">
       <Typography
         component="h1"
-        color="#F78166"
+        color="primary.main"
         fontWeight="bold"
         textAlign="center"
         sx={{
@@ -133,6 +116,7 @@ const ProjectPage = () => {
         sx={{
           mt: { xs: "10px", sm: "15px" },
         }}
+        color="secondary.main"
       >
         A collection of projects i have made
       </Typography>
@@ -155,7 +139,7 @@ const ProjectPage = () => {
           },
         }}
       >
-        <SearchBox
+        <TextField
           variant="outlined"
           placeholder="Find a project..."
           size="small"
@@ -170,6 +154,16 @@ const ProjectPage = () => {
             mr: {
               xs: "unset",
               sm: "40px",
+            },
+            "& fieldset": {
+              borderRadius: "12px",
+              borderColor: "border",
+            },
+          }}
+          autoComplete="off"
+          inputProps={{
+            sx: {
+              color: "secondary.main",
             },
           }}
           onChange={onFilterName}
@@ -193,7 +187,10 @@ const ProjectPage = () => {
               "Other",
             ]}
             filterType="Type"
-            sx={{ minWidth: "85px", mr: { xs: "5px", sm: "8px" } }}
+            sx={{
+              minWidth: currentTypeFilter === "All" ? "85px" : "125px",
+              mr: { xs: "5px", sm: "8px" },
+            }}
             onFilter={onFilterType}
           />
           <ProjectFilterSelect
@@ -232,17 +229,29 @@ const ProjectFilterSelect = ({
       }}
       size="small"
     >
-      <InputLabel sx={{ color: "#24292F", fontWeight: "bold" }}>
+      <InputLabel sx={{ color: "secondary.main", fontWeight: "bold" }}>
         {filterType}
       </InputLabel>
-      <FilterSelect
+      <Select
         label="Type"
         defaultValue=""
         sx={{
           borderRadius: "12px",
-          bgcolor: "#F6F8FA",
+          bgcolor: "selectBackground",
           fontWeight: "bold",
           fontFamily: `"Roboto", sans-serif`,
+          "& svg": {
+            color: "secondary.main",
+          },
+          "& fieldset": {
+            borderColor: "border",
+          },
+          color: "secondary.main",
+        }}
+        MenuProps={{
+          PaperProps: {
+            sx: { bgcolor: "selectPaperBackground", color: "secondary.main" },
+          },
         }}
         onChange={onFilter}
       >
@@ -255,7 +264,7 @@ const ProjectFilterSelect = ({
             {option}
           </MenuItem>
         ))}
-      </FilterSelect>
+      </Select>
     </FormControl>
   );
 };

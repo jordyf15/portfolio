@@ -20,7 +20,7 @@ const HomePage = () => {
     <Stack flex={1} py="35px" alignItems="center">
       <Typography
         component="h1"
-        color="#F78166"
+        color="primary.main"
         fontWeight="bold"
         textAlign="center"
         sx={{
@@ -59,6 +59,7 @@ const HomePage = () => {
             sm: "690px",
           },
         }}
+        color="secondary.main"
       >
         I am an undergraduate computer science student, and an aspiring Full
         Stack Developer.{notMobile ? <br></br> : null} I have a high interest in

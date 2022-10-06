@@ -1,13 +1,24 @@
 import { Stack, SvgIcon, Typography } from "@mui/material";
-import { ReactComponent as D3jsLogo } from "../../assets/icons/d3js.svg";
-import { ReactComponent as ExpressLogo } from "../../assets/icons/expressjs.svg";
-import { ReactComponent as GinLogo } from "../../assets/icons/gin.svg";
-import { ReactComponent as HapiLogo } from "../../assets/icons/hapi.svg";
-import { ReactComponent as MongoDBLogo } from "../../assets/icons/mongodb.svg";
-import { ReactComponent as PostgresLogo } from "../../assets/icons/postgres.svg";
-import { ReactComponent as ReactLogo } from "../../assets/icons/react.svg";
-import { ReactComponent as RedisLogo } from "../../assets/icons/redis.svg";
-import { ReactComponent as ReduxLogo } from "../../assets/icons/redux.svg";
+import { ReactComponent as D3jsLogoLight } from "../../assets/icons/d3js-light.svg";
+import { ReactComponent as ExpressLogoLight } from "../../assets/icons/expressjs-light.svg";
+import { ReactComponent as GinLogoLight } from "../../assets/icons/gin-light.svg";
+import { ReactComponent as HapiLogoLight } from "../../assets/icons/hapi-light.svg";
+import { ReactComponent as MongoDBLogoLight } from "../../assets/icons/mongodb-light.svg";
+import { ReactComponent as PostgresLogoLight } from "../../assets/icons/postgres-light.svg";
+import { ReactComponent as ReactLogoLight } from "../../assets/icons/react-light.svg";
+import { ReactComponent as RedisLogoLight } from "../../assets/icons/redis-light.svg";
+import { ReactComponent as ReduxLogoLight } from "../../assets/icons/redux-light.svg";
+
+import { ReactComponent as D3jsLogoDark } from "../../assets/icons/d3js-dark.svg";
+import { ReactComponent as ExpressLogoDark } from "../../assets/icons/expressjs-dark.svg";
+import { ReactComponent as GinLogoDark } from "../../assets/icons/gin-dark.svg";
+import { ReactComponent as HapiLogoDark } from "../../assets/icons/hapi-dark.svg";
+import { ReactComponent as MongoDBLogoDark } from "../../assets/icons/mongodb-dark.svg";
+import { ReactComponent as PostgresLogoDark } from "../../assets/icons/postgres-dark.svg";
+import { ReactComponent as ReactLogoDark } from "../../assets/icons/react-dark.svg";
+import { ReactComponent as RedisLogoDark } from "../../assets/icons/redis-dark.svg";
+import { ReactComponent as ReduxLogoDark } from "../../assets/icons/redux-dark.svg";
+import { useAppSelector } from "../../hook";
 
 type Technology =
   | "React"
@@ -48,6 +59,7 @@ const ProjectTechnologies = ({
             md: "15px",
           },
         }}
+        color="secondary.main"
       >
         Technologies:{" "}
       </Typography>
@@ -73,43 +85,44 @@ const TechnologyIcon = ({ technology }: TechnologyIconProps) => {
       title?: string | undefined;
     }
   >;
+  const theme = useAppSelector((state) => state.theme);
   let viewBox = "0 35 200 100";
 
   switch (technology) {
     case "D3js":
-      icon = D3jsLogo;
+      icon = theme === "Light" ? D3jsLogoLight : D3jsLogoDark;
       viewBox = "-35 30 200 100";
       break;
     case "Express":
-      icon = ExpressLogo;
+      icon = theme === "Light" ? ExpressLogoLight : ExpressLogoDark;
       viewBox = "-25 45 200 100";
       break;
     case "Gin":
-      icon = GinLogo;
+      icon = theme === "Light" ? GinLogoLight : GinLogoDark;
       viewBox = "0 55 150 50";
       break;
     case "Hapi":
-      icon = HapiLogo;
+      icon = theme === "Light" ? HapiLogoLight : HapiLogoDark;
       viewBox = "0 250 500 50";
       break;
     case "MongoDB":
-      icon = MongoDBLogo;
+      icon = theme === "Light" ? MongoDBLogoLight : MongoDBLogoDark;
       viewBox = "0 250 500 50";
       break;
     case "Postgres":
-      icon = PostgresLogo;
+      icon = theme === "Light" ? PostgresLogoLight : PostgresLogoDark;
       viewBox = "0 250 600 50";
       break;
     case "React":
-      icon = ReactLogo;
+      icon = theme === "Light" ? ReactLogoLight : ReactLogoDark;
       viewBox = "-13 50 150 50";
       break;
     case "Redis":
-      icon = RedisLogo;
+      icon = theme === "Light" ? RedisLogoLight : RedisLogoDark;
       viewBox = "0 400 1000 50";
       break;
     case "Redux":
-      icon = ReduxLogo;
+      icon = theme === "Light" ? ReduxLogoLight : ReduxLogoDark;
       viewBox = "0 200 400 50";
       break;
   }
