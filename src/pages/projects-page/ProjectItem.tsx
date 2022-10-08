@@ -94,8 +94,8 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
           lineHeight="unset"
           sx={{
             fontSize: {
-              xs: "12.5px",
-              md: "14px",
+              xs: "13px",
+              md: "15px",
             },
           }}
           color="secondary.main"
