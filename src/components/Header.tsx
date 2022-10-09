@@ -15,12 +15,16 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
+import { toggleLanguage } from "../features/language";
 import { toggleTheme } from "../features/theme";
 import { useAppDispatch, useAppSelector } from "../hook";
 
 const Header = () => {
   const location = useLocation();
+  const { t } = useTranslation();
+  const language = useAppSelector((state) => state.language);
 
   return (
     <Stack
@@ -45,15 +49,22 @@ const Header = () => {
           position="relative"
           sx={{
             textDecoration: "none",
+            fontSize: {
+              xs: language === "jp" ? "12px" : "16px",
+              sm: language === "jp" ? "14px" : "16px",
+            },
           }}
+          fontWeight="bold"
+          fontSize={language === "jp" ? "14px" : "16px"}
         >
           <Home
             sx={{
               mr: "5px",
               color: "headerIcon",
+              fontSize: "1.5rem",
             }}
           />
-          Home
+          {t("header.home")}
           <Box
             position="absolute"
             height="5px"
@@ -77,17 +88,23 @@ const Header = () => {
           py="15px"
           sx={{
             textDecoration: "none",
+            fontSize: {
+              xs: language === "jp" ? "12px" : "16px",
+              sm: language === "jp" ? "14px" : "16px",
+            },
           }}
           height="100%"
           position="relative"
+          fontWeight="bold"
         >
           <BackupTable
             sx={{
               mr: "5px",
               color: "headerIcon",
+              fontSize: "1.5rem",
             }}
           />
-          Projects
+          {t("header.projects")}
           <Box
             position="absolute"
             height="5px"
@@ -111,6 +128,8 @@ const SettingMenu = () => {
   const [showSettingModal, setShowSettingModal] = useState(false);
   const settingButtonRef = useRef<HTMLButtonElement>(null);
   const settingModalRef = useRef<HTMLDivElement>(null);
+  const language = useAppSelector((state) => state.language);
+  const { t } = useTranslation();
 
   const theme = useAppSelector((state) => state.theme);
   const dispatch = useAppDispatch();
@@ -137,7 +156,11 @@ const SettingMenu = () => {
   };
 
   const onToggleTheme = () => {
-    dispatch(toggleTheme({}));
+    dispatch(toggleTheme());
+  };
+
+  const onToggleLanguage = () => {
+    dispatch(toggleLanguage());
   };
 
   useEffect(() => {}, []);
@@ -181,8 +204,9 @@ const SettingMenu = () => {
             }}
             variant="text"
             startIcon={<Translate />}
+            onClick={onToggleLanguage}
           >
-            Japanese
+            {t("header.language")}
           </Button>
           <Button
             sx={{
@@ -193,12 +217,13 @@ const SettingMenu = () => {
               color: "secondary.main",
               pl: "15px",
               textTransform: "none",
+              fontSize: language === "jp" ? "14px" : "16px",
             }}
             variant="text"
             onClick={onToggleTheme}
             startIcon={theme === "Dark" ? <LightMode /> : <DarkMode />}
           >
-            {theme === "Dark" ? "Light Mode" : "Dark Mode"}
+            {theme === "Dark" ? t("header.lightTheme") : t("header.darkTheme")}
           </Button>
           <Box
             height={0}
@@ -225,10 +250,12 @@ const SettingMenu = () => {
         sx={{
           color: "onHeader",
           textTransform: "none",
+          fontWeight: "bold",
         }}
         startIcon={<Translate sx={{ color: "headerIcon" }} />}
+        onClick={onToggleLanguage}
       >
-        Japanese
+        {t("header.language")}
       </Button>
       <IconButton onClick={onToggleTheme}>
         {theme === "Dark" ? (

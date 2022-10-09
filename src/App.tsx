@@ -1,8 +1,11 @@
 import { createTheme, Stack, ThemeProvider } from "@mui/material";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { useAppSelector } from "./hook";
+import "./i18n";
 import HomePage from "./pages/home-page";
 import ProjectPage from "./pages/projects-page";
 
@@ -76,6 +79,12 @@ const darkTheme = createTheme({
 
 function App() {
   const theme = useAppSelector((state) => state.theme);
+  const language = useAppSelector((state) => state.language);
+  const { i18n } = useTranslation();
+  useEffect(() => {
+    i18n.changeLanguage(language);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [language]);
 
   return (
     <ThemeProvider theme={theme === "Dark" ? darkTheme : lightTheme}>

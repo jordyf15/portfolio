@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import languageReducer from "./features/language";
 import themeReducer from "./features/theme";
 
 const store = configureStore({
   reducer: {
     theme: themeReducer,
+    language: languageReducer,
   },
 });
 

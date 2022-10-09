@@ -1,7 +1,10 @@
 import { Circle } from "@mui/icons-material";
 import { Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <Typography
       color="minorText"
@@ -12,7 +15,7 @@ const Footer = () => {
     >
       © 2022 Jordy Ferdian{" "}
       <Circle sx={{ fontSize: "4px", position: "relative", bottom: "3px" }} />{" "}
-      Created with React, Typescript, and Material UI.
+      {t("footer")}
     </Typography>
   );
 };
