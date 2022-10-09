@@ -1,5 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { useState } from "react";
+import { useAppSelector } from "../../hook";
 import Certification from "../../models/Certification";
 
 interface CertificationItemProp {
@@ -7,6 +8,7 @@ interface CertificationItemProp {
 }
 const CertificationItem = ({ certification }: CertificationItemProp) => {
   const [showImageViewer, setShowImageViewer] = useState(false);
+  const language = useAppSelector((state) => state.language);
   const openImageViewer = () => {
     setShowImageViewer(true);
   };
@@ -94,8 +96,8 @@ const CertificationItem = ({ certification }: CertificationItemProp) => {
             lineHeight="unset"
             sx={{
               fontSize: {
-                xs: "16px",
-                sm: "22px",
+                xs: language === "en" ? "16px" : "14px",
+                sm: language === "en" ? "22px" : "18px",
               },
               textAlign: {
                 xs: "center",
@@ -111,8 +113,8 @@ const CertificationItem = ({ certification }: CertificationItemProp) => {
             textAlign="justify"
             sx={{
               fontSize: {
-                xs: "14px",
-                sm: "16px",
+                xs: language === "en" ? "14px" : "12px",
+                sm: language === "en" ? "16px" : "14px",
               },
             }}
             color="secondary.main"

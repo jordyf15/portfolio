@@ -26,7 +26,7 @@ import sgwjTerm3 from "../assets/certificates/sgwj-term3.jpg";
 import sgwjTerm4 from "../assets/certificates/sgwj-term4.jpg";
 import Certification from "../models/Certification";
 
-export const TechnicalCertifications: Array<Certification> = [
+export const technicalCertificationsEN: Array<Certification> = [
   {
     id: "technical-certification-20",
     title: "Dicoding Frontend Expert Course",
@@ -168,7 +168,148 @@ export const TechnicalCertifications: Array<Certification> = [
   },
 ];
 
-export const OtherCertifications: Array<Certification> = [
+export const technicalCertificationsJP: Array<Certification> = [
+  {
+    id: "technical-certification-20",
+    title: "Dicoding のフロントエンドエキスパートコース",
+    description:
+      "フロントエンド開発のエキスパートレベルのトピックをカバーするコースです。例えば、モバイルファーストアプローチやアクセシビリティやクリーンコードやPWAや自動テストやWebパフォーマンスなど。",
+    imageUrl: dicodingFrontendExpert,
+  },
+  {
+    id: "technical-certification-19",
+    title: "Dicodingのフロントエンドファンダメンタルコース",
+    description:
+      "フロントエンド開発のファンダメンタルレベルのトピックをカバーするコースです。例えば、ES6やWebコンポーネントやNPMやウェブパックや非同期ジャバスクリプトリクエストなど。",
+    imageUrl: dicodingFrontendFundamental,
+  },
+  {
+    id: "technical-certification-18",
+    title: "Dicodingのバックエンドファンダメンタルコース",
+    description:
+      "バックエンド開発のファンダメンタルレベルのトピックをカバーするコースです。例えば、Hapiプラグインやデータバリデーションや認証や認可やデータベース正規化やキャッシュやメッセージブローカーなど。",
+    imageUrl: dicodingBackendFundamental,
+  },
+  {
+    id: "technical-certification-17",
+    title: "Dicodingのバックエンドビギナーコース",
+    description:
+      "バックエンド開発のビギナーレベルのトピックをカバーするコースです。例えば、バックエンド入門やNodeJS基礎やHapiフレームワークによるRestful API開発やポストマンなど。",
+    imageUrl: dicodingBackendBeginner,
+  },
+  {
+    id: "technical-certification-16",
+    title: "Dicodingのアンドロイドファンダメンタルコース",
+    description:
+      "アンドロイド開発のファンダメンタルレベルのトピックをカバーするコースです。例えば、レイアウトやナビゲーションやバックグラウンド処理やネットワークやアンドロイドアーキテクチャなど。",
+    imageUrl: dicodingAndroidFundamental,
+  },
+  {
+    id: "technical-certification-15",
+    title: "Dicodingのアンドロイドビギナーコース",
+    description:
+      "アンドロイド開発のビギナーレベルのトピックをカバーするコースです。例えば、アクティビティやインテントやビューやスタイルやリサイクラー ビューなど。",
+    imageUrl: dicodingAndroidBeginner,
+  },
+  {
+    id: "technical-certification-14",
+    title: "Dicodingのジャバコース",
+    description:
+      "ジャバの基本をカバーするコースです。例えば、データタイプやコントロールフローやコレクションやOOPやコモンクラスなど。",
+    imageUrl: dicodingJava,
+  },
+  {
+    id: "technical-certification-13",
+    title: "Dicodingのジャバスクリプトコース",
+    description:
+      "ジャバスクリプトの基本をカバーするコースです。例えば、変数やデータタイプや関数やOOPやFPやモジュールやエラー処理やコンカレンシーなど。",
+    imageUrl: dicodingJavascriptBasic,
+  },
+  {
+    id: "technical-certification-12",
+    title: "Dicodingのコトリンコース",
+    description:
+      "コトリンの基本をカバーするコースです。例えば、データタイプやコントロールフローやデータクラスやコレクションやFPやOOPやジェネリックスやコルーチンなど。",
+    imageUrl: dicodingKotlin,
+  },
+  {
+    id: "technical-certification-11",
+    title: "DicodingのSOLIDプリンシプルコース",
+    description: "SOLIDプリンシプルをカバーするコースです。",
+    imageUrl: dicodingSolid,
+  },
+  {
+    id: "technical-certification-10",
+    title: "DicodingのAWSアーキテクチャコース",
+    description:
+      "AWSでのクラウドアーキテクチャの構築についてカバーするコースです。",
+    imageUrl: dicodingAwsArchitecture,
+  },
+  {
+    id: "technical-certification-9",
+    title: "DicodingのAWSクラウドプラクティショナーエッセンシャルコース",
+    description: "AWSクラウドが提供するサービスについてカバーするコースです。",
+    imageUrl: dicodingCloudPractitionerEssential,
+  },
+  {
+    id: "technical-certification-8",
+    title: "FreeCodeCampのバックエンド開発とAPIコース",
+    description:
+      "NodeJSとエクスプレスフレームワークを使ったバックエンドアプリケーションの書き方をカバーするコースです。",
+    imageUrl: fccBackendDevelopmentAndApi,
+  },
+  {
+    id: "technical-certification-7",
+    title: "FreeCodeCampのフロントエンド開発ライブラリコース",
+    description:
+      "業界で最も人気のあるフロントエンドライブラリをカバーするコースです。例えば、リアクトやリダックスやブートストラップやSASSなど。",
+    imageUrl: fccFrontendDevelopmentLibraries,
+  },
+  {
+    id: "technical-certification-6",
+    title: "FreeCodeCampのデータビジュアライゼーションコース",
+    description:
+      "D3.jsライブラリを使って、さまざまなデータをビジュアル化する方法をカバーするコースです。",
+    imageUrl: fccDataVisualization,
+  },
+  {
+    id: "technical-certification-5",
+    title:
+      "FreeCodeCampのジャバスクリプトとアルゴリズムとデータストラクチャーコース",
+    description:
+      "ジャバスクリプトの基礎とアルゴリズムとデータストラクチャーをカバーするコースです。",
+    imageUrl: fccJavascriptAlgorithmsAndDataStructures,
+  },
+  {
+    id: "technical-certification-4",
+    title: "FreeCodeCampのレガシー・フルスタック",
+    description:
+      "フルスタックパスの全コースを修了した場合に授与される認定証です。",
+    imageUrl: fccLegacyFullStack,
+  },
+  {
+    id: "technical-certification-3",
+    title: "FreeCodeCampの品質保証コース",
+    description:
+      "アプリケーションが期待通りに動作することを保証するためのテストの書き方をカバーするコースです。",
+    imageUrl: fccQualityAssurance,
+  },
+  {
+    id: "technical-certification-2",
+    title: "FreeCodeCampのレスポンシブWebデザイン",
+    description:
+      "さまざまなスクリーンサイズに対応するWebページの作り方をカバーするコースです。",
+    imageUrl: fccResponsiveWebDesign,
+  },
+  {
+    id: "technical-certification-1",
+    title: "Progateのジャバスクリプトスタディ",
+    description: "ジャバスクリプトのファンダメンタルをカバーするコースです。",
+    imageUrl: progateJavascriptStudy7,
+  },
+];
+
+export const otherCertificationsEN: Array<Certification> = [
   {
     id: "other-certification-6",
     title: "JLPT N5",
@@ -209,6 +350,51 @@ export const OtherCertifications: Array<Certification> = [
     title: "Australia International Corner",
     description:
       "A certificate awarded for serving as a volunteer for the Binus University AussieBanget Corner in the Even Semester 2019/2020.",
+    imageUrl: australiaInternationalCorner,
+  },
+];
+
+export const otherCertificationsJP: Array<Certification> = [
+  {
+    id: "other-certification-6",
+    title: "JLPT N5",
+    description:
+      "国際交流基金と日本国際教育支援協会が共同で実施する日本語能力試験のN5級に合格した方に授与される認定証です。",
+    imageUrl: jlptN5,
+  },
+  {
+    id: "other-certification-5",
+    title: "グーグルデベロッパーの学生クラブのコアチームメンバー",
+    description:
+      "2021-2022年度のビナ・ヌサンタラ大学のグーグルデベロッパーの学生クラブのコアチームメンバーを務めたことで授与される賞状です。",
+    imageUrl: gdscCoreTeam,
+  },
+  {
+    id: "other-certification-4",
+    title: "Study Go Work Japan 第4学期",
+    description:
+      "Study Go Work Japanの「日本語・日本文化研修プログラム」第4学期の合格証です。",
+    imageUrl: sgwjTerm4,
+  },
+  {
+    id: "other-certification-3",
+    title: "Study Go Work Japan 第3学期",
+    description:
+      "Study Go Work Japanの「日本語・日本文化研修プログラム」第3学期の合格証です。",
+    imageUrl: sgwjTerm3,
+  },
+  {
+    id: "other-certification-2",
+    title: "Study Go Work Japan 第2学期",
+    description:
+      "Study Go Work Japanの「日本語・日本文化研修プログラム」第2学期の合格証です。",
+    imageUrl: sgwjTerm2,
+  },
+  {
+    id: "other-certification-1",
+    title: "オーストラリア国際コーナー",
+    description:
+      "2019/2020年度偶数学期にビナ・ヌサンタラ大学のオーストラリア国際コーナーでボランティアを務めたことで授与される証書。",
     imageUrl: australiaInternationalCorner,
   },
 ];

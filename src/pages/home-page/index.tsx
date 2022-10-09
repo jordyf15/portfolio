@@ -1,20 +1,27 @@
 import { GitHub, LinkedIn } from "@mui/icons-material";
 import { Stack, Typography, useMediaQuery } from "@mui/material";
 import {
-  OtherCertifications,
-  TechnicalCertifications,
+  otherCertificationsEN,
+  otherCertificationsJP,
+  technicalCertificationsEN,
+  technicalCertificationsJP,
 } from "../../datas/CertificationData";
 import {
-  EducationHistory,
-  OrganizationHistory,
-  WorkHistory,
+  educationHistoryEN,
+  educationHistoryJP,
+  organizationHistoryEN,
+  organizationHistoryJP,
+  workHistoryEN,
+  workHistoryJP,
 } from "../../datas/HistoryData";
+import { useAppSelector } from "../../hook";
 import CertificationList from "./CertificationList";
 import HistoryList from "./HistoryList";
 import ProfileLinks from "./ProfileLinks";
 
 const HomePage = () => {
   const notMobile = useMediaQuery("(min-width:700px)");
+  const language = useAppSelector((state) => state.language);
 
   return (
     <Stack flex={1} py="35px" alignItems="center">
@@ -25,8 +32,8 @@ const HomePage = () => {
         textAlign="center"
         sx={{
           fontSize: {
-            xs: "24px",
-            sm: "40px",
+            xs: language === "en" ? "24px" : "14px",
+            sm: language === "en" ? "40px" : "34px",
           },
           mt: {
             xs: "unset",
@@ -34,7 +41,15 @@ const HomePage = () => {
           },
         }}
       >
-        Hi there, I'm Jordy Ferdian
+        {language === "en" ? (
+          "Hi there, I'm Jordy Ferdian"
+        ) : (
+          <>
+            初めまして、<br></br>
+            私はジョルディフェルディアンと申します。<br></br>
+            よろしくお願いします。
+          </>
+        )}
       </Typography>
       <Stack direction="row" justifyContent="center" mt="15px">
         <ProfileLinks
@@ -52,33 +67,68 @@ const HomePage = () => {
         textAlign="center"
         lineHeight="unset"
         mt="20px"
-        px="15px"
+        px={language === "en" ? "15px" : "20px"}
         sx={{
           width: {
             xs: "unset",
             sm: "690px",
           },
+          fontSize: {
+            xs: language === "en" ? "16px" : "12px",
+            sm: language === "en" ? "16px" : "15px",
+          },
         }}
         color="secondary.main"
       >
-        I am an undergraduate computer science student, and an aspiring Full
-        Stack Developer.{notMobile ? <br></br> : null} I have a high interest in
-        and am currently learning front-end and back-end web development. I also
-        like to create small projects to apply the knowledge i have learned.
+        {language === "en" ? (
+          <>
+            I am an undergraduate computer science student, and an aspiring Full
+            Stack Developer.{notMobile ? <br></br> : null} I have a high
+            interest in and am currently learning front-end and back-end web
+            development. I also like to create small projects to apply the
+            knowledge i have learned.
+          </>
+        ) : (
+          <>
+            私はコンピューターサイエンスの大学生と
+            {!notMobile ? <br></br> : null}
+            意欲的なフルスタックデベロッパーでございます。<br></br>
+            フロントエンドとバックエンドのWeb開発{!notMobile ? <br></br> : null}
+            に興味があって、勉強しております。<br></br>
+            そして、勉強した知識を適用するために{!notMobile ? <br></br> : null}
+            小さいプロジェクトを作成いたします。
+          </>
+        )}
       </Typography>
-      <HistoryList historyList={EducationHistory} historyTitle="Education" />
-      <HistoryList historyList={WorkHistory} historyTitle="Work Experience" />
       <HistoryList
-        historyList={OrganizationHistory}
-        historyTitle="Organization Experience"
+        historyList={
+          language === "en" ? educationHistoryEN : educationHistoryJP
+        }
+        historyTitle="title.educationHistory"
+      />
+      <HistoryList
+        historyList={language === "en" ? workHistoryEN : workHistoryJP}
+        historyTitle="title.workExperience"
+      />
+      <HistoryList
+        historyList={
+          language === "en" ? organizationHistoryEN : organizationHistoryJP
+        }
+        historyTitle="title.organizationExperience"
       />
       <CertificationList
-        certificationTitle="Technical Certification"
-        certificationList={TechnicalCertifications}
+        certificationTitle="title.technicalCertification"
+        certificationList={
+          language === "en"
+            ? technicalCertificationsEN
+            : technicalCertificationsJP
+        }
       />
       <CertificationList
-        certificationTitle="Other Certification"
-        certificationList={OtherCertifications}
+        certificationTitle="title.otherCertification"
+        certificationList={
+          language === "en" ? otherCertificationsEN : otherCertificationsJP
+        }
       />
     </Stack>
   );

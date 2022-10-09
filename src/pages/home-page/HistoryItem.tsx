@@ -1,6 +1,7 @@
 import { Groups, School, Work } from "@mui/icons-material";
 import { Box, BoxProps, Stack, SxProps, Typography } from "@mui/material";
 import { Theme } from "@mui/system";
+import { useAppSelector } from "../../hook";
 import History from "../../models/History";
 
 interface HistoryItemProp {
@@ -8,6 +9,7 @@ interface HistoryItemProp {
 }
 
 const HistoryItem = ({ history }: HistoryItemProp) => {
+  const language = useAppSelector((state) => state.language);
   return (
     <Stack
       direction="row"
@@ -50,22 +52,25 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
         <Typography
           sx={{
             fontSize: {
-              xs: "16px",
-              sm: "20px",
+              xs: language === "en" ? "16px" : "14px",
+              sm: language === "en" ? "20px" : "18px",
             },
           }}
           fontWeight="bold"
           color="primary.main"
+          pr={language === "jp" ? "15px" : "unset"}
+          mb={language === "jp" ? "3px" : "unset"}
         >
           {history.institution}
         </Typography>
         <Typography
           sx={{
             fontSize: {
-              xs: "14px",
-              sm: "18px",
+              xs: language === "en" ? "14px" : "12px",
+              sm: language === "en" ? "18px" : "16px",
             },
           }}
+          mb={language === "jp" ? "5px" : "unset"}
           fontWeight="bold"
           color="secondary.main"
         >
@@ -74,10 +79,11 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
         <Typography
           sx={{
             fontSize: {
-              xs: "12px",
-              sm: "16px",
+              xs: language === "en" ? "12px" : "10px",
+              sm: language === "en" ? "16px" : "14px",
             },
           }}
+          fontWeight="bold"
           color="minorText"
         >
           {history.date}

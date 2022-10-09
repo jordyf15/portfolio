@@ -1,4 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
+import { useAppSelector } from "../../hook";
 import History from "../../models/History";
 import HistoryItem from "./HistoryItem";
 
@@ -8,6 +10,8 @@ interface HistoryListProp {
 }
 
 const HistoryList = ({ historyList, historyTitle }: HistoryListProp) => {
+  const { t } = useTranslation();
+  const language = useAppSelector((state) => state.language);
   return (
     <Box
       width="100%"
@@ -26,12 +30,12 @@ const HistoryList = ({ historyList, historyTitle }: HistoryListProp) => {
         fontWeight="bold"
         sx={{
           fontSize: {
-            xs: "22px",
+            xs: language === "en" ? "22px" : "26px",
             sm: "32px",
           },
         }}
       >
-        {historyTitle}
+        {t(historyTitle)}
       </Typography>
       <Stack direction="column" alignItems="center">
         {historyList.map((history) => (

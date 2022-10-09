@@ -10,6 +10,8 @@ import {
   Typography,
 } from "@mui/material";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useAppSelector } from "../../hook";
 import Certification from "../../models/Certification";
 import CertificationItem from "./CertificationItem";
 
@@ -22,6 +24,8 @@ const CertificationList = ({
   certificationTitle,
 }: CertificationListProp) => {
   const [currentCertificateIndex, setCurrentCertificateIndex] = useState(0);
+  const { t } = useTranslation();
+  const language = useAppSelector((state) => state.language);
 
   const previousCertificate = () => {
     if (currentCertificateIndex > 0) {
@@ -56,12 +60,12 @@ const CertificationList = ({
         fontWeight="bold"
         sx={{
           fontSize: {
-            xs: "22px",
+            xs: language === "en" ? "22px" : "26px",
             sm: "32px",
           },
         }}
       >
-        {certificationTitle}
+        {t(certificationTitle)}
       </Typography>
       <Stack
         direction="row"
