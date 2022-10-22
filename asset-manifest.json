@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.dbc0895f.css",
-    "main.js": "/portfolio/static/js/main.2143d5eb.js",
+    "main.js": "/portfolio/static/js/main.43e6df14.js",
     "static/media/dicoding-aws-architecture.jpg": "/portfolio/static/media/dicoding-aws-architecture.b803107d6f76b7c0087a.jpg",
     "static/media/dicoding-cloud-practitioner-essential.jpg": "/portfolio/static/media/dicoding-cloud-practitioner-essential.b6b6b7a53ee68432e8d1.jpg",
     "static/media/dicoding-frontend-expert.jpg": "/portfolio/static/media/dicoding-frontend-expert.24c79fc180ab1d5228d8.jpg",
@@ -101,10 +101,10 @@
     "static/media/mongodb-light.svg": "/portfolio/static/media/mongodb-light.f6379189b1844f72aa24f71a74964d24.svg",
     "index.html": "/portfolio/index.html",
     "main.dbc0895f.css.map": "/portfolio/static/css/main.dbc0895f.css.map",
-    "main.2143d5eb.js.map": "/portfolio/static/js/main.2143d5eb.js.map"
+    "main.43e6df14.js.map": "/portfolio/static/js/main.43e6df14.js.map"
   },
   "entrypoints": [
     "static/css/main.dbc0895f.css",
-    "static/js/main.2143d5eb.js"
+    "static/js/main.43e6df14.js"
   ]
 }
