@@ -22,10 +22,19 @@ const ProfileLinks = ({ Icon, text, url }: ProfileLinksProp) => {
       flexDirection="row"
       alignItems="center"
       fontFamily={`"Roboto", sans-serif`}
-      p="5px"
-      pr="8px"
+      p="2px"
+      pr="5px"
       mx="12px"
       borderRadius="7px"
+      sx={{
+        borderWidth: "3px",
+        borderStyle: "solid",
+        borderColor: "primary.main",
+        "&:hover": {
+          color: "primary.main",
+          bgcolor: "background.default",
+        },
+      }}
     >
       <Icon sx={{ fontSize: "26px", mr: "5px" }} /> {text}
     </Link>
