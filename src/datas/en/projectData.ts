@@ -392,7 +392,7 @@ const projectsEN: Array<Project> = [
     type: "backend",
     language: "javascript",
     technologies: ["Postgres", "Redis", "Hapi"],
-    demoUrl: "https://jordy-open-music-api.herokuapp.com/",
+    demoUrl: "",
     repoUrl:
       "https://github.com/jordyf15/Open-Music-API_Dicoding-Fundamental-BackEnd-Development-Project",
     imageUrl: apiImg,
@@ -405,7 +405,7 @@ const projectsEN: Array<Project> = [
     type: "backend",
     language: "javascript",
     technologies: ["Hapi"],
-    demoUrl: "https://jordy-bookshelf-api.herokuapp.com/",
+    demoUrl: "",
     repoUrl:
       "https://github.com/jordyf15/BookShelf-API-Dicoding-Beginner-BackEnd-Development-Project",
     imageUrl: apiImg,
@@ -418,7 +418,7 @@ const projectsEN: Array<Project> = [
     type: "backend",
     language: "javascript",
     technologies: ["Hapi", "Postgres"],
-    demoUrl: "https://jordy-forum-api.herokuapp.com/",
+    demoUrl: "",
     repoUrl: "https://github.com/jordyf15/garuda-game-forum-api",
     imageUrl: apiImg,
   },
