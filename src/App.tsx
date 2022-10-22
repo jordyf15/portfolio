@@ -1,7 +1,7 @@
 import { createTheme, Stack, ThemeProvider } from "@mui/material";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { useAppSelector } from "./hook";
@@ -88,7 +88,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme === "Dark" ? darkTheme : lightTheme}>
-      <BrowserRouter>
+      <HashRouter>
         <Stack
           direction="column"
           minHeight="100vh"
@@ -102,7 +102,7 @@ function App() {
           </Routes>
           <Footer />
         </Stack>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }
