@@ -34,6 +34,9 @@ const Header = () => {
       alignItems="center"
       px="10px"
       justifyContent="space-between"
+      position="sticky"
+      top={0}
+      zIndex={10}
     >
       <Typography>Jordyf15</Typography>
       <Stack direction="row" height="100%">
