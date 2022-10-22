@@ -11,27 +11,61 @@ import {
   Theme,
   Typography,
 } from "@mui/material";
-import { ChangeEvent, ReactNode, useState } from "react";
-import { projects as projectDatas } from "../../datas/ProjectData";
+import { ChangeEvent, ReactNode, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import projectsEN from "../../datas/en/projectData";
+import projectsJP from "../../datas/jp/projectData";
+import { useAppSelector } from "../../hook";
+import Project from "../../models/Project";
 import ProjectList from "./ProjectList";
 
 const ProjectPage = () => {
-  const [currentProjectList, setCurrentProjectList] = useState(projectDatas);
+  const language = useAppSelector((state) => state.language);
+  const [currentProjectList, setCurrentProjectList] = useState(
+    language === "en" ? projectsEN : projectsJP
+  );
   const [currentNameFilter, setCurrentNameFilter] = useState("");
-  const [currentTypeFilter, setCurrentTypeFilter] = useState("All");
-  const [currentLanguageFilter, setCurrentLanguageFilter] = useState("All");
+  const [currentTypeFilter, setCurrentTypeFilter] = useState("all");
+  const [currentLanguageFilter, setCurrentLanguageFilter] = useState("all");
+  const { t } = useTranslation();
+
+  // to adjust the project data based on the current chosen language
+  useEffect(() => {
+    const currentProjectMap = new Map<string, Project>();
+    currentProjectList.forEach((project) => {
+      currentProjectMap.set(project.id, project);
+    });
+
+    const newProjectDatas = language === "en" ? projectsEN : projectsJP;
+    newProjectDatas.forEach((project) => {
+      if (currentProjectMap.has(project.id)) {
+        currentProjectMap.set(project.id, project);
+      }
+    });
+
+    const newProjectList: Array<Project> = [];
+    currentProjectMap.forEach((project, _) => {
+      newProjectList.push(project);
+    });
+
+    setCurrentProjectList(newProjectList);
+
+    // this function should only run when the language changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [language]);
 
   const onFilterName = ({
     target,
   }: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setCurrentNameFilter(target.value);
+    const projectDatas = language === "en" ? projectsEN : projectsJP;
     const filteredByType =
-      currentTypeFilter === "All"
+      currentTypeFilter === "all"
         ? projectDatas
         : projectDatas.filter((project) => project.type === currentTypeFilter);
 
     const filteredByLanguage =
-      currentLanguageFilter === "All"
+      currentLanguageFilter === "all"
         ? filteredByType
         : filteredByType.filter(
             (project) => project.language === currentLanguageFilter
@@ -49,8 +83,11 @@ const ProjectPage = () => {
     _: ReactNode
   ) => {
     setCurrentTypeFilter(target.value as string);
+
+    const projectDatas = language === "en" ? projectsEN : projectsJP;
+
     const filteredByLanguage =
-      currentLanguageFilter === "All"
+      currentLanguageFilter === "all"
         ? projectDatas
         : projectDatas.filter(
             (project) => project.language === currentLanguageFilter
@@ -61,7 +98,7 @@ const ProjectPage = () => {
     );
 
     const filteredByType =
-      target.value === "All"
+      target.value === "all"
         ? filteredByName
         : filteredByName.filter((project) => project.type === target.value);
 
@@ -73,8 +110,11 @@ const ProjectPage = () => {
     _: ReactNode
   ) => {
     setCurrentLanguageFilter(target.value as string);
+
+    const projectDatas = language === "en" ? projectsEN : projectsJP;
+
     const filteredByType =
-      currentTypeFilter === "All"
+      currentTypeFilter === "all"
         ? projectDatas
         : projectDatas.filter((project) => project.type === currentTypeFilter);
 
@@ -83,7 +123,7 @@ const ProjectPage = () => {
     );
 
     const filteredByLanguage =
-      target.value === "All"
+      target.value === "all"
         ? filteredByName
         : filteredByName.filter((project) => project.language === target.value);
 
@@ -100,7 +140,7 @@ const ProjectPage = () => {
         sx={{
           fontSize: {
             xs: "24px",
-            sm: "40px",
+            sm: language === "en" ? "40px" : "34px",
           },
           mt: {
             xs: "unset",
@@ -108,17 +148,21 @@ const ProjectPage = () => {
           },
         }}
       >
-        Projects
+        {t("title.project")}
       </Typography>
       <Typography
         textAlign="center"
         lineHeight="unset"
         sx={{
           mt: { xs: "10px", sm: "15px" },
+          fontSize: {
+            xs: language === "jp" ? "12px" : "1rem",
+            sm: "16px",
+          },
         }}
         color="secondary.main"
       >
-        A collection of projects i have made
+        {t("subTitle.project")}
       </Typography>
       <Stack
         width="100%"
@@ -141,7 +185,9 @@ const ProjectPage = () => {
       >
         <TextField
           variant="outlined"
-          placeholder="Find a project..."
+          placeholder={
+            language === "en" ? "Find a project..." : "プロジェクトを探します"
+          }
           size="small"
           sx={{
             width: "90%",
@@ -159,11 +205,17 @@ const ProjectPage = () => {
               borderRadius: "12px",
               borderColor: "border",
             },
+            "& .MuiOutlinedInput-root:hover": {
+              "& > fieldset": {
+                borderColor: "primary.main",
+              },
+            },
           }}
           autoComplete="off"
           inputProps={{
             sx: {
               color: "secondary.main",
+              fontSize: language === "en" ? "16px" : "14px",
             },
           }}
           onChange={onFilterName}
@@ -179,24 +231,38 @@ const ProjectPage = () => {
         >
           <ProjectFilterSelect
             options={[
-              "All",
-              "Front-end",
-              "Back-end",
-              "Android",
-              "Full Stack",
-              "Other",
+              "all",
+              "frontend",
+              "backend",
+              "android",
+              "fullstack",
+              "other",
             ]}
             filterType="Type"
             sx={{
-              minWidth: currentTypeFilter === "All" ? "85px" : "125px",
+              minWidth:
+                language === "en"
+                  ? currentTypeFilter === "all"
+                    ? "85px"
+                    : "125px"
+                  : currentTypeFilter === "all"
+                  ? "90px"
+                  : "140px",
               mr: { xs: "5px", sm: "8px" },
             }}
             onFilter={onFilterType}
           />
           <ProjectFilterSelect
-            options={["All", "Kotlin", "Javascript", "Ruby", "Go"]}
+            options={["all", "kotlin", "javascript", "ruby", "go"]}
             filterType="Language"
-            sx={{ minWidth: "125px" }}
+            sx={{
+              minWidth:
+                language === "en"
+                  ? "125px"
+                  : currentLanguageFilter === "all"
+                  ? "78px"
+                  : "140px",
+            }}
             onFilter={onFilterLanguage}
           />
           <Box flex={1} />
@@ -220,6 +286,9 @@ const ProjectFilterSelect = ({
   sx,
   onFilter,
 }: ProjectFilterSelectProps) => {
+  const { t } = useTranslation();
+  const language = useAppSelector((state) => state.language);
+
   return (
     <FormControl
       fullWidth
@@ -229,8 +298,14 @@ const ProjectFilterSelect = ({
       }}
       size="small"
     >
-      <InputLabel sx={{ color: "secondary.main", fontWeight: "bold" }}>
-        {filterType}
+      <InputLabel
+        sx={{
+          color: "secondary.main",
+          fontWeight: "bold",
+          fontSize: language === "en" ? "16px" : "14px",
+        }}
+      >
+        {t(filterType === "Language" ? "filter.language" : "filter.type")}
       </InputLabel>
       <Select
         label="Type"
@@ -246,11 +321,20 @@ const ProjectFilterSelect = ({
           "& fieldset": {
             borderColor: "border",
           },
+          "&:hover": {
+            "&& fieldset": {
+              borderColor: "primary.main",
+            },
+          },
           color: "secondary.main",
+          fontSize: language === "en" ? "16px" : "14px",
         }}
         MenuProps={{
           PaperProps: {
-            sx: { bgcolor: "selectPaperBackground", color: "secondary.main" },
+            sx: {
+              bgcolor: "selectPaperBackground",
+              color: "secondary.main",
+            },
           },
         }}
         onChange={onFilter}
@@ -259,9 +343,13 @@ const ProjectFilterSelect = ({
           <MenuItem
             value={option}
             key={option}
-            sx={{ fontWeight: "bold", fontFamily: `"Roboto", sans-serif` }}
+            sx={{
+              fontWeight: "bold",
+              fontFamily: `"Roboto", sans-serif`,
+              fontSize: language === "en" ? "16px" : "14px",
+            }}
           >
-            {option}
+            {t(option)}
           </MenuItem>
         ))}
       </Select>

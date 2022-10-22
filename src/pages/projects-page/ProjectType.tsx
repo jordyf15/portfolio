@@ -1,4 +1,5 @@
 import { Stack, SvgIcon, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import { ReactComponent as AndroidLogoDark } from "../../assets/icons/android-dark.svg";
 import { ReactComponent as AndroidLogoLight } from "../../assets/icons/android-light.svg";
 import { ReactComponent as BackendLogoDark } from "../../assets/icons/backend-dark.svg";
@@ -12,15 +13,18 @@ import { ReactComponent as OtherLogoLight } from "../../assets/icons/other-light
 import { useAppSelector } from "../../hook";
 
 interface ProjectTypeProps {
-  type: "Front-end" | "Back-end" | "Android" | "Other" | "Full Stack";
+  type: "frontend" | "backend" | "android" | "other" | "fullstack";
 }
 
 const ProjectType = ({ type }: ProjectTypeProps) => {
+  const { t } = useTranslation();
+  const language = useAppSelector((state) => state.language);
+
   return (
     <Stack
       direction="row"
       alignItems="center"
-      mb="10px"
+      mb={language === "en" ? "10px" : "12px"}
       sx={{
         mr: {
           md: "25px",
@@ -32,13 +36,13 @@ const ProjectType = ({ type }: ProjectTypeProps) => {
         mr="10px"
         sx={{
           fontSize: {
-            xs: "13px",
-            md: "15px",
+            xs: language === "en" ? "13px" : "11px",
+            md: language === "en" ? "15px" : "13px",
           },
         }}
         color="secondary.main"
       >
-        Type:{" "}
+        {t("project.type")}
       </Typography>
       <Stack
         direction="row"
@@ -58,13 +62,13 @@ const ProjectType = ({ type }: ProjectTypeProps) => {
           mr="8px"
           sx={{
             fontSize: {
-              xs: "13px",
-              md: "15px",
+              xs: language === "en" ? "13px" : "11px",
+              md: language === "en" ? "15px" : "13px",
             },
           }}
           color="secondary.main"
         >
-          {type}{" "}
+          {t(type)}{" "}
         </Typography>
         <TypeIcon type={type} />
       </Stack>
@@ -81,22 +85,22 @@ const TypeIcon = ({ type }: ProjectTypeProps) => {
   let viewBox = "0 10 150 110";
   const theme = useAppSelector((state) => state.theme);
   switch (type) {
-    case "Front-end":
+    case "frontend":
       icon = theme === "Light" ? FrontendLogoLight : FrontendLogoDark;
       break;
-    case "Back-end":
+    case "backend":
       icon = theme === "Light" ? BackendLogoLight : BackendLogoDark;
       viewBox = "0 10 140 110";
       break;
-    case "Full Stack":
+    case "fullstack":
       icon = theme === "Light" ? FullStackLogoLight : FullStackLogoDark;
       viewBox = "0 10 130 110";
       break;
-    case "Other":
+    case "other":
       icon = theme === "Light" ? OtherLogoLight : OtherLogoDark;
       viewBox = "0 5 150 110";
       break;
-    case "Android":
+    case "android":
       icon = theme === "Light" ? AndroidLogoLight : AndroidLogoDark;
       viewBox = "0 30 170 110";
       break;

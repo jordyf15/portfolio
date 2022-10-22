@@ -1,6 +1,6 @@
-type Type = "Front-end" | "Back-end" | "Android" | "Other" | "Full Stack";
+type Type = "frontend" | "backend" | "android" | "other" | "fullstack";
 
-type Language = "Kotlin" | "Javascript" | "Ruby" | "Go" | "Typescript";
+type Language = "kotlin" | "javascript" | "ruby" | "go" | "typescript";
 
 type Technology =
   | "React"

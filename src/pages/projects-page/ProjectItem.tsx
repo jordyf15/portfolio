@@ -1,4 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material";
+import { useAppSelector } from "../../hook";
 import Project from "../../models/Project";
 import ProjectLanguage from "./ProjectLanguage";
 import ProjectLink from "./ProjectLink";
@@ -10,6 +11,7 @@ interface ProjectItemProps {
 }
 
 const ProjectItem = ({ project }: ProjectItemProps) => {
+  const language = useAppSelector((state) => state.language);
   return (
     <Stack
       width="85%"
@@ -77,13 +79,15 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
               sm: "left",
             },
             fontSize: {
-              md: "20px",
+              xs: language === "en" ? "16px" : "14px",
+              md: language === "en" ? "20px" : "18px",
             },
             mt: {
               xs: "15px",
               sm: "unset",
               lg: "unset",
             },
+            mb: language === "jp" ? "2px" : "unset",
           }}
         >
           {project.title}
@@ -94,8 +98,8 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
           lineHeight="unset"
           sx={{
             fontSize: {
-              xs: "13px",
-              md: "15px",
+              xs: language === "en" ? "13px" : "11px",
+              md: language === "en" ? "15px" : "13px",
             },
           }}
           color="secondary.main"
@@ -117,7 +121,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
           }}
         >
           <ProjectType type={project.type} />
-          <ProjectLanguage language={project.language} />
+          <ProjectLanguage programmingLanguage={project.language} />
         </Stack>
         {project.technologies.length > 0 && (
           <ProjectTechnologies
@@ -142,7 +146,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
           {project.demoUrl.length > 0 && (
             <ProjectLink
               href={project.demoUrl}
-              text="Live Demo"
+              text="button.liveDemo"
               sx={{
                 mr: {
                   sm: "20px",
@@ -150,7 +154,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
               }}
             />
           )}
-          <ProjectLink href={project.repoUrl} text="View More" />
+          <ProjectLink href={project.repoUrl} text="button.viewMore" />
         </Stack>
       </Stack>
     </Stack>

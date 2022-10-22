@@ -24,8 +24,23 @@ const userInterface = {
   },
   project: {
     type: "Type: ",
-    language: "Language:",
+    language: "Language: ",
     technologies: "Technologies: ",
+  },
+  frontend: "Front-end",
+  backend: "Back-end",
+  android: "Android",
+  other: "Other",
+  fullstack: "Full Stack",
+  kotlin: "Kotlin",
+  javascript: "Javascript",
+  ruby: "Ruby",
+  go: "Go",
+  typescript: "Typescript",
+  all: "All",
+  filter: {
+    language: "Language",
+    type: "Type",
   },
 };
 

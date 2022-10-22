@@ -9,6 +9,7 @@ import { ReactComponent as ReactLogoLight } from "../../assets/icons/react-light
 import { ReactComponent as RedisLogoLight } from "../../assets/icons/redis-light.svg";
 import { ReactComponent as ReduxLogoLight } from "../../assets/icons/redux-light.svg";
 
+import { useTranslation } from "react-i18next";
 import { ReactComponent as D3jsLogoDark } from "../../assets/icons/d3js-dark.svg";
 import { ReactComponent as ExpressLogoDark } from "../../assets/icons/expressjs-dark.svg";
 import { ReactComponent as GinLogoDark } from "../../assets/icons/gin-dark.svg";
@@ -40,6 +41,9 @@ const ProjectTechnologies = ({
   technologies,
   projectID,
 }: ProjectTechnologiesProps) => {
+  const { t } = useTranslation();
+  const language = useAppSelector((state) => state.language);
+
   return (
     <Stack
       direction="row"
@@ -49,19 +53,20 @@ const ProjectTechnologies = ({
           md: "15px",
         },
       }}
+      alignItems="center"
     >
       <Typography
         fontWeight="bold"
         mr="5px"
         sx={{
           fontSize: {
-            xs: "13px",
-            md: "15px",
+            xs: language === "en" ? "13px" : "11px",
+            md: language === "en" ? "15px" : "13px",
           },
         }}
         color="secondary.main"
       >
-        Technologies:{" "}
+        {t("project.technologies")}
       </Typography>
       <Stack direction="row">
         {technologies.map((technology) => (
@@ -91,39 +96,39 @@ const TechnologyIcon = ({ technology }: TechnologyIconProps) => {
   switch (technology) {
     case "D3js":
       icon = theme === "Light" ? D3jsLogoLight : D3jsLogoDark;
-      viewBox = "-35 30 200 100";
+      viewBox = "-35 20 200 100";
       break;
     case "Express":
       icon = theme === "Light" ? ExpressLogoLight : ExpressLogoDark;
-      viewBox = "-25 45 200 100";
+      viewBox = "-25 35 200 100";
       break;
     case "Gin":
       icon = theme === "Light" ? GinLogoLight : GinLogoDark;
-      viewBox = "0 55 150 50";
+      viewBox = "0 45 150 50";
       break;
     case "Hapi":
       icon = theme === "Light" ? HapiLogoLight : HapiLogoDark;
-      viewBox = "0 250 500 50";
+      viewBox = "0 240 500 50";
       break;
     case "MongoDB":
       icon = theme === "Light" ? MongoDBLogoLight : MongoDBLogoDark;
-      viewBox = "0 250 500 50";
+      viewBox = "0 240 500 50";
       break;
     case "Postgres":
       icon = theme === "Light" ? PostgresLogoLight : PostgresLogoDark;
-      viewBox = "0 250 600 50";
+      viewBox = "0 240 600 50";
       break;
     case "React":
       icon = theme === "Light" ? ReactLogoLight : ReactLogoDark;
-      viewBox = "-13 50 150 50";
+      viewBox = "-13 40 150 50";
       break;
     case "Redis":
       icon = theme === "Light" ? RedisLogoLight : RedisLogoDark;
-      viewBox = "0 400 1000 50";
+      viewBox = "0 390 1000 50";
       break;
     case "Redux":
       icon = theme === "Light" ? ReduxLogoLight : ReduxLogoDark;
-      viewBox = "0 200 400 50";
+      viewBox = "0 190 400 50";
       break;
   }
   return (

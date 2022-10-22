@@ -1,4 +1,6 @@
 import { Link, LinkProps } from "@mui/material";
+import { useTranslation } from "react-i18next";
+import { useAppSelector } from "../../hook";
 
 interface ProjectLinkProp extends LinkProps {
   href: string;
@@ -6,6 +8,9 @@ interface ProjectLinkProp extends LinkProps {
 }
 
 const ProjectLink = ({ href, text, sx }: ProjectLinkProp) => {
+  const { t } = useTranslation();
+  const language = useAppSelector((state) => state.language);
+
   return (
     <Link
       color="background.default"
@@ -18,13 +23,14 @@ const ProjectLink = ({ href, text, sx }: ProjectLinkProp) => {
         fontFamily: `"Roboto", sans-serif`,
         ...sx,
         fontSize: {
-          xs: "13px",
-          md: "15px",
+          xs: language === "en" ? "13px" : "11px",
+          md: language === "en" ? "15px" : "13px",
         },
         "&:hover": {
           bgcolor: "background.default",
           color: "primary.main",
         },
+        fontWeight: "bold",
         borderWidth: "3px",
         borderStyle: "solid",
         borderColor: "primary.main",
@@ -33,7 +39,7 @@ const ProjectLink = ({ href, text, sx }: ProjectLinkProp) => {
       target="_blank"
       rel="noreferrer"
     >
-      {text}
+      {t(text)}
     </Link>
   );
 };

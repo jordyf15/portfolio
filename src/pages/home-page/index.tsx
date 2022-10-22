@@ -2,18 +2,22 @@ import { GitHub, LinkedIn } from "@mui/icons-material";
 import { Stack, Typography, useMediaQuery } from "@mui/material";
 import {
   otherCertificationsEN,
-  otherCertificationsJP,
   technicalCertificationsEN,
-  technicalCertificationsJP,
-} from "../../datas/CertificationData";
+} from "../../datas/en/certificationData";
 import {
   educationHistoryEN,
-  educationHistoryJP,
   organizationHistoryEN,
-  organizationHistoryJP,
   workHistoryEN,
+} from "../../datas/en/historyData";
+import {
+  otherCertificationsJP,
+  technicalCertificationsJP,
+} from "../../datas/jp/certificationData";
+import {
+  educationHistoryJP,
+  organizationHistoryJP,
   workHistoryJP,
-} from "../../datas/HistoryData";
+} from "../../datas/jp/historyData";
 import { useAppSelector } from "../../hook";
 import CertificationList from "./CertificationList";
 import HistoryList from "./HistoryList";
