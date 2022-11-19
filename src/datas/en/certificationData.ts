@@ -1,10 +1,12 @@
 import australiaInternationalCorner from "../../assets/certificates/australia-international-corner.jpg";
 import dicodingAndroidBeginner from "../../assets/certificates/dicoding-android-beginner.jpg";
 import dicodingAndroidFundamental from "../../assets/certificates/dicoding-android-fundamental.jpg";
+import dicodingAndroidIntermediate from "../../assets/certificates/dicoding-android-intermediate.jpg";
 import dicodingAwsArchitecture from "../../assets/certificates/dicoding-aws-architecture.jpg";
 import dicodingBackendBeginner from "../../assets/certificates/dicoding-backend-beginner.jpg";
 import dicodingBackendFundamental from "../../assets/certificates/dicoding-backend-fundamental.jpg";
 import dicodingCloudPractitionerEssential from "../../assets/certificates/dicoding-cloud-practitioner-essential.jpg";
+import dicodingDevopsBasic from "../../assets/certificates/dicoding-devops-basic.jpg";
 import dicodingFrontendExpert from "../../assets/certificates/dicoding-frontend-expert.jpg";
 import dicodingFrontendFundamental from "../../assets/certificates/dicoding-frontend-fundamental.jpg";
 import dicodingJava from "../../assets/certificates/dicoding-java.jpg";
@@ -19,14 +21,30 @@ import fccLegacyFullStack from "../../assets/certificates/freecodecamp-legacy-fu
 import fccQualityAssurance from "../../assets/certificates/freecodecamp-quality-assurance.jpg";
 import fccResponsiveWebDesign from "../../assets/certificates/freecodecamp-responsive-web-design.jpg";
 import gdscCoreTeam from "../../assets/certificates/gdsc-core-team.jpg";
+import jlptN4 from "../../assets/certificates/jlpt-n4.jpeg";
 import jlptN5 from "../../assets/certificates/jlpt-n5.jpeg";
 import progateJavascriptStudy7 from "../../assets/certificates/progate-javascript-study7.jpg";
 import sgwjTerm2 from "../../assets/certificates/sgwj-term2.jpg";
 import sgwjTerm3 from "../../assets/certificates/sgwj-term3.jpg";
 import sgwjTerm4 from "../../assets/certificates/sgwj-term4.jpg";
+import sgwjTerm5 from "../../assets/certificates/sgwj-term5.jpg";
 import Certification from "../../models/Certification";
 
 export const technicalCertificationsEN: Array<Certification> = [
+  {
+    id: "technical-certification-22",
+    title: "Dicoding Android Intermediate Course",
+    description:
+      "A course that covers Intermediate level topics in Android Development such as Custom View, Animation, localization, Media, Location, Testing, and Advanced Database.",
+    imageUrl: dicodingAndroidIntermediate,
+  },
+  {
+    id: "technical-certification-21",
+    title: "Dicoding Devops Basic Course",
+    description:
+      "A course that covers Basic level topics in Devops such as culture, practices, and tools used in Devops.",
+    imageUrl: dicodingDevopsBasic,
+  },
   {
     id: "technical-certification-20",
     title: "Dicoding Frontend Expert Course",
@@ -170,18 +188,32 @@ export const technicalCertificationsEN: Array<Certification> = [
 
 export const otherCertificationsEN: Array<Certification> = [
   {
-    id: "other-certification-6",
+    id: "other-certification-8",
+    title: "JLPT N4",
+    description:
+      "A certificate awarded for passing the Level N4 of the Japanese Language Proficiency Test jointly administered by the Japan Foundation and Japan Educational Exchanges and Services.",
+    imageUrl: jlptN4,
+  },
+  {
+    id: "other-certification-7",
     title: "JLPT N5",
     description:
       "A certificate awarded for passing the Level N5 of the Japanese Language Proficiency Test jointly administered by the Japan Foundation and Japan Educational Exchanges and Services.",
     imageUrl: jlptN5,
   },
   {
-    id: "other-certification-5",
+    id: "other-certification-6",
     title: "Google Developer Student Club Core Team",
     description:
       "A certificate awarded for serving as a Google Developer Student Club Core Team Member at Binus University for the 2021-2022 academic year.",
     imageUrl: gdscCoreTeam,
+  },
+  {
+    id: "other-certification-5",
+    title: "Study Go Work Japan 5th Term",
+    description:
+      "A certificate awarded for passing the 5th term of Study Go Work Japan's Japanese Language and Culture Training Program.",
+    imageUrl: sgwjTerm5,
   },
   {
     id: "other-certification-4",

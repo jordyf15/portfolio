@@ -1,10 +1,12 @@
 import australiaInternationalCorner from "../../assets/certificates/australia-international-corner.jpg";
 import dicodingAndroidBeginner from "../../assets/certificates/dicoding-android-beginner.jpg";
 import dicodingAndroidFundamental from "../../assets/certificates/dicoding-android-fundamental.jpg";
+import dicodingAndroidIntermediate from "../../assets/certificates/dicoding-android-intermediate.jpg";
 import dicodingAwsArchitecture from "../../assets/certificates/dicoding-aws-architecture.jpg";
 import dicodingBackendBeginner from "../../assets/certificates/dicoding-backend-beginner.jpg";
 import dicodingBackendFundamental from "../../assets/certificates/dicoding-backend-fundamental.jpg";
 import dicodingCloudPractitionerEssential from "../../assets/certificates/dicoding-cloud-practitioner-essential.jpg";
+import dicodingDevopsBasic from "../../assets/certificates/dicoding-devops-basic.jpg";
 import dicodingFrontendExpert from "../../assets/certificates/dicoding-frontend-expert.jpg";
 import dicodingFrontendFundamental from "../../assets/certificates/dicoding-frontend-fundamental.jpg";
 import dicodingJava from "../../assets/certificates/dicoding-java.jpg";
@@ -19,14 +21,30 @@ import fccLegacyFullStack from "../../assets/certificates/freecodecamp-legacy-fu
 import fccQualityAssurance from "../../assets/certificates/freecodecamp-quality-assurance.jpg";
 import fccResponsiveWebDesign from "../../assets/certificates/freecodecamp-responsive-web-design.jpg";
 import gdscCoreTeam from "../../assets/certificates/gdsc-core-team.jpg";
+import jlptN4 from "../../assets/certificates/jlpt-n4.jpeg";
 import jlptN5 from "../../assets/certificates/jlpt-n5.jpeg";
 import progateJavascriptStudy7 from "../../assets/certificates/progate-javascript-study7.jpg";
 import sgwjTerm2 from "../../assets/certificates/sgwj-term2.jpg";
 import sgwjTerm3 from "../../assets/certificates/sgwj-term3.jpg";
 import sgwjTerm4 from "../../assets/certificates/sgwj-term4.jpg";
+import sgwjTerm5 from "../../assets/certificates/sgwj-term5.jpg";
 import Certification from "../../models/Certification";
 
 export const technicalCertificationsJP: Array<Certification> = [
+  {
+    id: "technical-certification-22",
+    title: "ディコーディングのアンドロイド中級コース",
+    description:
+      "アンドロイド開発の中級レベルのトピックをカバーするコースです。例えば、カスタムビューやアニメーションやローカライズやメディアやロケーションやテスティングやアドバンストデータベースなどです。",
+    imageUrl: dicodingAndroidIntermediate,
+  },
+  {
+    id: "technical-certification-21",
+    title: "ディコーディングのデブオプスベーシックコース",
+    description:
+      "デブオプスのベーシックレベルのトピックをカバーするコースです。例えば、デブオプスで使用される文化、プラクティス、およびツールです。",
+    imageUrl: dicodingDevopsBasic,
+  },
   {
     id: "technical-certification-20",
     title: "ディコーディングのフロントエンドエキスパートコース",
@@ -170,18 +188,32 @@ export const technicalCertificationsJP: Array<Certification> = [
 
 export const otherCertificationsJP: Array<Certification> = [
   {
-    id: "other-certification-6",
+    id: "other-certification-8",
+    title: "JLPT N4",
+    description:
+      "国際交流基金と日本国際教育支援協会が共同で実施する日本語能力試験のN4級に合格した方に授与される認定証です。",
+    imageUrl: jlptN4,
+  },
+  {
+    id: "other-certification-7",
     title: "JLPT N5",
     description:
       "国際交流基金と日本国際教育支援協会が共同で実施する日本語能力試験のN5級に合格した方に授与される認定証です。",
     imageUrl: jlptN5,
   },
   {
-    id: "other-certification-5",
+    id: "other-certification-6",
     title: "グーグルデベロッパーの学生クラブのコアチームメンバー",
     description:
       "2021-2022年度のビナ・ヌサンタラ大学のグーグルデベロッパーの学生クラブのコアチームメンバーを務めたことで授与される賞状です。",
     imageUrl: gdscCoreTeam,
+  },
+  {
+    id: "other-certification-5",
+    title: "Study Go Work Japan 第5学期",
+    description:
+      "Study Go Work Japanの「日本語・日本文化研修プログラム」第5学期の合格証です。",
+    imageUrl: sgwjTerm5,
   },
   {
     id: "other-certification-4",

@@ -5,6 +5,7 @@ import cliMasterMindImg from "../../assets/projects/cli-mastermind.jpeg";
 import cliTicTacToeImg from "../../assets/projects/cli-tic-tac-toe.jpeg";
 import connectingFourImg from "../../assets/projects/connecting-four.jpg";
 import cvApplicationImg from "../../assets/projects/cv-application.jpeg";
+import dicodingStoryImg from "../../assets/projects/dicoding-story.jpg";
 import difoodingImg from "../../assets/projects/difooding.jpeg";
 import digiMemoryImg from "../../assets/projects/digi-memory.jpeg";
 import drumMachineImg from "../../assets/projects/drum-machine.jpeg";
@@ -44,6 +45,19 @@ import wikipediaViewerImg from "../../assets/projects/wikipedia-viewer.jpeg";
 import Project from "../../models/Project";
 
 const projectsEN: Array<Project> = [
+  {
+    id: "project-46",
+    title: "Dicoding Story",
+    description:
+      "Dicoding Story is an android application where users can view and post stories. Users can also view the locations of those stories in Google Map. This project was made in order to pass the Dicoding's Intermediate Android Development Course.",
+    imageUrl: dicodingStoryImg,
+    type: "android",
+    language: "kotlin",
+    technologies: [],
+    demoUrl: "",
+    repoUrl:
+      "https://github.com/jordyf15/Dicoding-Story_Dicoding-Intermediate-Android-Development-Final-Project",
+  },
   {
     id: "project-45",
     title: "Github Users",
