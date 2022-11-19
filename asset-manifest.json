@@ -1,8 +1,10 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.dbc0895f.css",
-    "main.js": "/portfolio/static/js/main.43e6df14.js",
+    "main.js": "/portfolio/static/js/main.3b68672e.js",
+    "static/media/dicoding-android-intermediate.jpg": "/portfolio/static/media/dicoding-android-intermediate.191ebaaddcf0c7a43080.jpg",
     "static/media/dicoding-aws-architecture.jpg": "/portfolio/static/media/dicoding-aws-architecture.b803107d6f76b7c0087a.jpg",
+    "static/media/dicoding-devops-basic.jpg": "/portfolio/static/media/dicoding-devops-basic.d8a8e755aa6d9cae40a1.jpg",
     "static/media/dicoding-cloud-practitioner-essential.jpg": "/portfolio/static/media/dicoding-cloud-practitioner-essential.b6b6b7a53ee68432e8d1.jpg",
     "static/media/dicoding-frontend-expert.jpg": "/portfolio/static/media/dicoding-frontend-expert.24c79fc180ab1d5228d8.jpg",
     "static/media/dicoding-android-fundamental.jpg": "/portfolio/static/media/dicoding-android-fundamental.b1c4ee6c2c0a3a03ab9a.jpg",
@@ -16,6 +18,7 @@
     "static/media/dicoding-kotlin.jpg": "/portfolio/static/media/dicoding-kotlin.8574facb2fcb87ab2785.jpg",
     "static/media/sgwj-term2.jpg": "/portfolio/static/media/sgwj-term2.35bca23d39f9734e4492.jpg",
     "static/media/sgwj-term4.jpg": "/portfolio/static/media/sgwj-term4.d2011e73132cef45b65b.jpg",
+    "static/media/sgwj-term5.jpg": "/portfolio/static/media/sgwj-term5.e3262641700a3feabfd6.jpg",
     "static/media/sgwj-term3.jpg": "/portfolio/static/media/sgwj-term3.c9b4592fbe19a3855b15.jpg",
     "static/media/gdsc-core-team.jpg": "/portfolio/static/media/gdsc-core-team.9fee96eabdac85e1263a.jpg",
     "static/media/australia-international-corner.jpg": "/portfolio/static/media/australia-international-corner.6cf70576c01e801bb8fb.jpg",
@@ -36,6 +39,7 @@
     "static/media/monthly-global-land-surface-temperature-heat-map.jpeg": "/portfolio/static/media/monthly-global-land-surface-temperature-heat-map.bc87b9c1876f125219c2.jpeg",
     "static/media/freecodecamp-javascript-algorithms-and-data-structures.jpg": "/portfolio/static/media/freecodecamp-javascript-algorithms-and-data-structures.3c62e52e27bed0abfa2b.jpg",
     "static/media/jlpt-n5.jpeg": "/portfolio/static/media/jlpt-n5.9149a1e4fdeba158036b.jpeg",
+    "static/media/jlpt-n4.jpeg": "/portfolio/static/media/jlpt-n4.c97e4bcd64eddab5b28f.jpeg",
     "static/media/freecodecamp-front-end-development-libraries.jpg": "/portfolio/static/media/freecodecamp-front-end-development-libraries.f2bd899afb313463df53.jpg",
     "static/media/freecodecamp-back-end-development-and-apis.jpg": "/portfolio/static/media/freecodecamp-back-end-development-and-apis.382e068838ca9296a3f5.jpg",
     "static/media/connecting-four.jpg": "/portfolio/static/media/connecting-four.35c7152696c76fcf52c5.jpg",
@@ -48,6 +52,7 @@
     "static/media/github-users.jpg": "/portfolio/static/media/github-users.4bed26b71208021c96db.jpg",
     "static/media/timestamp-microservice.jpeg": "/portfolio/static/media/timestamp-microservice.a389af5c79846815ca4d.jpeg",
     "static/media/markdown-previewer.jpeg": "/portfolio/static/media/markdown-previewer.eb5c35ed037c2ea77901.jpeg",
+    "static/media/dicoding-story.jpg": "/portfolio/static/media/dicoding-story.987cdfe1a512984d5968.jpg",
     "static/media/url-shortener-microservice.jpeg": "/portfolio/static/media/url-shortener-microservice.1f0967c88af87882d412.jpeg",
     "static/media/exercise-tracker-microservice.jpeg": "/portfolio/static/media/exercise-tracker-microservice.06a6e0d43eecfde8a4be.jpeg",
     "static/media/local-weather.jpeg": "/portfolio/static/media/local-weather.945f847bf2e703f00347.jpeg",
@@ -101,10 +106,10 @@
     "static/media/mongodb-light.svg": "/portfolio/static/media/mongodb-light.f6379189b1844f72aa24f71a74964d24.svg",
     "index.html": "/portfolio/index.html",
     "main.dbc0895f.css.map": "/portfolio/static/css/main.dbc0895f.css.map",
-    "main.43e6df14.js.map": "/portfolio/static/js/main.43e6df14.js.map"
+    "main.3b68672e.js.map": "/portfolio/static/js/main.3b68672e.js.map"
   },
   "entrypoints": [
     "static/css/main.dbc0895f.css",
-    "static/js/main.43e6df14.js"
+    "static/js/main.3b68672e.js"
   ]
 }
