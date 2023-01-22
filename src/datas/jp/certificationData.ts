@@ -1,4 +1,5 @@
 import australiaInternationalCorner from "../../assets/certificates/australia-international-corner.jpg";
+import codeToJapanAlgorithmChallenge from "../../assets/certificates/code-to-japan-algorithm-challenge.jpg";
 import dicodingAndroidBeginner from "../../assets/certificates/dicoding-android-beginner.jpg";
 import dicodingAndroidFundamental from "../../assets/certificates/dicoding-android-fundamental.jpg";
 import dicodingAndroidIntermediate from "../../assets/certificates/dicoding-android-intermediate.jpg";
@@ -13,6 +14,7 @@ import dicodingJava from "../../assets/certificates/dicoding-java.jpg";
 import dicodingJavascriptBasic from "../../assets/certificates/dicoding-javascript-basic.jpg";
 import dicodingKotlin from "../../assets/certificates/dicoding-kotlin.jpg";
 import dicodingSolid from "../../assets/certificates/dicoding-solid.jpg";
+import digitalentAndroidIntermediate from "../../assets/certificates/digitalent-android-intermediate.jpg";
 import fccBackendDevelopmentAndApi from "../../assets/certificates/freecodecamp-back-end-development-and-apis.jpg";
 import fccDataVisualization from "../../assets/certificates/freecodecamp-data-visualization.jpg";
 import fccFrontendDevelopmentLibraries from "../../assets/certificates/freecodecamp-front-end-development-libraries.jpg";
@@ -21,6 +23,7 @@ import fccLegacyFullStack from "../../assets/certificates/freecodecamp-legacy-fu
 import fccQualityAssurance from "../../assets/certificates/freecodecamp-quality-assurance.jpg";
 import fccResponsiveWebDesign from "../../assets/certificates/freecodecamp-responsive-web-design.jpg";
 import gdscCoreTeam from "../../assets/certificates/gdsc-core-team.jpg";
+import iycl2021 from "../../assets/certificates/iycl-2021.jpg";
 import jlptN4 from "../../assets/certificates/jlpt-n4.jpeg";
 import jlptN5 from "../../assets/certificates/jlpt-n5.jpeg";
 import progateJavascriptStudy7 from "../../assets/certificates/progate-javascript-study7.jpg";
@@ -31,6 +34,13 @@ import sgwjTerm5 from "../../assets/certificates/sgwj-term5.jpg";
 import Certification from "../../models/Certification";
 
 export const technicalCertificationsJP: Array<Certification> = [
+  {
+    id: "technical-certification-23",
+    title: "ディジタラントのアンドロイド中級コース",
+    description:
+      "インドネシアの通信情報技術省による、アンドロイド開発に関する中級レベルのトピックを扱うコースです。例えば、カスタムビューやアニメーションやローカライズやメディアやロケーションやテスティングやアドバンストデータベースなどです。",
+    imageUrl: digitalentAndroidIntermediate,
+  },
   {
     id: "technical-certification-22",
     title: "ディコーディングのアンドロイド中級コース",
@@ -187,6 +197,20 @@ export const technicalCertificationsJP: Array<Certification> = [
 ];
 
 export const otherCertificationsJP: Array<Certification> = [
+  {
+    id: "other-certification-10",
+    title: "CODE TO JAPANのアルゴリズムチャレンジ",
+    description:
+      "ASIA TO JAPANのCODE TO JAPANアルゴリズムチャレンジを成功したことで授与される賞状です。",
+    imageUrl: codeToJapanAlgorithmChallenge,
+  },
+  {
+    id: "other-certification-9",
+    title: "Indonesia Young Coders League 2021",
+    description:
+      "Indonesia Young Coders League 2021の競争100位以内にランクインした場合ことで授与される賞状です。",
+    imageUrl: iycl2021,
+  },
   {
     id: "other-certification-8",
     title: "JLPT N4",
