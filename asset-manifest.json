@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.dbc0895f.css",
-    "main.js": "/portfolio/static/js/main.3b68672e.js",
+    "main.js": "/portfolio/static/js/main.bf0a5076.js",
     "static/media/dicoding-android-intermediate.jpg": "/portfolio/static/media/dicoding-android-intermediate.191ebaaddcf0c7a43080.jpg",
     "static/media/dicoding-aws-architecture.jpg": "/portfolio/static/media/dicoding-aws-architecture.b803107d6f76b7c0087a.jpg",
     "static/media/dicoding-devops-basic.jpg": "/portfolio/static/media/dicoding-devops-basic.d8a8e755aa6d9cae40a1.jpg",
@@ -14,12 +14,14 @@
     "static/media/dicoding-android-beginner.jpg": "/portfolio/static/media/dicoding-android-beginner.eca471d29a28f9cb6ae2.jpg",
     "static/media/dicoding-backend-beginner.jpg": "/portfolio/static/media/dicoding-backend-beginner.4a9ba207b647a1d7c037.jpg",
     "static/media/dicoding-solid.jpg": "/portfolio/static/media/dicoding-solid.23226baebd803fbe1e8b.jpg",
+    "static/media/code-to-japan-algorithm-challenge.jpg": "/portfolio/static/media/code-to-japan-algorithm-challenge.274fa2966f44d24702fd.jpg",
     "static/media/dicoding-javascript-basic.jpg": "/portfolio/static/media/dicoding-javascript-basic.9eebee411a20fc0f9957.jpg",
     "static/media/dicoding-kotlin.jpg": "/portfolio/static/media/dicoding-kotlin.8574facb2fcb87ab2785.jpg",
     "static/media/sgwj-term2.jpg": "/portfolio/static/media/sgwj-term2.35bca23d39f9734e4492.jpg",
     "static/media/sgwj-term4.jpg": "/portfolio/static/media/sgwj-term4.d2011e73132cef45b65b.jpg",
     "static/media/sgwj-term5.jpg": "/portfolio/static/media/sgwj-term5.e3262641700a3feabfd6.jpg",
     "static/media/sgwj-term3.jpg": "/portfolio/static/media/sgwj-term3.c9b4592fbe19a3855b15.jpg",
+    "static/media/digitalent-android-intermediate.jpg": "/portfolio/static/media/digitalent-android-intermediate.e56d09d199e35407d043.jpg",
     "static/media/gdsc-core-team.jpg": "/portfolio/static/media/gdsc-core-team.9fee96eabdac85e1263a.jpg",
     "static/media/australia-international-corner.jpg": "/portfolio/static/media/australia-international-corner.6cf70576c01e801bb8fb.jpg",
     "static/media/difooding.jpeg": "/portfolio/static/media/difooding.66df4cac50071c3f5efd.jpeg",
@@ -43,6 +45,7 @@
     "static/media/freecodecamp-front-end-development-libraries.jpg": "/portfolio/static/media/freecodecamp-front-end-development-libraries.f2bd899afb313463df53.jpg",
     "static/media/freecodecamp-back-end-development-and-apis.jpg": "/portfolio/static/media/freecodecamp-back-end-development-and-apis.382e068838ca9296a3f5.jpg",
     "static/media/connecting-four.jpg": "/portfolio/static/media/connecting-four.35c7152696c76fcf52c5.jpg",
+    "static/media/iycl-2021.jpg": "/portfolio/static/media/iycl-2021.bc626c48d7471b8a882d.jpg",
     "static/media/freecodecamp-responsive-web-design.jpg": "/portfolio/static/media/freecodecamp-responsive-web-design.fddfbfcaa3d356113211.jpg",
     "static/media/freecodecamp-quality-assurance.jpg": "/portfolio/static/media/freecodecamp-quality-assurance.72ba2d95ba503a4dba39.jpg",
     "static/media/cli-mastermind.jpeg": "/portfolio/static/media/cli-mastermind.bc7c1b3c9a69db722997.jpeg",
@@ -106,10 +109,10 @@
     "static/media/mongodb-light.svg": "/portfolio/static/media/mongodb-light.f6379189b1844f72aa24f71a74964d24.svg",
     "index.html": "/portfolio/index.html",
     "main.dbc0895f.css.map": "/portfolio/static/css/main.dbc0895f.css.map",
-    "main.3b68672e.js.map": "/portfolio/static/js/main.3b68672e.js.map"
+    "main.bf0a5076.js.map": "/portfolio/static/js/main.bf0a5076.js.map"
   },
   "entrypoints": [
     "static/css/main.dbc0895f.css",
-    "static/js/main.3b68672e.js"
+    "static/js/main.bf0a5076.js"
   ]
 }
