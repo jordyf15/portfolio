@@ -1,9 +1,9 @@
 import { createTheme, Stack, ThemeProvider } from "@mui/material";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { HashRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import SlideFade from "./components/SlideFade";
 import { useAppSelector } from "./hook";
 import "./i18n";
 import HomePage from "./pages/home-page";
@@ -78,6 +78,9 @@ const darkTheme = createTheme({
 });
 
 function App() {
+  const [displayedContent, setDisplayedContent] = useState<"home" | "projects">(
+    "home"
+  );
   const theme = useAppSelector((state) => state.theme);
   const language = useAppSelector((state) => state.language);
   const { i18n } = useTranslation();
@@ -86,23 +89,34 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [displayedContent]);
+
   return (
     <ThemeProvider theme={theme === "Dark" ? darkTheme : lightTheme}>
-      <HashRouter>
-        <Stack
-          direction="column"
-          minHeight="100vh"
-          justifyContent="space-between"
-          bgcolor="background.default"
-        >
-          <Header />
-          <Routes>
-            <Route path="/projects" element={<ProjectPage />} />
-            <Route path="/" element={<HomePage />} />
-          </Routes>
-          <Footer />
-        </Stack>
-      </HashRouter>
+      <Stack
+        direction="column"
+        minHeight="100vh"
+        justifyContent="space-between"
+        bgcolor="background.default"
+      >
+        <Header
+          displayedContent={displayedContent}
+          setDisplayedContent={setDisplayedContent}
+        />
+        <SlideFade
+          show={displayedContent === "home"}
+          slideDirection="right"
+          content={<HomePage />}
+        />
+        <SlideFade
+          show={displayedContent === "projects"}
+          slideDirection="left"
+          content={<ProjectPage />}
+        />
+        <Footer />
+      </Stack>
     </ThemeProvider>
   );
 }

@@ -16,13 +16,19 @@ import {
 } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useLocation } from "react-router-dom";
 import { toggleLanguage } from "../features/language";
 import { toggleTheme } from "../features/theme";
 import { useAppDispatch, useAppSelector } from "../hook";
 
-const Header = () => {
-  const location = useLocation();
+type DisplayedContent = "home" | "projects";
+
+const Header = ({
+  displayedContent,
+  setDisplayedContent,
+}: {
+  displayedContent: DisplayedContent;
+  setDisplayedContent: (displayedContent: DisplayedContent) => void;
+}) => {
   const { t } = useTranslation();
   const language = useAppSelector((state) => state.language);
 
@@ -41,8 +47,7 @@ const Header = () => {
       <Typography>Jordyf15</Typography>
       <Stack direction="row" height="100%">
         <Typography
-          component={Link}
-          to="/"
+          onClick={() => setDisplayedContent("home")}
           display="flex"
           flexDirection="row"
           alignItems="center"
@@ -76,7 +81,7 @@ const Header = () => {
             width="100%"
             bgcolor="primary.main"
             sx={{
-              visibility: location.pathname === "/" ? "show" : "hidden",
+              visibility: displayedContent === "home" ? "show" : "hidden",
             }}
           />
         </Typography>
@@ -84,8 +89,7 @@ const Header = () => {
           display="flex"
           flexDirection="row"
           alignItems="center"
-          component={Link}
-          to="/projects"
+          onClick={() => setDisplayedContent("projects")}
           color="onHeader"
           px="5px"
           py="15px"
@@ -116,7 +120,7 @@ const Header = () => {
             width="100%"
             bgcolor="primary.main"
             sx={{
-              visibility: location.pathname === "/projects" ? "show" : "hidden",
+              visibility: displayedContent === "projects" ? "show" : "hidden",
             }}
           ></Box>
         </Typography>
