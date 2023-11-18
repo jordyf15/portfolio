@@ -24,6 +24,7 @@ import fccQualityAssurance from "../../assets/certificates/freecodecamp-quality-
 import fccResponsiveWebDesign from "../../assets/certificates/freecodecamp-responsive-web-design.jpg";
 import gdscCoreTeam from "../../assets/certificates/gdsc-core-team.jpg";
 import iycl2021 from "../../assets/certificates/iycl-2021.jpg";
+import jlptN3 from "../../assets/certificates/jlpt-n3.jpeg";
 import jlptN4 from "../../assets/certificates/jlpt-n4.jpeg";
 import jlptN5 from "../../assets/certificates/jlpt-n5.jpeg";
 import progateJavascriptStudy7 from "../../assets/certificates/progate-javascript-study7.jpg";
@@ -198,18 +199,25 @@ export const technicalCertificationsEN: Array<Certification> = [
 
 export const otherCertificationsEN: Array<Certification> = [
   {
-    id: "other-certification-10",
+    id: "other-certification-11",
     title: "Code To Japan Algorithms Challenge",
     description:
       "A certificate awarded for successfully completing ASIA To JAPAN's Code To Japan Algorithms Challenge.",
     imageUrl: codeToJapanAlgorithmChallenge,
   },
   {
-    id: "other-certification-9",
+    id: "other-certification-10",
     title: "Indonesia Young Coders League 2021",
     description:
       "A certificate awarded for ranking at the top 100 in the Indonesia Young Coders League 2021.",
     imageUrl: iycl2021,
+  },
+  {
+    id: "other-certification-9",
+    title: "JLPT N3",
+    description:
+      "A certificate awarded for passing the Level N3 of the Japanese Language Proficiency Test jointly administered by the Japan Foundation and Japan Educational Exchanges and Services.",
+    imageUrl: jlptN3,
   },
   {
     id: "other-certification-8",

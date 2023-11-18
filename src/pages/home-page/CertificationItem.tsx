@@ -69,13 +69,13 @@ const CertificationItem = ({ certification }: CertificationItemProp) => {
               component="img"
               onClick={openImageViewer}
               maxWidth="300px"
-              maxHeight="280px"
               src={certification.imageUrl}
               sx={{
                 width: {
                   xs: "100%",
                   sm: "unset",
                 },
+                height: "210px",
               }}
             />
           </Box>
@@ -103,6 +103,10 @@ const CertificationItem = ({ certification }: CertificationItemProp) => {
                 xs: "center",
                 sm: "left",
               },
+              minHeight: {
+                xs: "40px",
+                sm: "unset",
+              },
             }}
           >
             {certification.title}
@@ -115,6 +119,10 @@ const CertificationItem = ({ certification }: CertificationItemProp) => {
               fontSize: {
                 xs: language === "en" ? "14px" : "12px",
                 sm: language === "en" ? "16px" : "14px",
+              },
+              minHeight: {
+                xs: "135px",
+                sm: "unset",
               },
             }}
             color="secondary.main"
