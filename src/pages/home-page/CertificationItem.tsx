@@ -1,24 +1,26 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { useState } from "react";
 import { useAppSelector } from "../../hook";
 import Certification from "../../models/Certification";
 
 interface CertificationItemProp {
   certification: Certification;
+  sliderContainerWidth: number;
 }
-const CertificationItem = ({ certification }: CertificationItemProp) => {
-  const [showImageViewer, setShowImageViewer] = useState(false);
+const CertificationItem = ({
+  certification,
+  sliderContainerWidth,
+}: CertificationItemProp) => {
   const language = useAppSelector((state) => state.language);
-  const openImageViewer = () => {
-    setShowImageViewer(true);
-  };
-
-  const closeImageViewer = () => {
-    setShowImageViewer(false);
-  };
 
   return (
-    <Stack flex={1} alignItems="center">
+    <Stack
+      width={sliderContainerWidth ? `${sliderContainerWidth}px` : 1}
+      alignItems="center"
+      mx={{
+        xs: 4,
+        sm: 2,
+      }}
+    >
       <Stack
         sx={{
           flexDirection: {
@@ -34,20 +36,6 @@ const CertificationItem = ({ certification }: CertificationItemProp) => {
           },
         }}
       >
-        {/* TODO Image Viewer */}
-        {/* {showImageViewer && (
-          <Box
-            onClick={closeImageViewer}
-            bgcolor="rgba(0, 0, 0, 0.6)"
-            position="fixed"
-            width="100%"
-            height="100%"
-            top={0}
-            left={0}
-          >
-            <Box component="img" width="100%" src={certification.imageUrl} />
-          </Box>
-        )} */}
         <Stack
           sx={{
             minWidth: {
@@ -67,7 +55,6 @@ const CertificationItem = ({ certification }: CertificationItemProp) => {
           >
             <Box
               component="img"
-              onClick={openImageViewer}
               maxWidth="300px"
               src={certification.imageUrl}
               sx={{

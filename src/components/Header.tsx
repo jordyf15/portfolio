@@ -55,12 +55,14 @@ const Header = ({
           px="5px"
           py="15px"
           position="relative"
+          component="a"
           sx={{
             textDecoration: "none",
             fontSize: {
               xs: language === "jp" ? "12px" : "16px",
               sm: language === "jp" ? "14px" : "16px",
             },
+            cursor: "pointer",
           }}
           fontWeight="bold"
           fontSize={language === "jp" ? "14px" : "16px"}
@@ -93,12 +95,14 @@ const Header = ({
           color="onHeader"
           px="5px"
           py="15px"
+          component="a"
           sx={{
             textDecoration: "none",
             fontSize: {
               xs: language === "jp" ? "12px" : "16px",
               sm: language === "jp" ? "14px" : "16px",
             },
+            cursor: "pointer",
           }}
           height="100%"
           position="relative"

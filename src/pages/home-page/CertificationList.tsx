@@ -9,8 +9,11 @@ import {
   Theme,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import { createRef, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import { useAppSelector } from "../../hook";
 import Certification from "../../models/Certification";
 import CertificationItem from "./CertificationItem";
@@ -19,38 +22,78 @@ interface CertificationListProp {
   certificationList: Array<Certification>;
   certificationTitle: string;
 }
-const CertificationList = ({
+const CertificationListCarousel = ({
   certificationList,
   certificationTitle,
 }: CertificationListProp) => {
   const [currentCertificateIndex, setCurrentCertificateIndex] = useState(0);
+  const [sliderContainerWidth, setSliderContainerWidth] = useState(0);
+  const customSlider = createRef<Slider>();
+  const sliderContainer = createRef<HTMLDivElement>();
   const { t } = useTranslation();
   const language = useAppSelector((state) => state.language);
 
+  useEffect(() => {
+    setSliderContainerWidth(
+      sliderContainer?.current?.clientWidth
+        ? sliderContainer.current.clientWidth
+        : 0
+    );
+  }, [sliderContainer]);
+
   const previousCertificate = () => {
-    if (currentCertificateIndex > 0) {
-      setCurrentCertificateIndex(currentCertificateIndex - 1);
+    if (customSlider.current) {
+      customSlider.current.slickPrev();
     }
   };
 
   const nextCertificate = () => {
-    if (currentCertificateIndex < certificationList.length - 1) {
-      setCurrentCertificateIndex(currentCertificateIndex + 1);
+    if (customSlider.current) {
+      customSlider.current.slickNext();
+    }
+  };
+
+  const onBeforeChange = (currIdx: number, nextIdx: number) => {
+    if (Math.abs(nextIdx - currIdx) > 1) {
+      // with paging
+      setCurrentCertificateIndex(nextIdx);
+    } else if (Math.abs(nextIdx - currIdx) === 0) {
+      return;
+    } else if (
+      // with next and prev button
+      (nextIdx > currIdx &&
+        !(currIdx === 0 && nextIdx === certificationList.length - 1)) ||
+      (currIdx === certificationList.length - 1 && nextIdx === 0)
+    ) {
+      if (currentCertificateIndex === certificationList.length - 1) {
+        setCurrentCertificateIndex(0);
+      } else {
+        setCurrentCertificateIndex(currentCertificateIndex + 1);
+      }
+    } else {
+      if (currentCertificateIndex === 0) {
+        setCurrentCertificateIndex(certificationList.length - 1);
+      } else {
+        setCurrentCertificateIndex(currentCertificateIndex - 1);
+      }
     }
   };
 
   const jumpToCertificate = (number: number) => {
-    setCurrentCertificateIndex(number - 1);
+    if (customSlider.current) {
+      customSlider.current.slickGoTo(number - 1);
+    }
   };
 
   return (
-    <Box
+    <Stack
       sx={{
         mt: {
           xs: "40px",
           sm: "60px",
         },
       }}
+      // alignItems="center"
       width="100%"
     >
       <Typography
@@ -72,6 +115,7 @@ const CertificationList = ({
         alignItems="center"
         mt="20px"
         mx="auto"
+        width={1}
         maxWidth="1000px"
         sx={{
           maxWidth: {
@@ -84,10 +128,41 @@ const CertificationList = ({
         <CustomIconBtn onClick={previousCertificate}>
           <KeyboardArrowLeft sx={iconSx} />
         </CustomIconBtn>
-        <CertificationItem
-          key={certificationList[currentCertificateIndex].id}
-          certification={certificationList[currentCertificateIndex]}
-        />
+        <Box
+          flex={1}
+          sx={{
+            overflowX: "hidden",
+          }}
+          ref={sliderContainer}
+        >
+          <Box
+            component={Slider}
+            sx={{
+              "& .slick-track": {
+                display: "inline-flex",
+              },
+            }}
+            slidesToShow={1}
+            slidesToScroll={1}
+            rows={1}
+            variableWidth
+            centerMode
+            swipeToSlide
+            swipe
+            speed={300}
+            beforeChange={onBeforeChange}
+            ref={customSlider}
+            arrows={false}
+          >
+            {certificationList.map((certification) => (
+              <CertificationItem
+                key={certification.id}
+                certification={certification}
+                sliderContainerWidth={sliderContainerWidth}
+              />
+            ))}
+          </Box>
+        </Box>
         <CustomIconBtn onClick={nextCertificate}>
           <KeyboardArrowRight sx={iconSx} />
         </CustomIconBtn>
@@ -136,7 +211,7 @@ const CertificationList = ({
           );
         })}
       </Stack>
-    </Box>
+    </Stack>
   );
 };
 
@@ -158,4 +233,4 @@ const CustomIconBtn = (props: IconButtonProps) => {
   );
 };
 
-export default CertificationList;
+export default CertificationListCarousel;
