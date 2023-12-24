@@ -19,7 +19,7 @@ const Footer = () => {
         },
       }}
     >
-      © 2022 Jordy Ferdian{" "}
+      © {new Date().getFullYear()} Jordy Ferdian{" "}
       <Circle sx={{ fontSize: "4px", position: "relative", bottom: "3px" }} />{" "}
       {t("footer")}
     </Typography>
