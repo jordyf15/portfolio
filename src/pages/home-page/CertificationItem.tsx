@@ -1,4 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material";
+import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 import { useAppSelector } from "../../hook";
 import Certification from "../../models/Certification";
 
@@ -53,18 +54,37 @@ const CertificationItem = ({
               },
             }}
           >
-            <Box
-              component="img"
-              maxWidth="300px"
-              src={certification.imageUrl}
-              sx={{
-                width: {
-                  xs: "100%",
-                  sm: "unset",
-                },
-                height: "210px",
-              }}
-            />
+            <SimpleReactLightbox>
+              <SRLWrapper
+                options={{
+                  buttons: {
+                    showAutoplayButton: false,
+                    showDownloadButton: false,
+                    showFullscreenButton: false,
+                    showNextButton: false,
+                    showPrevButton: false,
+                    showThumbnailsButton: false,
+                  },
+                  thumbnails: {
+                    showThumbnails: false,
+                  },
+                }}
+              >
+                <Box
+                  component="img"
+                  maxWidth="300px"
+                  src={certification.imageUrl}
+                  sx={{
+                    width: {
+                      xs: "100%",
+                      sm: "unset",
+                    },
+                    height: "210px",
+                    cursor: "pointer",
+                  }}
+                />
+              </SRLWrapper>
+            </SimpleReactLightbox>
           </Box>
         </Stack>
         <Box maxWidth="60px" width="25%" />
