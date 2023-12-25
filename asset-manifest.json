@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.dbc0895f.css",
-    "main.js": "/portfolio/static/js/main.bf0a5076.js",
+    "main.css": "/portfolio/static/css/main.733a6b38.css",
+    "main.js": "/portfolio/static/js/main.ce751b21.js",
     "static/media/dicoding-android-intermediate.jpg": "/portfolio/static/media/dicoding-android-intermediate.191ebaaddcf0c7a43080.jpg",
     "static/media/dicoding-aws-architecture.jpg": "/portfolio/static/media/dicoding-aws-architecture.b803107d6f76b7c0087a.jpg",
     "static/media/dicoding-devops-basic.jpg": "/portfolio/static/media/dicoding-devops-basic.d8a8e755aa6d9cae40a1.jpg",
@@ -35,6 +35,7 @@
     "static/media/wikipedia-viewer.jpeg": "/portfolio/static/media/wikipedia-viewer.f1c48dbf6232645cbf01.jpeg",
     "static/media/restaurant-page.jpeg": "/portfolio/static/media/restaurant-page.61d84cf377b3d90d9f45.jpeg",
     "static/media/pinterest-clone.jpeg": "/portfolio/static/media/pinterest-clone.e16f8bb414b4beae1fef.jpeg",
+    "static/media/jlpt-n3.jpeg": "/portfolio/static/media/jlpt-n3.6add8c66b254deb2b052.jpeg",
     "static/media/hololive-infoapp.jpg": "/portfolio/static/media/hololive-infoapp.ab27f75137ded8b25ebd.jpg",
     "static/media/us-educational-attainment-choropleth-map.jpeg": "/portfolio/static/media/us-educational-attainment-choropleth-map.3169e8e8f68ebe57a8cf.jpeg",
     "static/media/video-game-sale-tree.jpeg": "/portfolio/static/media/video-game-sale-tree.2f2c0d279f58f97d1205.jpeg",
@@ -95,12 +96,16 @@
     "static/media/fullstack-light.svg": "/portfolio/static/media/fullstack-light.88855f9ef76e48af95adca187f9cef4d.svg",
     "static/media/react-dark.svg": "/portfolio/static/media/react-dark.275847f97820746ebd879e51577586ff.svg",
     "static/media/react-light.svg": "/portfolio/static/media/react-light.2f86f0771c9c7fe03a67b14e8cf9e1aa.svg",
+    "static/media/slick.svg": "/portfolio/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/portfolio/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/redux-dark.svg": "/portfolio/static/media/redux-dark.6ef7a31e02cf63a23909046156637dc4.svg",
     "static/media/redux-light.svg": "/portfolio/static/media/redux-light.1baa7960ee7dbb291b1c2c77d8680431.svg",
+    "static/media/slick.ttf": "/portfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/frontend-dark.svg": "/portfolio/static/media/frontend-dark.244ceacd13881e4949488f1fd789dd67.svg",
     "static/media/frontend-light.svg": "/portfolio/static/media/frontend-light.acbaa3c449b1e98a2d3495436b63c58c.svg",
     "static/media/expressjs-dark.svg": "/portfolio/static/media/expressjs-dark.03bab6fb6bc901c9e0c200b32eb016f0.svg",
     "static/media/expressjs-light.svg": "/portfolio/static/media/expressjs-light.b2598c986dd13c4b71380da9367ff1f4.svg",
+    "static/media/slick.woff": "/portfolio/static/media/slick.295183786cd8a1389865.woff",
     "static/media/android-dark.svg": "/portfolio/static/media/android-dark.5d4578bd4ca26b5575b256f63314596f.svg",
     "static/media/android-light.svg": "/portfolio/static/media/android-light.462a44336c61bfe62489fdd38c0b7844.svg",
     "static/media/d3js-dark.svg": "/portfolio/static/media/d3js-dark.f36ec8d85916b8abaa781d8bf693fd61.svg",
@@ -108,11 +113,11 @@
     "static/media/mongodb-dark.svg": "/portfolio/static/media/mongodb-dark.646de9d0828a8cca18b218fc7498c0fd.svg",
     "static/media/mongodb-light.svg": "/portfolio/static/media/mongodb-light.f6379189b1844f72aa24f71a74964d24.svg",
     "index.html": "/portfolio/index.html",
-    "main.dbc0895f.css.map": "/portfolio/static/css/main.dbc0895f.css.map",
-    "main.bf0a5076.js.map": "/portfolio/static/js/main.bf0a5076.js.map"
+    "main.733a6b38.css.map": "/portfolio/static/css/main.733a6b38.css.map",
+    "main.ce751b21.js.map": "/portfolio/static/js/main.ce751b21.js.map"
   },
   "entrypoints": [
-    "static/css/main.dbc0895f.css",
-    "static/js/main.bf0a5076.js"
+    "static/css/main.733a6b38.css",
+    "static/js/main.ce751b21.js"
   ]
 }
