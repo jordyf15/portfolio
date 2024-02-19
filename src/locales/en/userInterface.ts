@@ -6,6 +6,7 @@ const userInterface = {
     technicalCertification: "Technical Certification",
     otherCertification: "Other Certification",
     project: "Projects",
+    skill: "IT Skills",
   },
   subTitle: {
     project: "A collection of projects i have made",

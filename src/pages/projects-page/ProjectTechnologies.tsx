@@ -1,24 +1,24 @@
 import { Stack, SvgIcon, Typography } from "@mui/material";
-import { ReactComponent as D3jsLogoLight } from "../../assets/icons/d3js-light.svg";
-import { ReactComponent as ExpressLogoLight } from "../../assets/icons/expressjs-light.svg";
-import { ReactComponent as GinLogoLight } from "../../assets/icons/gin-light.svg";
-import { ReactComponent as HapiLogoLight } from "../../assets/icons/hapi-light.svg";
-import { ReactComponent as MongoDBLogoLight } from "../../assets/icons/mongodb-light.svg";
-import { ReactComponent as PostgresLogoLight } from "../../assets/icons/postgres-light.svg";
-import { ReactComponent as ReactLogoLight } from "../../assets/icons/react-light.svg";
-import { ReactComponent as RedisLogoLight } from "../../assets/icons/redis-light.svg";
-import { ReactComponent as ReduxLogoLight } from "../../assets/icons/redux-light.svg";
+import { ReactComponent as D3jsLogoLight } from "../../assets/technology-icons/d3js-light.svg";
+import { ReactComponent as ExpressLogoLight } from "../../assets/technology-icons/expressjs-light.svg";
+import { ReactComponent as GinLogoLight } from "../../assets/technology-icons/gin-light.svg";
+import { ReactComponent as HapiLogoLight } from "../../assets/technology-icons/hapi-light.svg";
+import { ReactComponent as MongoDBLogoLight } from "../../assets/technology-icons/mongodb-light.svg";
+import { ReactComponent as PostgresLogoLight } from "../../assets/technology-icons/postgres-light.svg";
+import { ReactComponent as ReactLogoLight } from "../../assets/technology-icons/react-light.svg";
+import { ReactComponent as RedisLogoLight } from "../../assets/technology-icons/redis-light.svg";
+import { ReactComponent as ReduxLogoLight } from "../../assets/technology-icons/redux-light.svg";
 
 import { useTranslation } from "react-i18next";
-import { ReactComponent as D3jsLogoDark } from "../../assets/icons/d3js-dark.svg";
-import { ReactComponent as ExpressLogoDark } from "../../assets/icons/expressjs-dark.svg";
-import { ReactComponent as GinLogoDark } from "../../assets/icons/gin-dark.svg";
-import { ReactComponent as HapiLogoDark } from "../../assets/icons/hapi-dark.svg";
-import { ReactComponent as MongoDBLogoDark } from "../../assets/icons/mongodb-dark.svg";
-import { ReactComponent as PostgresLogoDark } from "../../assets/icons/postgres-dark.svg";
-import { ReactComponent as ReactLogoDark } from "../../assets/icons/react-dark.svg";
-import { ReactComponent as RedisLogoDark } from "../../assets/icons/redis-dark.svg";
-import { ReactComponent as ReduxLogoDark } from "../../assets/icons/redux-dark.svg";
+import { ReactComponent as D3jsLogoDark } from "../../assets/technology-icons/d3js-dark.svg";
+import { ReactComponent as ExpressLogoDark } from "../../assets/technology-icons/expressjs-dark.svg";
+import { ReactComponent as GinLogoDark } from "../../assets/technology-icons/gin-dark.svg";
+import { ReactComponent as HapiLogoDark } from "../../assets/technology-icons/hapi-dark.svg";
+import { ReactComponent as MongoDBLogoDark } from "../../assets/technology-icons/mongodb-dark.svg";
+import { ReactComponent as PostgresLogoDark } from "../../assets/technology-icons/postgres-dark.svg";
+import { ReactComponent as ReactLogoDark } from "../../assets/technology-icons/react-dark.svg";
+import { ReactComponent as RedisLogoDark } from "../../assets/technology-icons/redis-dark.svg";
+import { ReactComponent as ReduxLogoDark } from "../../assets/technology-icons/redux-dark.svg";
 import { useAppSelector } from "../../hook";
 
 type Technology =

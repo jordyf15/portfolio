@@ -18,10 +18,12 @@ import {
   organizationHistoryJP,
   workHistoryJP,
 } from "../../datas/jp/historyData";
+import { skills } from "../../datas/skillData";
 import { useAppSelector } from "../../hook";
 import CertificationList from "./CertificationList";
 import HistoryList from "./HistoryList";
 import ProfileLinks from "./ProfileLinks";
+import SkillList from "./SkillList";
 
 const HomePage = () => {
   const notMobile = useMediaQuery("(min-width:700px)");
@@ -104,6 +106,7 @@ const HomePage = () => {
           </>
         )}
       </Typography>
+      <SkillList skillList={skills} skillTitle="title.skill" />
       <HistoryList
         historyList={
           language === "en" ? educationHistoryEN : educationHistoryJP

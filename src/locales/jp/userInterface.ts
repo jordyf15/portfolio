@@ -6,6 +6,7 @@ const userInterface = {
     technicalCertification: "技術認定",
     otherCertification: "他の認証",
     project: "プロジェクト",
+    skill: "ITスキル",
   },
   subTitle: {
     project: "これまでに制作したプロジェクト集でございます",

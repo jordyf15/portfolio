@@ -1,15 +1,15 @@
 import { Stack, SvgIcon, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { ReactComponent as AndroidLogoDark } from "../../assets/icons/android-dark.svg";
-import { ReactComponent as AndroidLogoLight } from "../../assets/icons/android-light.svg";
-import { ReactComponent as BackendLogoDark } from "../../assets/icons/backend-dark.svg";
-import { ReactComponent as BackendLogoLight } from "../../assets/icons/backend-light.svg";
-import { ReactComponent as FrontendLogoDark } from "../../assets/icons/frontend-dark.svg";
-import { ReactComponent as FrontendLogoLight } from "../../assets/icons/frontend-light.svg";
-import { ReactComponent as FullStackLogoDark } from "../../assets/icons/fullstack-dark.svg";
-import { ReactComponent as FullStackLogoLight } from "../../assets/icons/fullstack-light.svg";
-import { ReactComponent as OtherLogoDark } from "../../assets/icons/other-dark.svg";
-import { ReactComponent as OtherLogoLight } from "../../assets/icons/other-light.svg";
+import { ReactComponent as AndroidLogoDark } from "../../assets/technology-icons/android-dark.svg";
+import { ReactComponent as AndroidLogoLight } from "../../assets/technology-icons/android-light.svg";
+import { ReactComponent as BackendLogoDark } from "../../assets/technology-icons/backend-dark.svg";
+import { ReactComponent as BackendLogoLight } from "../../assets/technology-icons/backend-light.svg";
+import { ReactComponent as FrontendLogoDark } from "../../assets/technology-icons/frontend-dark.svg";
+import { ReactComponent as FrontendLogoLight } from "../../assets/technology-icons/frontend-light.svg";
+import { ReactComponent as FullStackLogoDark } from "../../assets/technology-icons/fullstack-dark.svg";
+import { ReactComponent as FullStackLogoLight } from "../../assets/technology-icons/fullstack-light.svg";
+import { ReactComponent as OtherLogoDark } from "../../assets/technology-icons/other-dark.svg";
+import { ReactComponent as OtherLogoLight } from "../../assets/technology-icons/other-light.svg";
 import { useAppSelector } from "../../hook";
 
 interface ProjectTypeProps {
