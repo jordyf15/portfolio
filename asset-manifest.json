@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.733a6b38.css",
-    "main.js": "/portfolio/static/js/main.ce751b21.js",
+    "main.js": "/portfolio/static/js/main.ecdfc389.js",
     "static/media/dicoding-android-intermediate.jpg": "/portfolio/static/media/dicoding-android-intermediate.191ebaaddcf0c7a43080.jpg",
     "static/media/dicoding-aws-architecture.jpg": "/portfolio/static/media/dicoding-aws-architecture.b803107d6f76b7c0087a.jpg",
     "static/media/dicoding-devops-basic.jpg": "/portfolio/static/media/dicoding-devops-basic.d8a8e755aa6d9cae40a1.jpg",
@@ -72,6 +72,7 @@
     "static/media/cli-tic-tac-toe.jpeg": "/portfolio/static/media/cli-tic-tac-toe.352a5f20c539c162766c.jpeg",
     "static/media/scatter-plot.jpeg": "/portfolio/static/media/scatter-plot.cd7fd8a0b7e784bee3eb.jpeg",
     "static/media/random-quote-machine.jpeg": "/portfolio/static/media/random-quote-machine.d93013ab02e22652f068.jpeg",
+    "static/media/gin.png": "/portfolio/static/media/gin.2d519b9a4c949f3a770d.png",
     "static/media/react-calculator.jpeg": "/portfolio/static/media/react-calculator.3a065e364289df2cb5c0.jpeg",
     "static/media/etch-a-sketch.jpeg": "/portfolio/static/media/etch-a-sketch.75c204eea23b6118d12a.jpeg",
     "static/media/todo-list.jpeg": "/portfolio/static/media/todo-list.2fe327dfc4763dbda6c6.jpeg",
@@ -80,6 +81,8 @@
     "static/media/tic-tac-toe.jpeg": "/portfolio/static/media/tic-tac-toe.6f7c0424a9e53a789bf7.jpeg",
     "static/media/drum-machine.jpeg": "/portfolio/static/media/drum-machine.31d68cbf1c9ecf51049d.jpeg",
     "static/media/javascript-calculator.jpeg": "/portfolio/static/media/javascript-calculator.49380fb504a7e3c6d75a.jpeg",
+    "static/media/golang.png": "/portfolio/static/media/golang.02bc982b6d5375664482.png",
+    "static/media/postgresql.png": "/portfolio/static/media/postgresql.2e675658cedda3e07b93.png",
     "static/media/postgres-dark.svg": "/portfolio/static/media/postgres-dark.e8e63062187b9c4c5c37597f337fac8d.svg",
     "static/media/postgres-light.svg": "/portfolio/static/media/postgres-light.a5a45d0ad82519b79953f8ae186d5a17.svg",
     "static/media/other-dark.svg": "/portfolio/static/media/other-dark.c59e8e07e2398fce5f92d76bcd864487.svg",
@@ -114,10 +117,10 @@
     "static/media/mongodb-light.svg": "/portfolio/static/media/mongodb-light.f6379189b1844f72aa24f71a74964d24.svg",
     "index.html": "/portfolio/index.html",
     "main.733a6b38.css.map": "/portfolio/static/css/main.733a6b38.css.map",
-    "main.ce751b21.js.map": "/portfolio/static/js/main.ce751b21.js.map"
+    "main.ecdfc389.js.map": "/portfolio/static/js/main.ecdfc389.js.map"
   },
   "entrypoints": [
     "static/css/main.733a6b38.css",
-    "static/js/main.ce751b21.js"
+    "static/js/main.ecdfc389.js"
   ]
 }
