@@ -1,6 +1,6 @@
 import History from "../../models/History";
 
-export const educationHistoryJP: Array<History> = [
+export const educationHistoryJP: History[] = [
   {
     id: "history-education-1",
     institution: "ビナヌサンタラ大学",
@@ -17,23 +17,53 @@ export const educationHistoryJP: Array<History> = [
   },
 ];
 
-export const workHistoryJP: Array<History> = [
+export const workHistoryJP: History[] = [
   {
     id: "history-work-1",
     institution: "コーラスデジタルインドネシア",
     category: "Work",
     role: "フルスタックデベロッパー",
     date: "2022年 - 現在",
+    points: [
+      "インドネシアの複数のマーケットプレイスに統合されたAutobosというオンラインショップ管理システムのレストフルAPIとフロントエンドウェブアプリケーションの開発を手伝い、より効率的な注文処理プロセスを提供することで、運用コストを削減し、時間効率を向上させた。",
+      "ミュージシャンやコンテンツクリエイターがロイヤリティフリーで良質なサウンドを入手できるサウンド共有プラットフォーム「Sampled」のレストフルAPI、フロントエンドWebアプリケーション、サーバーサイドアプリケーション、ツールの開発を手伝いました。",
+      "前より早くて楽しく曲を学ぶのためにカラオケのように流れるギターとウクレレのコードと歌詞を提供する音楽学習アプリケーション「Chord Genius」のレストフルAPI、サーバーサイドアプリケーション、ツールの開発を手伝いました。",
+    ],
+    technologies: [
+      "Typescript",
+      "React",
+      "Golang",
+      "Gin",
+      "Ruby",
+      "Ruby on Rails",
+      "Firebase",
+      "MongoDB",
+      "PostgreSQL",
+      "Redis",
+    ],
   },
 ];
 
-export const organizationHistoryJP: Array<History> = [
+export const organizationHistoryJP: History[] = [
   {
     id: "history-organization-1",
     institution: "グーグルデベロッパーの学生クラブ",
     category: "Organization",
     role: "コアチームメンバー",
     date: "2021年 - 2022年",
+    points: [
+      "フロントエンドのファシリテーターとして、クラブのメンバーにフロントエンド開発のための HTML、CSS、JavaScript、ReactJS、Typescript を教えました。",
+      "バックエンドのファシリテーターとして、クラブのメンバーにバックエンド開発のための Javascript、Express、MongoDB を教えました。",
+    ],
+    technologies: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Typescript",
+      "React",
+      "Express",
+      "MongoDB",
+    ],
   },
   {
     id: "history-organization-2",
@@ -41,5 +71,8 @@ export const organizationHistoryJP: Array<History> = [
     category: "Organization",
     role: "ボランティア",
     date: "2019年 - 2020年",
+    points: [
+      "オーストラリア・インターナショナル・コーナーとそのイベントの世話を手伝いました。",
+    ],
   },
 ];

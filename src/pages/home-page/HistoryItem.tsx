@@ -24,8 +24,14 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
         borderStyle: "solid",
         borderColor: "border",
       }}
+      pr={{ xs: 2, sm: 5 }}
     >
-      <Stack direction="column" width="70px" alignItems="center">
+      <Stack
+        px={{ xs: 1.5, sm: 5 }}
+        direction="column"
+        width="70px"
+        alignItems="center"
+      >
         <Pipe sx={{ mt: "5px" }} />
         <Stack
           bgcolor="historyBackground"
@@ -48,46 +54,94 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
         </Stack>
         <Pipe sx={{ mb: "5px" }} />
       </Stack>
-      <Stack direction="column" justifyContent="center">
-        <Typography
-          sx={{
-            fontSize: {
-              xs: language === "en" ? "16px" : "14px",
-              sm: language === "en" ? "20px" : "18px",
-            },
-          }}
-          fontWeight="bold"
-          color="primary.main"
-          pr={language === "jp" ? "15px" : "unset"}
-          mb={language === "jp" ? "3px" : "unset"}
-        >
-          {history.institution}
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: {
-              xs: language === "en" ? "14px" : "12px",
-              sm: language === "en" ? "18px" : "16px",
-            },
-          }}
-          mb={language === "jp" ? "5px" : "unset"}
-          fontWeight="bold"
-          color="secondary.main"
-        >
-          {history.role}
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: {
-              xs: language === "en" ? "12px" : "10px",
-              sm: language === "en" ? "16px" : "14px",
-            },
-          }}
-          fontWeight="bold"
-          color="minorText"
-        >
-          {history.date}
-        </Typography>
+      <Stack direction="column" justifyContent="center" py={1.5} spacing={1.5}>
+        <Stack>
+          <Typography
+            sx={{
+              fontSize: {
+                xs: language === "en" ? "16px" : "14px",
+                sm: language === "en" ? "20px" : "18px",
+              },
+            }}
+            fontWeight="bold"
+            color="primary.main"
+            pr={language === "jp" ? "15px" : "unset"}
+            mb={language === "jp" ? "3px" : "unset"}
+          >
+            {history.institution}
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: {
+                xs: language === "en" ? "14px" : "12px",
+                sm: language === "en" ? "18px" : "16px",
+              },
+            }}
+            mb={language === "jp" ? "5px" : "unset"}
+            fontWeight="bold"
+            color="secondary.main"
+          >
+            {history.role}
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: {
+                xs: language === "en" ? "12px" : "10px",
+                sm: language === "en" ? "16px" : "14px",
+              },
+            }}
+            fontWeight="bold"
+            color="minorText"
+          >
+            {history.date}
+          </Typography>
+        </Stack>
+        {history.points?.length && (
+          <Box component="ul" pl={2}>
+            {history.points?.map((point) => (
+              <Typography
+                color="secondary.main"
+                textAlign="justify"
+                fontSize={{ xs: "12px", sm: "14px" }}
+                component="li"
+                sx={{
+                  "::marker": {
+                    fontSize: "12px",
+                  },
+                }}
+              >
+                {point}
+              </Typography>
+            ))}
+          </Box>
+        )}
+        {history.technologies?.length && (
+          <Stack flexWrap="wrap" direction="row">
+            {history.technologies?.map((technology) => (
+              <Stack
+                alignItems="center"
+                justifyContent="center"
+                px={1}
+                py={0.3}
+                mb={1}
+                mr={1}
+                sx={{
+                  borderWidth: "2px",
+                  borderStyle: "solid",
+                  borderColor: "border",
+                  borderRadius: "25px",
+                }}
+              >
+                <Typography
+                  fontSize={{ xs: "12px", sm: "14px" }}
+                  color="secondary.main"
+                >
+                  {technology}
+                </Typography>
+              </Stack>
+            ))}
+          </Stack>
+        )}
       </Stack>
     </Stack>
   );
@@ -98,8 +152,9 @@ const Pipe = (props: BoxProps) => {
     <Box
       bgcolor="historyPillar"
       width="4px"
+      flexGrow={1}
       sx={{
-        height: {
+        minHeight: {
           xs: "25px",
           sm: "30px",
         },

@@ -108,12 +108,6 @@ const HomePage = () => {
       </Typography>
       <SkillList skillList={skills} skillTitle="title.skill" />
       <HistoryList
-        historyList={
-          language === "en" ? educationHistoryEN : educationHistoryJP
-        }
-        historyTitle="title.educationHistory"
-      />
-      <HistoryList
         historyList={language === "en" ? workHistoryEN : workHistoryJP}
         historyTitle="title.workExperience"
       />
@@ -122,6 +116,12 @@ const HomePage = () => {
           language === "en" ? organizationHistoryEN : organizationHistoryJP
         }
         historyTitle="title.organizationExperience"
+      />
+      <HistoryList
+        historyList={
+          language === "en" ? educationHistoryEN : educationHistoryJP
+        }
+        historyTitle="title.educationHistory"
       />
       <CertificationList
         certificationTitle="title.technicalCertification"
