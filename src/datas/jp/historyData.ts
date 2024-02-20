@@ -6,14 +6,14 @@ export const educationHistoryJP: History[] = [
     institution: "ビナヌサンタラ大学",
     category: "Education",
     role: "コンピュータサイエンス",
-    date: "2019年 - 現在",
+    date: "2019年9月 - 現在",
   },
   {
     id: "history-education-2",
     institution: "シトラベルカト高等学校",
     category: "Education",
     role: "自然科学",
-    date: "2016年 - 2019年",
+    date: "2016年7月 - 2019年5月",
   },
 ];
 
@@ -23,7 +23,7 @@ export const workHistoryJP: History[] = [
     institution: "コーラスデジタルインドネシア",
     category: "Work",
     role: "フルスタックデベロッパー",
-    date: "2022年 - 現在",
+    date: "2022年3月 - 現在",
     points: [
       "インドネシアの複数のマーケットプレイスに統合されたAutobosというオンラインショップ管理システムのレストフルAPIとフロントエンドウェブアプリケーションの開発を手伝い、より効率的な注文処理プロセスを提供することで、運用コストを削減し、時間効率を向上させた。",
       "ミュージシャンやコンテンツクリエイターがロイヤリティフリーで良質なサウンドを入手できるサウンド共有プラットフォーム「Sampled」のレストフルAPI、フロントエンドWebアプリケーション、サーバーサイドアプリケーション、ツールの開発を手伝いました。",
@@ -50,7 +50,7 @@ export const organizationHistoryJP: History[] = [
     institution: "グーグルデベロッパーの学生クラブ",
     category: "Organization",
     role: "コアチームメンバー",
-    date: "2021年 - 2022年",
+    date: "2021年9月 - 2022年9月",
     points: [
       "フロントエンドのファシリテーターとして、クラブのメンバーにフロントエンド開発のための HTML、CSS、JavaScript、ReactJS、Typescript を教えました。",
       "バックエンドのファシリテーターとして、クラブのメンバーにバックエンド開発のための Javascript、Express、MongoDB を教えました。",
@@ -70,7 +70,7 @@ export const organizationHistoryJP: History[] = [
     institution: "オーストラリア国際コーナー",
     category: "Organization",
     role: "ボランティア",
-    date: "2019年 - 2020年",
+    date: "2020年2月 - 2020年7月",
     points: [
       "オーストラリア・インターナショナル・コーナーとそのイベントの世話を手伝いました。",
     ],

@@ -6,14 +6,14 @@ export const educationHistoryEN: History[] = [
     institution: "Bina Nusantara University",
     category: "Education",
     role: "Computer Science",
-    date: "2019 - Present",
+    date: "September 2019 - Present",
   },
   {
     id: "history-education-2",
     institution: "SMA Citra Berkat",
     category: "Education",
     role: "Natural Science",
-    date: "2016 - 2019",
+    date: "July 2016 - May 2019",
   },
 ];
 
@@ -23,7 +23,7 @@ export const workHistoryEN: History[] = [
     institution: "Chorus Digital Indonesia",
     category: "Work",
     role: "Full Stack Developer",
-    date: "2022 - Present",
+    date: "March 2022 - Present",
     points: [
       "Assisted in developing restful APIs and frontend web applications for an online shop management system named Autobos that is integrated to multiple marketplaces in Indonesia and provided a more efficient process to handle orders which descreased operational cost and increased time efficiency.",
       "Assisted in developing a restful API, frontend web application, server-side application, and tools for an sound sharing platform named Sampled which is made for musicians and content creators to find quality sounds for free and royalty-free.",
@@ -50,7 +50,7 @@ export const organizationHistoryEN: History[] = [
     institution: "Google Developer Student Club",
     category: "Organization",
     role: "Core Team Member",
-    date: "2021 - 2022",
+    date: "September 2021 - September 2022",
     points: [
       "Had been a frontend facilitator, teaching club members HTML, CSS, Javascript, ReactJS, and Typescript for Frontend Development.",
       "Had been a backend facilitator, teaching club members backend development Javascript, Express, and MongoDB for Backend Development.",
@@ -70,7 +70,7 @@ export const organizationHistoryEN: History[] = [
     institution: "Australia International Corner",
     category: "Organization",
     role: "Volunteer",
-    date: "2019 - 2020",
+    date: "February 2020 - July 2020",
     points: [
       "Assisted in taking care of the australia international corner and its events.",
     ],
