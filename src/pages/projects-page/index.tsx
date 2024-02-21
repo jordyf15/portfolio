@@ -131,7 +131,7 @@ const ProjectPage = () => {
   };
 
   return (
-    <Stack flex={1} py="35px" alignItems="center">
+    <Stack flex={1} py="35px" alignItems="center" flexGrow={1}>
       <Typography
         component="h1"
         color="primary.main"

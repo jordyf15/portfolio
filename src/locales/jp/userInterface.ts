@@ -42,6 +42,7 @@ const userInterface = {
   filter: {
     language: "言語",
     type: "タイプ",
+    noResult: "申し訳ありませんが、該当するものが見つかりませんでした。",
   },
 };
 

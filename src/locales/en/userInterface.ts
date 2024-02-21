@@ -42,6 +42,7 @@ const userInterface = {
   filter: {
     language: "Language",
     type: "Type",
+    noResult: "Sorry, we couldn't find any matches.",
   },
 };
 
