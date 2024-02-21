@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.733a6b38.css",
-    "main.js": "/portfolio/static/js/main.8250cdd4.js",
+    "main.js": "/portfolio/static/js/main.76163f09.js",
     "static/media/dicoding-android-intermediate.jpg": "/portfolio/static/media/dicoding-android-intermediate.191ebaaddcf0c7a43080.jpg",
     "static/media/dicoding-aws-architecture.jpg": "/portfolio/static/media/dicoding-aws-architecture.b803107d6f76b7c0087a.jpg",
     "static/media/dicoding-devops-basic.jpg": "/portfolio/static/media/dicoding-devops-basic.d8a8e755aa6d9cae40a1.jpg",
@@ -117,10 +117,10 @@
     "static/media/mongodb-light.svg": "/portfolio/static/media/mongodb-light.f6379189b1844f72aa24f71a74964d24.svg",
     "index.html": "/portfolio/index.html",
     "main.733a6b38.css.map": "/portfolio/static/css/main.733a6b38.css.map",
-    "main.8250cdd4.js.map": "/portfolio/static/js/main.8250cdd4.js.map"
+    "main.76163f09.js.map": "/portfolio/static/js/main.76163f09.js.map"
   },
   "entrypoints": [
     "static/css/main.733a6b38.css",
-    "static/js/main.8250cdd4.js"
+    "static/js/main.76163f09.js"
   ]
 }
