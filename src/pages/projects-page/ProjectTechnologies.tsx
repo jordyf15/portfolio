@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Tooltip, Typography } from "@mui/material";
 import D3jsLogoLight from "../../assets/technology-icons/d3js-light.png";
 import ExpressLogoLight from "../../assets/technology-icons/expressjs-light.png";
 import GinLogoLight from "../../assets/technology-icons/gin-light.png";
@@ -123,7 +123,23 @@ const TechnologyIcon = ({ technology }: TechnologyIconProps) => {
       icon = theme === "Light" ? FirebaseLogoLight : FirebaseLogoDark;
       break;
   }
-  return <Box component="img" src={icon} width="25px" height="25px" />;
+  return (
+    <Tooltip
+      title={technology}
+      PopperProps={{
+        modifiers: [
+          {
+            name: "offset",
+            options: {
+              offset: [0, -10],
+            },
+          },
+        ],
+      }}
+    >
+      <Box component="img" src={icon} width="25px" height="25px" />
+    </Tooltip>
+  );
 };
 
 export default ProjectTechnologies;
