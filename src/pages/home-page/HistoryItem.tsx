@@ -98,7 +98,7 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
         </Stack>
         {history.points?.length && (
           <Box component="ul" pl={2}>
-            {history.points?.map((point) => (
+            {history.points?.map((point, idx) => (
               <Typography
                 color="secondary.main"
                 textAlign="justify"
@@ -109,6 +109,7 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
                     fontSize: "12px",
                   },
                 }}
+                key={`${history.id}-point${idx}`}
               >
                 {point}
               </Typography>
@@ -119,6 +120,7 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
           <Stack flexWrap="wrap" direction="row">
             {history.technologies?.map((technology) => (
               <Stack
+                key={`${history.id}-${technology}`}
                 alignItems="center"
                 justifyContent="center"
                 px={1}
