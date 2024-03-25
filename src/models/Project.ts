@@ -11,7 +11,8 @@ type Technology =
   | "Redis"
   | "Postgres"
   | "Hapi"
-  | "D3js";
+  | "D3js"
+  | "Firebase";
 
 export default interface Project {
   id: string;

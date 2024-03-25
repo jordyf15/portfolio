@@ -1,15 +1,15 @@
-import { Stack, SvgIcon, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { ReactComponent as AndroidLogoDark } from "../../assets/technology-icons/android-dark.svg";
-import { ReactComponent as AndroidLogoLight } from "../../assets/technology-icons/android-light.svg";
-import { ReactComponent as BackendLogoDark } from "../../assets/technology-icons/backend-dark.svg";
-import { ReactComponent as BackendLogoLight } from "../../assets/technology-icons/backend-light.svg";
-import { ReactComponent as FrontendLogoDark } from "../../assets/technology-icons/frontend-dark.svg";
-import { ReactComponent as FrontendLogoLight } from "../../assets/technology-icons/frontend-light.svg";
-import { ReactComponent as FullStackLogoDark } from "../../assets/technology-icons/fullstack-dark.svg";
-import { ReactComponent as FullStackLogoLight } from "../../assets/technology-icons/fullstack-light.svg";
-import { ReactComponent as OtherLogoDark } from "../../assets/technology-icons/other-dark.svg";
-import { ReactComponent as OtherLogoLight } from "../../assets/technology-icons/other-light.svg";
+import AndroidLogoDark from "../../assets/technology-icons/android-dark.png";
+import AndroidLogoLight from "../../assets/technology-icons/android-light.png";
+import BackendLogoDark from "../../assets/technology-icons/backend-dark.png";
+import BackendLogoLight from "../../assets/technology-icons/backend-light.png";
+import FrontendLogoDark from "../../assets/technology-icons/frontend-dark.png";
+import FrontendLogoLight from "../../assets/technology-icons/frontend-light.png";
+import FullStackLogoDark from "../../assets/technology-icons/fullstack-dark.png";
+import FullStackLogoLight from "../../assets/technology-icons/fullstack-light.png";
+import OtherLogoDark from "../../assets/technology-icons/other-dark.png";
+import OtherLogoLight from "../../assets/technology-icons/other-light.png";
 import { useAppSelector } from "../../hook";
 
 interface ProjectTypeProps {
@@ -77,12 +77,8 @@ const ProjectType = ({ type }: ProjectTypeProps) => {
 };
 
 const TypeIcon = ({ type }: ProjectTypeProps) => {
-  let icon: React.FunctionComponent<
-    React.SVGProps<SVGSVGElement> & {
-      title?: string | undefined;
-    }
-  >;
-  let viewBox = "0 10 150 110";
+  let icon: string;
+
   const theme = useAppSelector((state) => state.theme);
   switch (type) {
     case "frontend":
@@ -90,23 +86,19 @@ const TypeIcon = ({ type }: ProjectTypeProps) => {
       break;
     case "backend":
       icon = theme === "Light" ? BackendLogoLight : BackendLogoDark;
-      viewBox = "0 10 140 110";
       break;
     case "fullstack":
       icon = theme === "Light" ? FullStackLogoLight : FullStackLogoDark;
-      viewBox = "0 10 130 110";
       break;
     case "other":
       icon = theme === "Light" ? OtherLogoLight : OtherLogoDark;
-      viewBox = "0 5 150 110";
       break;
     case "android":
       icon = theme === "Light" ? AndroidLogoLight : AndroidLogoDark;
-      viewBox = "0 30 170 110";
       break;
   }
 
-  return <SvgIcon viewBox={viewBox} component={icon}></SvgIcon>;
+  return <Box src={icon} component="img" width="20px" height="20px" />;
 };
 
 export default ProjectType;

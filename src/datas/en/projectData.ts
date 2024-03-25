@@ -32,6 +32,7 @@ import restopediaImg from "../../assets/projects/restopedia.jpeg";
 import rockPaperScissorsImg from "../../assets/projects/rock-paper-scissors.jpeg";
 import scatterPlotImg from "../../assets/projects/scatter-plot.jpeg";
 import simonGameImg from "../../assets/projects/simon-game.jpeg";
+import smartLearningSystemImg from "../../assets/projects/smart-learning-system.jpg";
 import ticTacToeImg from "../../assets/projects/tic-tac-toe.jpeg";
 import timestampMicroservice from "../../assets/projects/timestamp-microservice.jpeg";
 import todoListImg from "../../assets/projects/todo-list.jpeg";
@@ -45,6 +46,18 @@ import wikipediaViewerImg from "../../assets/projects/wikipedia-viewer.jpeg";
 import Project from "../../models/Project";
 
 const projectsEN: Array<Project> = [
+  {
+    id: "project-47",
+    title: "Smart Learning System",
+    description:
+      "Smart Learning System is a web based learning management system that have features that assist learning and teaching activities between students and teachers of junior and senior high school.　The main features are classes, materials, assignments, forum, scores, progress, announcements, and agenda. This project was made for my thesis at Bina Nusantara University.",
+    imageUrl: smartLearningSystemImg,
+    type: "frontend",
+    language: "javascript",
+    technologies: ["React", "Redux", "Firebase"],
+    demoUrl: "https://sistem-belajar-pintar-49f3f.web.app/",
+    repoUrl: "https://github.com/jordyf15/sistem-sekolah-pintar",
+  },
   {
     id: "project-46",
     title: "Dicoding Story",
@@ -79,7 +92,7 @@ const projectsEN: Array<Project> = [
     type: "frontend",
     language: "javascript",
     technologies: [],
-    demoUrl: "https://Restopedia.jordyf15.repl.co",
+    demoUrl: "https://restopedia-97073.web.app/",
     repoUrl:
       "https://github.com/jordyf15/Dicoding-Expert-FrontEnd-Web-Development-FinalProject",
     imageUrl: restopediaImg,
@@ -141,7 +154,7 @@ const projectsEN: Array<Project> = [
     type: "frontend",
     language: "javascript",
     technologies: [],
-    demoUrl: "https://todo-list.jordyf15.repl.co/",
+    demoUrl: "https://jordyf15.github.io/todo-list/",
     repoUrl: "https://github.com/jordyf15/todo-list",
     imageUrl: todoListImg,
   },
@@ -201,7 +214,7 @@ const projectsEN: Array<Project> = [
     type: "other",
     language: "ruby",
     technologies: [],
-    demoUrl: "https://replit.com/@jordyf15/ruby-chess-1#.replit",
+    demoUrl: "",
     repoUrl: "https://github.com/jordyf15/ruby-chess",
     imageUrl: cliChessImg,
   },
@@ -213,7 +226,7 @@ const projectsEN: Array<Project> = [
     type: "other",
     language: "ruby",
     technologies: [],
-    demoUrl: "https://replit.com/@jordyf15/ruby-tic-tac-toe",
+    demoUrl: "",
     repoUrl: "https://github.com/jordyf15/ruby-tic-tac-toe",
     imageUrl: cliTicTacToeImg,
   },
@@ -225,7 +238,7 @@ const projectsEN: Array<Project> = [
     type: "other",
     language: "ruby",
     technologies: [],
-    demoUrl: "https://replit.com/@jordyf15/ruby-hangman",
+    demoUrl: "",
     repoUrl: "https://github.com/jordyf15/ruby-hangman",
     imageUrl: cliHangmanImg,
   },
@@ -237,7 +250,7 @@ const projectsEN: Array<Project> = [
     type: "other",
     language: "ruby",
     technologies: [],
-    demoUrl: "https://replit.com/@jordyf15/ruby-mastermind#.replit",
+    demoUrl: "",
     repoUrl: "https://github.com/jordyf15/ruby-mastermind",
     imageUrl: cliMasterMindImg,
   },
@@ -310,7 +323,7 @@ const projectsEN: Array<Project> = [
     type: "fullstack",
     language: "javascript",
     technologies: ["React", "MongoDB", "Express"],
-    demoUrl: "https://freecodecamp-pinterest-clone.jordyf15.repl.co/",
+    demoUrl: "",
     repoUrl: "https://github.com/jordyf15/FreeCodeCamp-Pinterest-Clone",
     imageUrl: pinterestCloneImg,
   },
@@ -346,7 +359,7 @@ const projectsEN: Array<Project> = [
     type: "fullstack",
     language: "javascript",
     technologies: ["React", "MongoDB", "Express"],
-    demoUrl: "https://FreeCodeCamp-Image-Searcher-1.jordyf15.repl.co",
+    demoUrl: "",
     repoUrl: "https://github.com/jordyf15/FreeCodeCamp-Image-Searcher",
     imageUrl: imageSearcherImg,
   },
@@ -444,7 +457,7 @@ const projectsEN: Array<Project> = [
     type: "backend",
     language: "javascript",
     technologies: ["Express"],
-    demoUrl: "https://file-metadata-microservice.jordyf15.repl.co/",
+    demoUrl: "",
     repoUrl:
       "https://github.com/jordyf15/FreeCodeCamp-File-Metadata-Microservice",
     imageUrl: fileMetadataMicroserviceImg,
@@ -457,7 +470,7 @@ const projectsEN: Array<Project> = [
     type: "backend",
     language: "javascript",
     technologies: ["Express", "MongoDB"],
-    demoUrl: "https://freecodecamp-project-exercisetracker.jordyf15.repl.co/",
+    demoUrl: "",
     repoUrl:
       "https://github.com/jordyf15/FreeCodeCamp-Exercise-Tracker-Microservice",
     imageUrl: exerciseTrackerMicroserviceImg,
@@ -470,7 +483,7 @@ const projectsEN: Array<Project> = [
     type: "backend",
     language: "javascript",
     technologies: ["Express", "MongoDB"],
-    demoUrl: "https://url-shortener-microservices.jordyf15.repl.co/",
+    demoUrl: "",
     repoUrl:
       "https://github.com/jordyf15/FreeCodeCamp-URL-Shortener-Microservice",
     imageUrl: urlShortenerMicroserviceImg,
@@ -483,7 +496,7 @@ const projectsEN: Array<Project> = [
     type: "backend",
     language: "javascript",
     technologies: ["Express"],
-    demoUrl: "https://request-header-parser-microservice.jordyf15.repl.co/",
+    demoUrl: "",
     repoUrl:
       "https://github.com/jordyf15/FreeCodeCamp-Request-Header-Parser-Microservice",
     imageUrl: requestHeaderParserMicroserviceImg,
@@ -496,7 +509,7 @@ const projectsEN: Array<Project> = [
     type: "backend",
     language: "javascript",
     technologies: ["Express"],
-    demoUrl: "https://freecodecamp-project-timestamp.jordyf15.repl.co/",
+    demoUrl: "",
     repoUrl: "https://github.com/jordyf15/FreeCodeCamp-Timestamp-Microservice",
     imageUrl: timestampMicroservice,
   },
