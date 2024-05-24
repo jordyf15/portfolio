@@ -23,7 +23,7 @@ export const workHistoryEN: History[] = [
     institution: "Chorus Digital Indonesia",
     category: "Work",
     role: "Full Stack Developer",
-    date: "March 2022 - Present",
+    date: "March 2022 - October 2023",
     points: [
       "Assisted in developing restful APIs and frontend web applications for an online shop management system named Autobos that is integrated to multiple marketplaces in Indonesia and provided a more efficient process to handle orders which descreased operational cost and increased time efficiency.",
       "Assisted in developing a restful API, frontend web application, server-side application, and tools for an sound sharing platform named Sampled which is made for musicians and content creators to find quality sounds for free and royalty-free.",
@@ -72,7 +72,7 @@ export const organizationHistoryEN: History[] = [
     role: "Volunteer",
     date: "February 2020 - July 2020",
     points: [
-      "Assisted in taking care of the australia international corner and its events.",
+      "Assisted in taking care of the Australia International Corner and its events.",
     ],
   },
 ];
