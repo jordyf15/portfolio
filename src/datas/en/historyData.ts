@@ -25,9 +25,13 @@ export const workHistoryEN: History[] = [
     role: "Full Stack Developer",
     date: "March 2022 - October 2023",
     points: [
-      "Assisted in developing restful APIs and frontend web applications for an online shop management system named Autobos that is integrated to multiple marketplaces in Indonesia and provided a more efficient process to handle orders which descreased operational cost and increased time efficiency.",
-      "Assisted in developing a restful API, frontend web application, server-side application, and tools for an sound sharing platform named Sampled which is made for musicians and content creators to find quality sounds for free and royalty-free.",
-      "Assisted in developing a restful API, server-side application, and tools for an music learning application named Chord Genius which provided guitar and ukulele chords and lyrics that move along like karaoke to help learn songs faster and more fun than ever before.",
+      "Contributed to the development of an online shop management system that is integrated to multiple marketplaces in Indonesia using Typescript and React for the Front-End web applications, and Go and Gin for the REST APIs. Developed 30% of all features for the system.",
+      "Contributed to the development of a music learning application that provides guitar and ukulele chords, and lyrics that move along like karaoke using Go and Gin for the main REST API, and Ruby on Rails for the admin web application. Developed major features such as playlist, report, play history, and popular and favorite songs.",
+      "Contributed to the development of a sound-sharing platform for musicians and content creators using Go and Gin for the main REST API, Typescript and React for the main Front-End web application, and Ruby on Rails for the admin web application. Developed major features such as collection and report.",
+      "Wrote unit tests for the main REST API of a music learning application, which helped to detect bugs early in the development.",
+      "Refactored React components in the main Front-End web application of a sound sharing platform to use Material UI instead of styled components, resulting in better code readability.",
+      "Developed tools for generating popularity index for both the music learning application and sound-sharing platform using Go, allowing users to view the current most popular content in the platform.",
+      "Developed a tool for analyzing song difficulty for a music learning application using Go, avoiding the admin team from having to manually analyze all old and new songs in the application.",
     ],
     technologies: [
       "Typescript",
@@ -52,8 +56,8 @@ export const organizationHistoryEN: History[] = [
     role: "Core Team Member",
     date: "September 2021 - September 2022",
     points: [
-      "Had been a frontend facilitator, teaching club members HTML, CSS, Javascript, ReactJS, and Typescript for Frontend Development.",
-      "Had been a backend facilitator, teaching club members backend development Javascript, Express, and MongoDB for Backend Development.",
+      "Taught Front-End development using HTML, CSS, Javascript, React and Typescript to club members.",
+      "Taught Back-End development using Javascript, Express, and MongoDB to club members.",
     ],
     technologies: [
       "HTML",

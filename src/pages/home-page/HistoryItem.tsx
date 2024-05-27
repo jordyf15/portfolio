@@ -97,7 +97,7 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
           </Typography>
         </Stack>
         {history.points?.length && (
-          <Box component="ul" pl={2}>
+          <Stack spacing={1} component="ul" pl={2}>
             {history.points?.map((point, idx) => (
               <Typography
                 color="secondary.main"
@@ -114,7 +114,7 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
                 {point}
               </Typography>
             ))}
-          </Box>
+          </Stack>
         )}
         {history.technologies?.length && (
           <Stack flexWrap="wrap" direction="row">

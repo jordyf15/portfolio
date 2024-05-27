@@ -70,17 +70,15 @@ const HomePage = () => {
         />
       </Stack>
       <Typography
-        textAlign="center"
+        textAlign="justify"
         lineHeight="unset"
         mt="20px"
         px={language === "en" ? "15px" : "20px"}
         sx={{
-          width: {
-            xs: "unset",
-            sm: "690px",
-          },
+          width: "100%",
+          maxWidth: "865px",
           fontSize: {
-            xs: language === "en" ? "16px" : "12px",
+            xs: language === "en" ? "14px" : "13px",
             sm: language === "en" ? "16px" : "15px",
           },
         }}
@@ -88,21 +86,18 @@ const HomePage = () => {
       >
         {language === "en" ? (
           <>
-            I am an undergraduate computer science student, and an aspiring Full
-            Stack Developer.{notMobile ? <br></br> : null} I have a high
-            interest in and am currently learning front-end and back-end web
-            development. I also like to create small projects to apply the
-            knowledge i have learned.
+            Aspiring Full Stack Developer with high interest and enthusiasm for
+            Front-End development, Back-End development, Cloud Computing, DevOps
+            and Open-Source Software. Committed to continuous learning and
+            improvement, and always seeking new challenges and opportunities to
+            leverage my skills and contribute to innovative and exciting
+            projects. Looking for opportunities to start a career in Japan.
           </>
         ) : (
           <>
-            私はコンピューターサイエンスの大学生と
-            {!notMobile ? <br></br> : null}
-            意欲的なフルスタックデベロッパーでございます。<br></br>
-            フロントエンドとバックエンドのWeb開発{!notMobile ? <br></br> : null}
-            に興味があって、勉強しております。<br></br>
-            そして、勉強した知識を適用するために{!notMobile ? <br></br> : null}
-            小さいプロジェクトを作成いたします。
+            フロントエンド開発、バックエンド開発、クラウドコンピューティング、DevOps、オープンソースソフトウェアに高い関心と熱意があるフルスタック開発者でございます。
+            継続的な学習と改善に努めて、常に新たな挑戦と機会を求めて自分のスキルを活用し、革新的でエキサイティングなプロジェクトに貢献いたします。
+            日本でのキャリアをスタートさせる機会を探しております。
           </>
         )}
       </Typography>
