@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.733a6b38.css",
-    "main.js": "/portfolio/static/js/main.b0577b1d.js",
+    "main.js": "/portfolio/static/js/main.80e8a747.js",
     "static/media/dicoding-android-intermediate.jpg": "/portfolio/static/media/dicoding-android-intermediate.191ebaaddcf0c7a43080.jpg",
     "static/media/dicoding-aws-architecture.jpg": "/portfolio/static/media/dicoding-aws-architecture.b803107d6f76b7c0087a.jpg",
     "static/media/dicoding-devops-basic.jpg": "/portfolio/static/media/dicoding-devops-basic.d8a8e755aa6d9cae40a1.jpg",
@@ -91,16 +91,17 @@
     "static/media/hapi-dark.png": "/portfolio/static/media/hapi-dark.d385ed6e953ccc70c18c.png",
     "static/media/redux-light.png": "/portfolio/static/media/redux-light.4988076c0dc739006f76.png",
     "static/media/postgresql.png": "/portfolio/static/media/postgresql.2e675658cedda3e07b93.png",
+    "static/media/sql-server.png": "/portfolio/static/media/sql-server.fb481a636bc760a9e9ab.png",
     "static/media/slick.svg": "/portfolio/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/portfolio/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/portfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/portfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/portfolio/index.html",
     "main.733a6b38.css.map": "/portfolio/static/css/main.733a6b38.css.map",
-    "main.b0577b1d.js.map": "/portfolio/static/js/main.b0577b1d.js.map"
+    "main.80e8a747.js.map": "/portfolio/static/js/main.80e8a747.js.map"
   },
   "entrypoints": [
     "static/css/main.733a6b38.css",
-    "static/js/main.b0577b1d.js"
+    "static/js/main.80e8a747.js"
   ]
 }
