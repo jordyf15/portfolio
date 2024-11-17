@@ -6,7 +6,7 @@ export const educationHistoryJP: History[] = [
     institution: "ビナヌサンタラ大学",
     category: "Education",
     role: "コンピュータサイエンス",
-    date: "2019年9月 - 現在",
+    date: "2019年9月 - 2024年7月",
   },
   {
     id: "history-education-2",

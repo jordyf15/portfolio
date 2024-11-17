@@ -6,7 +6,7 @@ export const educationHistoryEN: History[] = [
     institution: "Bina Nusantara University",
     category: "Education",
     role: "Computer Science",
-    date: "September 2019 - Present",
+    date: "September 2019 - July 2024",
   },
   {
     id: "history-education-2",
