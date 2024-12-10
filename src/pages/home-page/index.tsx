@@ -66,7 +66,7 @@ const HomePage = () => {
         <ProfileLinks
           Icon={LinkedIn}
           text="jordyferdian"
-          url="https://www.linkedin.com/in/jordy-ferdian-3606041a7/"
+          url="https://www.linkedin.com/in/jordy-ferdian-chandra-3606041a7/"
         />
       </Stack>
       <Typography
