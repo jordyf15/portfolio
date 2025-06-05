@@ -11,54 +11,25 @@ import {
   Theme,
   Typography,
 } from "@mui/material";
-import { ChangeEvent, ReactNode, useEffect, useState } from "react";
+import { ChangeEvent, ReactNode, useState } from "react";
 import { useTranslation } from "react-i18next";
-import projectsEN from "../../datas/en/projectData";
-import projectsJP from "../../datas/jp/projectData";
+import projects from "../../datas/projectData";
 import { useAppSelector } from "../../hook";
-import Project from "../../models/Project";
 import ProjectList from "./ProjectList";
 
 const ProjectPage = () => {
   const language = useAppSelector((state) => state.language);
-  const [currentProjectList, setCurrentProjectList] = useState(
-    language === "en" ? projectsEN : projectsJP
-  );
+  const [currentProjectList, setCurrentProjectList] = useState(projects);
   const [currentNameFilter, setCurrentNameFilter] = useState("");
   const [currentTypeFilter, setCurrentTypeFilter] = useState("all");
   const [currentLanguageFilter, setCurrentLanguageFilter] = useState("all");
   const { t } = useTranslation();
 
-  // to adjust the project data based on the current chosen language
-  useEffect(() => {
-    const currentProjectMap = new Map<string, Project>();
-    currentProjectList.forEach((project) => {
-      currentProjectMap.set(project.id, project);
-    });
-
-    const newProjectDatas = language === "en" ? projectsEN : projectsJP;
-    newProjectDatas.forEach((project) => {
-      if (currentProjectMap.has(project.id)) {
-        currentProjectMap.set(project.id, project);
-      }
-    });
-
-    const newProjectList: Array<Project> = [];
-    currentProjectMap.forEach((project, _) => {
-      newProjectList.push(project);
-    });
-
-    setCurrentProjectList(newProjectList);
-
-    // this function should only run when the language changes.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [language]);
-
   const onFilterName = ({
     target,
   }: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setCurrentNameFilter(target.value);
-    const projectDatas = language === "en" ? projectsEN : projectsJP;
+    const projectDatas = projects;
     const filteredByType =
       currentTypeFilter === "all"
         ? projectDatas
@@ -71,8 +42,10 @@ const ProjectPage = () => {
             (project) => project.language === currentLanguageFilter
           );
 
-    const filteredByName = filteredByLanguage.filter((project) =>
-      project.title.toLowerCase().includes(target.value.toLowerCase())
+    const filteredByName = filteredByLanguage.filter(
+      (project) =>
+        project.titleEN.toLowerCase().includes(target.value.toLowerCase()) ||
+        project.titleJP.toLowerCase().includes(target.value.toLowerCase())
     );
 
     setCurrentProjectList(filteredByName);
@@ -84,7 +57,7 @@ const ProjectPage = () => {
   ) => {
     setCurrentTypeFilter(target.value as string);
 
-    const projectDatas = language === "en" ? projectsEN : projectsJP;
+    const projectDatas = projects;
 
     const filteredByLanguage =
       currentLanguageFilter === "all"
@@ -93,8 +66,12 @@ const ProjectPage = () => {
             (project) => project.language === currentLanguageFilter
           );
 
-    const filteredByName = filteredByLanguage.filter((project) =>
-      project.title.toLowerCase().includes(currentNameFilter.toLowerCase())
+    const filteredByName = filteredByLanguage.filter(
+      (project) =>
+        project.titleEN
+          .toLowerCase()
+          .includes(currentNameFilter.toLowerCase()) ||
+        project.titleJP.toLowerCase().includes(currentNameFilter.toLowerCase())
     );
 
     const filteredByType =
@@ -111,15 +88,19 @@ const ProjectPage = () => {
   ) => {
     setCurrentLanguageFilter(target.value as string);
 
-    const projectDatas = language === "en" ? projectsEN : projectsJP;
+    const projectDatas = projects;
 
     const filteredByType =
       currentTypeFilter === "all"
         ? projectDatas
         : projectDatas.filter((project) => project.type === currentTypeFilter);
 
-    const filteredByName = filteredByType.filter((project) =>
-      project.title.toLowerCase().includes(currentNameFilter.toLowerCase())
+    const filteredByName = filteredByType.filter(
+      (project) =>
+        project.titleEN
+          .toLowerCase()
+          .includes(currentNameFilter.toLowerCase()) ||
+        project.titleJP.toLowerCase().includes(currentNameFilter.toLowerCase())
     );
 
     const filteredByLanguage =

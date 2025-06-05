@@ -68,7 +68,7 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
             pr={language === "jp" ? "15px" : "unset"}
             mb={language === "jp" ? "3px" : "unset"}
           >
-            {history.institution}
+            {language === "en" ? history.institutionEN : history.institutionJP}
           </Typography>
           <Typography
             sx={{
@@ -81,7 +81,7 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
             fontWeight="bold"
             color="secondary.main"
           >
-            {history.role}
+            {language === "en" ? history.roleEN : history.roleJP}
           </Typography>
           <Typography
             sx={{
@@ -93,29 +93,32 @@ const HistoryItem = ({ history }: HistoryItemProp) => {
             fontWeight="bold"
             color="minorText"
           >
-            {history.date}
+            {language === "en" ? history.dateEN : history.dateJP}
           </Typography>
         </Stack>
-        {history.points?.length && (
-          <Stack spacing={1} component="ul" pl={2}>
-            {history.points?.map((point, idx) => (
-              <Typography
-                color="secondary.main"
-                textAlign="justify"
-                fontSize={{ xs: "12px", sm: "14px" }}
-                component="li"
-                sx={{
-                  "::marker": {
-                    fontSize: "12px",
-                  },
-                }}
-                key={`${history.id}-point${idx}`}
-              >
-                {point}
-              </Typography>
-            ))}
-          </Stack>
-        )}
+        {language === "en"
+          ? history.pointsEN?.length && (
+              <Stack spacing={1} component="ul" pl={2}>
+                {history.pointsEN?.map((point, idx) => (
+                  <HistoryPoint
+                    historyID={history.id}
+                    point={point}
+                    idx={idx}
+                  />
+                ))}
+              </Stack>
+            )
+          : history.pointsJP?.length && (
+              <Stack spacing={1} component="ul" pl={2}>
+                {history.pointsJP?.map((point, idx) => (
+                  <HistoryPoint
+                    historyID={history.id}
+                    point={point}
+                    idx={idx}
+                  />
+                ))}
+              </Stack>
+            )}
         {history.technologies?.length && (
           <Stack flexWrap="wrap" direction="row">
             {history.technologies?.map((technology) => (
@@ -188,6 +191,31 @@ const HistoryIcon = ({ category }: HistoryIconProp) => {
     default:
       return <></>;
   }
+};
+
+interface HistoryPointProp {
+  historyID: string;
+  point: string;
+  idx: number;
+}
+
+const HistoryPoint = ({ historyID, point, idx }: HistoryPointProp) => {
+  return (
+    <Typography
+      color="secondary.main"
+      textAlign="justify"
+      fontSize={{ xs: "12px", sm: "14px" }}
+      component="li"
+      sx={{
+        "::marker": {
+          fontSize: "12px",
+        },
+      }}
+      key={`${historyID}-point${idx}`}
+    >
+      {point}
+    </Typography>
+  );
 };
 
 export default HistoryItem;

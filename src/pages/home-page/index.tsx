@@ -1,23 +1,14 @@
 import { GitHub, LinkedIn } from "@mui/icons-material";
-import { Stack, Typography, useMediaQuery } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import {
-  otherCertificationsEN,
-  technicalCertificationsEN,
-} from "../../datas/en/certificationData";
+  otherCertifications,
+  technicalCertifications,
+} from "../../datas/certificationData";
 import {
-  educationHistoryEN,
-  organizationHistoryEN,
-  workHistoryEN,
-} from "../../datas/en/historyData";
-import {
-  otherCertificationsJP,
-  technicalCertificationsJP,
-} from "../../datas/jp/certificationData";
-import {
-  educationHistoryJP,
-  organizationHistoryJP,
-  workHistoryJP,
-} from "../../datas/jp/historyData";
+  educationHistory,
+  organizationHistory,
+  workHistory,
+} from "../../datas/historyData";
 import { skills } from "../../datas/skillData";
 import { useAppSelector } from "../../hook";
 import CertificationList from "./CertificationList";
@@ -26,7 +17,6 @@ import ProfileLinks from "./ProfileLinks";
 import SkillList from "./SkillList";
 
 const HomePage = () => {
-  const notMobile = useMediaQuery("(min-width:700px)");
   const language = useAppSelector((state) => state.language);
 
   return (
@@ -103,34 +93,24 @@ const HomePage = () => {
       </Typography>
       <SkillList skillList={skills} skillTitle="title.skill" />
       <HistoryList
-        historyList={language === "en" ? workHistoryEN : workHistoryJP}
+        historyList={workHistory}
         historyTitle="title.workExperience"
       />
       <HistoryList
-        historyList={
-          language === "en" ? organizationHistoryEN : organizationHistoryJP
-        }
+        historyList={organizationHistory}
         historyTitle="title.organizationExperience"
       />
       <HistoryList
-        historyList={
-          language === "en" ? educationHistoryEN : educationHistoryJP
-        }
+        historyList={educationHistory}
         historyTitle="title.educationHistory"
       />
       <CertificationList
         certificationTitle="title.technicalCertification"
-        certificationList={
-          language === "en"
-            ? technicalCertificationsEN
-            : technicalCertificationsJP
-        }
+        certificationList={technicalCertifications}
       />
       <CertificationList
         certificationTitle="title.otherCertification"
-        certificationList={
-          language === "en" ? otherCertificationsEN : otherCertificationsJP
-        }
+        certificationList={otherCertifications}
       />
     </Stack>
   );

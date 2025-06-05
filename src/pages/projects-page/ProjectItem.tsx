@@ -90,7 +90,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
             mb: language === "jp" ? "2px" : "unset",
           }}
         >
-          {project.title}
+          {language === "en" ? project.titleEN : project.titleJP}
         </Typography>
         <Typography
           mt="5px"
@@ -104,7 +104,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
           }}
           color="secondary.main"
         >
-          {project.description}
+          {language === "en" ? project.descriptionEN : project.descriptionJP}
         </Typography>
         <Stack
           sx={{

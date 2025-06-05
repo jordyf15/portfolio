@@ -116,7 +116,7 @@ const CertificationItem = ({
               },
             }}
           >
-            {certification.title}
+            {language === "en" ? certification.titleEN : certification.titleJP}
           </Typography>
           <Typography
             lineHeight="unset"
@@ -134,7 +134,9 @@ const CertificationItem = ({
             }}
             color="secondary.main"
           >
-            {certification.description}
+            {language === "en"
+              ? certification.descriptionEN
+              : certification.descriptionJP}
           </Typography>
         </Box>
       </Stack>

@@ -18,10 +18,14 @@ type Technology =
 
 export default interface History {
   id: string;
-  role: string;
-  date: string;
-  institution: string;
   category: Category;
-  points?: string[];
+  roleEN: string;
+  dateEN: string;
+  institutionEN: string;
+  pointsEN?: string[];
+  roleJP: string;
+  dateJP: string;
+  institutionJP: string;
+  pointsJP?: string[];
   technologies?: Technology[];
 }

@@ -16,8 +16,10 @@ type Technology =
 
 export default interface Project {
   id: string;
-  title: string;
-  description: string;
+  titleEN: string;
+  descriptionEN: string;
+  titleJP: string;
+  descriptionJP: string;
   type: Type;
   language: Language;
   technologies: Array<Technology>;
